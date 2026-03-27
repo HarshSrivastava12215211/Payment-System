@@ -1,0 +1,783 @@
+2026-03-27T00:28:43.629+05:30  INFO 40748 --- [NOTIFICATION-SERVICE] [restartedMain] c.n.NotificationServiceApplication       : Starting NotificationServiceApplication using Java 21.0.6 with PID 40748 (C:\Users\Asus\Desktop\Payment-wallet\Notification-Service\target\classes started by Asus in C:\Users\Asus\Desktop\Payment-wallet\Notification-Service)
+2026-03-27T00:28:43.641+05:30 DEBUG 40748 --- [NOTIFICATION-SERVICE] [restartedMain] c.n.NotificationServiceApplication       : Running with Spring Boot v3.3.5, Spring v6.1.14
+2026-03-27T00:28:43.643+05:30  INFO 40748 --- [NOTIFICATION-SERVICE] [restartedMain] c.n.NotificationServiceApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-03-27T00:28:43.875+05:30  INFO 40748 --- [NOTIFICATION-SERVICE] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-03-27T00:28:43.875+05:30  INFO 40748 --- [NOTIFICATION-SERVICE] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-03-27T00:28:45.932+05:30  INFO 40748 --- [NOTIFICATION-SERVICE] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-27T00:28:46.183+05:30  INFO 40748 --- [NOTIFICATION-SERVICE] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 240 ms. Found 1 JPA repository interface.
+2026-03-27T00:28:46.660+05:30  INFO 40748 --- [NOTIFICATION-SERVICE] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=330ce3de-b4f7-3263-aded-34d8f4bc9f44
+2026-03-27T00:28:47.254+05:30  WARN 40748 --- [NOTIFICATION-SERVICE] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-03-27T00:28:47.259+05:30  WARN 40748 --- [NOTIFICATION-SERVICE] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected/applied to a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies/advisors. If this bean does not have to be post-processed, declare it with ROLE_INFRASTRUCTURE.
+2026-03-27T00:28:48.058+05:30  INFO 40748 --- [NOTIFICATION-SERVICE] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 7507 (http)
+2026-03-27T00:28:48.083+05:30  INFO 40748 --- [NOTIFICATION-SERVICE] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-27T00:28:48.084+05:30  INFO 40748 --- [NOTIFICATION-SERVICE] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2026-03-27T00:28:48.189+05:30  INFO 40748 --- [NOTIFICATION-SERVICE] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-03-27T00:28:48.190+05:30  INFO 40748 --- [NOTIFICATION-SERVICE] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4314 ms
+2026-03-27T00:28:48.945+05:30  INFO 40748 --- [NOTIFICATION-SERVICE] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-27T00:28:49.058+05:30  INFO 40748 --- [NOTIFICATION-SERVICE] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2026-03-27T00:28:49.112+05:30  INFO 40748 --- [NOTIFICATION-SERVICE] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-03-27T00:28:49.684+05:30  INFO 40748 --- [NOTIFICATION-SERVICE] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-27T00:28:49.737+05:30  INFO 40748 --- [NOTIFICATION-SERVICE] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-27T00:28:50.031+05:30  INFO 40748 --- [NOTIFICATION-SERVICE] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6d3263f8
+2026-03-27T00:28:50.034+05:30  INFO 40748 --- [NOTIFICATION-SERVICE] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-03-27T00:28:50.093+05:30  WARN 40748 --- [NOTIFICATION-SERVICE] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-27T00:28:51.682+05:30  INFO 40748 --- [NOTIFICATION-SERVICE] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-27T00:28:51.777+05:30  INFO 40748 --- [NOTIFICATION-SERVICE] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-27T00:28:52.507+05:30  WARN 40748 --- [NOTIFICATION-SERVICE] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'binding' defined in class path resource [com/notification/config/RabbitConfig.class]: Unsatisfied dependency expressed through method 'binding' parameter 0: No qualifying bean of type 'org.springframework.amqp.core.Queue' available: expected single matching bean but found 2: queue,paymentQueue
+2026-03-27T00:28:52.508+05:30  INFO 40748 --- [NOTIFICATION-SERVICE] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-27T00:28:52.513+05:30  INFO 40748 --- [NOTIFICATION-SERVICE] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-03-27T00:28:52.517+05:30  INFO 40748 --- [NOTIFICATION-SERVICE] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-03-27T00:28:52.522+05:30  INFO 40748 --- [NOTIFICATION-SERVICE] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-03-27T00:28:52.556+05:30  INFO 40748 --- [NOTIFICATION-SERVICE] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-03-27T00:28:52.615+05:30 ERROR 40748 --- [NOTIFICATION-SERVICE] [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of method binding in com.notification.config.RabbitConfig required a single bean, but 2 were found:
+	- queue: defined by method 'queue' in class path resource [com/notification/config/RabbitConfig.class]
+	- paymentQueue: defined by method 'paymentQueue' in class path resource [com/notification/config/RabbitConfig.class]
+
+This may be due to missing parameter name information
+
+Action:
+
+Consider marking one of the beans as @Primary, updating the consumer to accept multiple beans, or using @Qualifier to identify the bean that should be consumed
+
+Ensure that your compiler is configured to use the '-parameters' flag.
+You may need to update both your build tool settings as well as your IDE.
+(See https://github.com/spring-projects/spring-framework/wiki/Upgrading-to-Spring-Framework-6.x#parameter-name-retention)
+
+
+2026-03-27T00:34:13.024+05:30  INFO 26292 --- [NOTIFICATION-SERVICE] [restartedMain] c.n.NotificationServiceApplication       : Starting NotificationServiceApplication using Java 21.0.6 with PID 26292 (C:\Users\Asus\Desktop\Payment-wallet\Notification-Service\target\classes started by Asus in C:\Users\Asus\Desktop\Payment-wallet\Notification-Service)
+2026-03-27T00:34:13.034+05:30 DEBUG 26292 --- [NOTIFICATION-SERVICE] [restartedMain] c.n.NotificationServiceApplication       : Running with Spring Boot v3.3.5, Spring v6.1.14
+2026-03-27T00:34:13.036+05:30  INFO 26292 --- [NOTIFICATION-SERVICE] [restartedMain] c.n.NotificationServiceApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-03-27T00:34:13.150+05:30  INFO 26292 --- [NOTIFICATION-SERVICE] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-03-27T00:34:13.152+05:30  INFO 26292 --- [NOTIFICATION-SERVICE] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-03-27T00:34:16.352+05:30  INFO 26292 --- [NOTIFICATION-SERVICE] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-27T00:34:16.751+05:30  INFO 26292 --- [NOTIFICATION-SERVICE] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 379 ms. Found 1 JPA repository interface.
+2026-03-27T00:34:17.503+05:30  INFO 26292 --- [NOTIFICATION-SERVICE] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=330ce3de-b4f7-3263-aded-34d8f4bc9f44
+2026-03-27T00:34:18.602+05:30  WARN 26292 --- [NOTIFICATION-SERVICE] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-03-27T00:34:18.614+05:30  WARN 26292 --- [NOTIFICATION-SERVICE] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected/applied to a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies/advisors. If this bean does not have to be post-processed, declare it with ROLE_INFRASTRUCTURE.
+2026-03-27T00:34:19.962+05:30  INFO 26292 --- [NOTIFICATION-SERVICE] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 7507 (http)
+2026-03-27T00:34:20.006+05:30  INFO 26292 --- [NOTIFICATION-SERVICE] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-27T00:34:20.008+05:30  INFO 26292 --- [NOTIFICATION-SERVICE] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2026-03-27T00:34:20.203+05:30  INFO 26292 --- [NOTIFICATION-SERVICE] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-03-27T00:34:20.206+05:30  INFO 26292 --- [NOTIFICATION-SERVICE] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 7051 ms
+2026-03-27T00:34:21.522+05:30  INFO 26292 --- [NOTIFICATION-SERVICE] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-27T00:34:21.703+05:30  INFO 26292 --- [NOTIFICATION-SERVICE] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2026-03-27T00:34:21.814+05:30  INFO 26292 --- [NOTIFICATION-SERVICE] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-03-27T00:34:22.903+05:30  INFO 26292 --- [NOTIFICATION-SERVICE] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-27T00:34:23.001+05:30  INFO 26292 --- [NOTIFICATION-SERVICE] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-27T00:34:23.565+05:30  INFO 26292 --- [NOTIFICATION-SERVICE] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@310838f9
+2026-03-27T00:34:23.574+05:30  INFO 26292 --- [NOTIFICATION-SERVICE] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-03-27T00:34:23.683+05:30  WARN 26292 --- [NOTIFICATION-SERVICE] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-27T00:34:26.646+05:30  INFO 26292 --- [NOTIFICATION-SERVICE] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-27T00:34:26.852+05:30  INFO 26292 --- [NOTIFICATION-SERVICE] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-27T00:34:28.036+05:30  WARN 26292 --- [NOTIFICATION-SERVICE] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'binding' defined in class path resource [com/notification/config/RabbitConfig.class]: Unsatisfied dependency expressed through method 'binding' parameter 0: No qualifying bean of type 'org.springframework.amqp.core.Queue' available: expected single matching bean but found 2: queue,paymentQueue
+2026-03-27T00:34:28.040+05:30  INFO 26292 --- [NOTIFICATION-SERVICE] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-27T00:34:28.047+05:30  INFO 26292 --- [NOTIFICATION-SERVICE] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-03-27T00:34:28.058+05:30  INFO 26292 --- [NOTIFICATION-SERVICE] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-03-27T00:34:28.070+05:30  INFO 26292 --- [NOTIFICATION-SERVICE] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-03-27T00:34:28.111+05:30  INFO 26292 --- [NOTIFICATION-SERVICE] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-03-27T00:34:28.185+05:30 ERROR 26292 --- [NOTIFICATION-SERVICE] [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of method binding in com.notification.config.RabbitConfig required a single bean, but 2 were found:
+	- queue: defined by method 'queue' in class path resource [com/notification/config/RabbitConfig.class]
+	- paymentQueue: defined by method 'paymentQueue' in class path resource [com/notification/config/RabbitConfig.class]
+
+This may be due to missing parameter name information
+
+Action:
+
+Consider marking one of the beans as @Primary, updating the consumer to accept multiple beans, or using @Qualifier to identify the bean that should be consumed
+
+Ensure that your compiler is configured to use the '-parameters' flag.
+You may need to update both your build tool settings as well as your IDE.
+(See https://github.com/spring-projects/spring-framework/wiki/Upgrading-to-Spring-Framework-6.x#parameter-name-retention)
+
+
+2026-03-27T09:46:59.940+05:30  INFO 34828 --- [NOTIFICATION-SERVICE] [restartedMain] c.n.NotificationServiceApplication       : Starting NotificationServiceApplication using Java 21.0.6 with PID 34828 (C:\Users\Asus\Desktop\Payment-wallet\Notification-Service\target\classes started by Asus in C:\Users\Asus\Desktop\Payment-wallet\Notification-Service)
+2026-03-27T09:46:59.946+05:30 DEBUG 34828 --- [NOTIFICATION-SERVICE] [restartedMain] c.n.NotificationServiceApplication       : Running with Spring Boot v3.3.5, Spring v6.1.14
+2026-03-27T09:46:59.947+05:30  INFO 34828 --- [NOTIFICATION-SERVICE] [restartedMain] c.n.NotificationServiceApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-03-27T09:46:59.996+05:30  INFO 34828 --- [NOTIFICATION-SERVICE] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-03-27T09:47:00.070+05:30  INFO 34828 --- [NOTIFICATION-SERVICE] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-03-27T09:47:01.335+05:30  INFO 34828 --- [NOTIFICATION-SERVICE] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-27T09:47:01.539+05:30  INFO 34828 --- [NOTIFICATION-SERVICE] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 126 ms. Found 1 JPA repository interface.
+2026-03-27T09:47:01.840+05:30  INFO 34828 --- [NOTIFICATION-SERVICE] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=330ce3de-b4f7-3263-aded-34d8f4bc9f44
+2026-03-27T09:47:02.174+05:30  WARN 34828 --- [NOTIFICATION-SERVICE] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-03-27T09:47:02.179+05:30  WARN 34828 --- [NOTIFICATION-SERVICE] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected/applied to a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies/advisors. If this bean does not have to be post-processed, declare it with ROLE_INFRASTRUCTURE.
+2026-03-27T09:47:02.643+05:30  INFO 34828 --- [NOTIFICATION-SERVICE] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 7507 (http)
+2026-03-27T09:47:02.655+05:30  INFO 34828 --- [NOTIFICATION-SERVICE] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-27T09:47:02.656+05:30  INFO 34828 --- [NOTIFICATION-SERVICE] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2026-03-27T09:47:02.708+05:30  INFO 34828 --- [NOTIFICATION-SERVICE] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-03-27T09:47:02.726+05:30  INFO 34828 --- [NOTIFICATION-SERVICE] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2654 ms
+2026-03-27T09:47:03.107+05:30  INFO 34828 --- [NOTIFICATION-SERVICE] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-27T09:47:03.165+05:30  INFO 34828 --- [NOTIFICATION-SERVICE] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2026-03-27T09:47:03.197+05:30  INFO 34828 --- [NOTIFICATION-SERVICE] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-03-27T09:47:03.485+05:30  INFO 34828 --- [NOTIFICATION-SERVICE] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-27T09:47:03.528+05:30  INFO 34828 --- [NOTIFICATION-SERVICE] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-27T09:47:03.708+05:30  INFO 34828 --- [NOTIFICATION-SERVICE] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6f05f477
+2026-03-27T09:47:03.709+05:30  INFO 34828 --- [NOTIFICATION-SERVICE] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-03-27T09:47:03.740+05:30  WARN 34828 --- [NOTIFICATION-SERVICE] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-27T09:47:04.655+05:30  INFO 34828 --- [NOTIFICATION-SERVICE] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-27T09:47:04.820+05:30  INFO 34828 --- [NOTIFICATION-SERVICE] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-27T09:47:05.181+05:30  WARN 34828 --- [NOTIFICATION-SERVICE] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'binding' defined in class path resource [com/notification/config/RabbitConfig.class]: Unsatisfied dependency expressed through method 'binding' parameter 0: No qualifying bean of type 'org.springframework.amqp.core.Queue' available: expected single matching bean but found 2: queue,paymentQueue
+2026-03-27T09:47:05.211+05:30  INFO 34828 --- [NOTIFICATION-SERVICE] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-27T09:47:05.273+05:30  INFO 34828 --- [NOTIFICATION-SERVICE] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-03-27T09:47:05.279+05:30  INFO 34828 --- [NOTIFICATION-SERVICE] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-03-27T09:47:05.337+05:30  INFO 34828 --- [NOTIFICATION-SERVICE] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-03-27T09:47:05.356+05:30  INFO 34828 --- [NOTIFICATION-SERVICE] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-03-27T09:47:05.386+05:30 ERROR 34828 --- [NOTIFICATION-SERVICE] [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of method binding in com.notification.config.RabbitConfig required a single bean, but 2 were found:
+	- queue: defined by method 'queue' in class path resource [com/notification/config/RabbitConfig.class]
+	- paymentQueue: defined by method 'paymentQueue' in class path resource [com/notification/config/RabbitConfig.class]
+
+This may be due to missing parameter name information
+
+Action:
+
+Consider marking one of the beans as @Primary, updating the consumer to accept multiple beans, or using @Qualifier to identify the bean that should be consumed
+
+Ensure that your compiler is configured to use the '-parameters' flag.
+You may need to update both your build tool settings as well as your IDE.
+(See https://github.com/spring-projects/spring-framework/wiki/Upgrading-to-Spring-Framework-6.x#parameter-name-retention)
+
+
+2026-03-27T09:48:48.007+05:30  INFO 7504 --- [NOTIFICATION-SERVICE] [restartedMain] c.n.NotificationServiceApplication       : Starting NotificationServiceApplication using Java 21.0.6 with PID 7504 (C:\Users\Asus\Desktop\Payment-wallet\Notification-Service\target\classes started by Asus in C:\Users\Asus\Desktop\Payment-wallet\Notification-Service)
+2026-03-27T09:48:48.009+05:30 DEBUG 7504 --- [NOTIFICATION-SERVICE] [restartedMain] c.n.NotificationServiceApplication       : Running with Spring Boot v3.3.5, Spring v6.1.14
+2026-03-27T09:48:48.010+05:30  INFO 7504 --- [NOTIFICATION-SERVICE] [restartedMain] c.n.NotificationServiceApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-03-27T09:48:48.056+05:30  INFO 7504 --- [NOTIFICATION-SERVICE] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-03-27T09:48:48.057+05:30  INFO 7504 --- [NOTIFICATION-SERVICE] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-03-27T09:48:49.235+05:30  INFO 7504 --- [NOTIFICATION-SERVICE] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-27T09:48:49.362+05:30  INFO 7504 --- [NOTIFICATION-SERVICE] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 121 ms. Found 1 JPA repository interface.
+2026-03-27T09:48:49.629+05:30  INFO 7504 --- [NOTIFICATION-SERVICE] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=330ce3de-b4f7-3263-aded-34d8f4bc9f44
+2026-03-27T09:48:49.947+05:30  WARN 7504 --- [NOTIFICATION-SERVICE] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-03-27T09:48:49.952+05:30  WARN 7504 --- [NOTIFICATION-SERVICE] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected/applied to a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies/advisors. If this bean does not have to be post-processed, declare it with ROLE_INFRASTRUCTURE.
+2026-03-27T09:48:50.386+05:30  INFO 7504 --- [NOTIFICATION-SERVICE] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 7507 (http)
+2026-03-27T09:48:50.400+05:30  INFO 7504 --- [NOTIFICATION-SERVICE] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-27T09:48:50.401+05:30  INFO 7504 --- [NOTIFICATION-SERVICE] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2026-03-27T09:48:50.461+05:30  INFO 7504 --- [NOTIFICATION-SERVICE] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-03-27T09:48:50.461+05:30  INFO 7504 --- [NOTIFICATION-SERVICE] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2402 ms
+2026-03-27T09:48:50.919+05:30  INFO 7504 --- [NOTIFICATION-SERVICE] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-27T09:48:50.974+05:30  INFO 7504 --- [NOTIFICATION-SERVICE] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2026-03-27T09:48:51.010+05:30  INFO 7504 --- [NOTIFICATION-SERVICE] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-03-27T09:48:51.309+05:30  INFO 7504 --- [NOTIFICATION-SERVICE] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-27T09:48:51.346+05:30  INFO 7504 --- [NOTIFICATION-SERVICE] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-27T09:48:51.520+05:30  INFO 7504 --- [NOTIFICATION-SERVICE] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@376c6ac7
+2026-03-27T09:48:51.523+05:30  INFO 7504 --- [NOTIFICATION-SERVICE] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-03-27T09:48:51.557+05:30  WARN 7504 --- [NOTIFICATION-SERVICE] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-27T09:48:52.436+05:30  INFO 7504 --- [NOTIFICATION-SERVICE] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-27T09:48:52.491+05:30  INFO 7504 --- [NOTIFICATION-SERVICE] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-27T09:48:52.861+05:30  WARN 7504 --- [NOTIFICATION-SERVICE] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'binding' defined in class path resource [com/notification/config/RabbitConfig.class]: Unsatisfied dependency expressed through method 'binding' parameter 1: No qualifying bean of type 'org.springframework.amqp.core.TopicExchange' available: expected single matching bean but found 2: exchange,paymentExchange
+2026-03-27T09:48:52.863+05:30  INFO 7504 --- [NOTIFICATION-SERVICE] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-27T09:48:52.867+05:30  INFO 7504 --- [NOTIFICATION-SERVICE] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-03-27T09:48:52.870+05:30  INFO 7504 --- [NOTIFICATION-SERVICE] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-03-27T09:48:52.875+05:30  INFO 7504 --- [NOTIFICATION-SERVICE] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-03-27T09:48:52.893+05:30  INFO 7504 --- [NOTIFICATION-SERVICE] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-03-27T09:48:52.920+05:30 ERROR 7504 --- [NOTIFICATION-SERVICE] [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 1 of method binding in com.notification.config.RabbitConfig required a single bean, but 2 were found:
+	- exchange: defined by method 'exchange' in class path resource [com/notification/config/RabbitConfig.class]
+	- paymentExchange: defined by method 'paymentExchange' in class path resource [com/notification/config/RabbitConfig.class]
+
+This may be due to missing parameter name information
+
+Action:
+
+Consider marking one of the beans as @Primary, updating the consumer to accept multiple beans, or using @Qualifier to identify the bean that should be consumed
+
+Ensure that your compiler is configured to use the '-parameters' flag.
+You may need to update both your build tool settings as well as your IDE.
+(See https://github.com/spring-projects/spring-framework/wiki/Upgrading-to-Spring-Framework-6.x#parameter-name-retention)
+
+
+2026-03-27T09:49:14.252+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [restartedMain] c.n.NotificationServiceApplication       : Starting NotificationServiceApplication using Java 21.0.6 with PID 19144 (C:\Users\Asus\Desktop\Payment-wallet\Notification-Service\target\classes started by Asus in C:\Users\Asus\Desktop\Payment-wallet\Notification-Service)
+2026-03-27T09:49:14.255+05:30 DEBUG 19144 --- [NOTIFICATION-SERVICE] [restartedMain] c.n.NotificationServiceApplication       : Running with Spring Boot v3.3.5, Spring v6.1.14
+2026-03-27T09:49:14.255+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [restartedMain] c.n.NotificationServiceApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-03-27T09:49:14.303+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-03-27T09:49:14.303+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-03-27T09:49:15.256+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-27T09:49:15.374+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 112 ms. Found 1 JPA repository interface.
+2026-03-27T09:49:15.584+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=330ce3de-b4f7-3263-aded-34d8f4bc9f44
+2026-03-27T09:49:15.859+05:30  WARN 19144 --- [NOTIFICATION-SERVICE] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-03-27T09:49:15.863+05:30  WARN 19144 --- [NOTIFICATION-SERVICE] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected/applied to a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies/advisors. If this bean does not have to be post-processed, declare it with ROLE_INFRASTRUCTURE.
+2026-03-27T09:49:16.264+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 7507 (http)
+2026-03-27T09:49:16.278+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-27T09:49:16.279+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2026-03-27T09:49:16.328+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-03-27T09:49:16.328+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2024 ms
+2026-03-27T09:49:16.645+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-27T09:49:16.688+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2026-03-27T09:49:16.713+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-03-27T09:49:16.953+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-27T09:49:16.979+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-27T09:49:17.133+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@61f2c1ae
+2026-03-27T09:49:17.135+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-03-27T09:49:17.164+05:30  WARN 19144 --- [NOTIFICATION-SERVICE] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-27T09:49:17.886+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-27T09:49:17.933+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-27T09:49:18.607+05:30  WARN 19144 --- [NOTIFICATION-SERVICE] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-27T09:49:20.197+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-03-27T09:49:20.501+05:30  WARN 19144 --- [NOTIFICATION-SERVICE] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2026-03-27T09:49:21.532+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-03-27T09:49:21.556+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2026-03-27T09:49:21.623+05:30  WARN 19144 --- [NOTIFICATION-SERVICE] [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-03-27T09:49:21.633+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoints beneath base path '/actuator'
+2026-03-27T09:49:21.720+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-03-27T09:49:21.743+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-03-27T09:49:21.747+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-27T09:49:21.757+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-03-27T09:49:21.757+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-03-27T09:49:21.758+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-03-27T09:49:21.758+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-03-27T09:49:21.758+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-03-27T09:49:21.759+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-03-27T09:49:21.759+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-03-27T09:49:22.038+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-03-27T09:49:22.042+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-03-27T09:49:22.043+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-03-27T09:49:22.045+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1774585162044 with initial instances count: 8
+2026-03-27T09:49:22.053+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application NOTIFICATION-SERVICE with eureka with status UP
+2026-03-27T09:49:22.054+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1774585162054, current=UP, previous=STARTING]
+2026-03-27T09:49:22.056+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_NOTIFICATION-SERVICE/localhost:NOTIFICATION-SERVICE:7507: registering service...
+2026-03-27T09:49:22.073+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 7507 (http) with context path '/'
+2026-03-27T09:49:22.074+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 7507
+2026-03-27T09:49:22.094+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_NOTIFICATION-SERVICE/localhost:NOTIFICATION-SERVICE:7507 - registration status: 204
+2026-03-27T09:49:23.089+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-03-27T09:49:23.105+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [restartedMain] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-27T09:49:23.169+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [restartedMain] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#53245b78:0/SimpleConnection@29939538 [delegate=amqp://guest@127.0.0.1:5672/, localPort=56913]
+2026-03-27T09:49:23.334+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [restartedMain] c.n.NotificationServiceApplication       : Started NotificationServiceApplication in 10.509 seconds (process running for 10.954)
+2026-03-27T09:52:31.174+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [http-nio-7507-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-27T09:52:31.179+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [http-nio-7507-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-03-27T09:52:31.183+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [http-nio-7507-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-03-27T09:52:31.675+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [http-nio-7507-exec-1] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 354 ms
+2026-03-27T09:54:21.775+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-27T09:59:21.795+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-27T10:04:21.806+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-27T10:09:21.820+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-27T10:14:21.838+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-27T10:17:20.595+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-03-27T10:17:20.605+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [Thread-1] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application NOTIFICATION-SERVICE with eureka with status DOWN
+2026-03-27T10:17:20.606+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [Thread-1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1774586840606, current=DOWN, previous=UP]
+2026-03-27T10:17:20.607+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_NOTIFICATION-SERVICE/localhost:NOTIFICATION-SERVICE:7507: registering service...
+2026-03-27T10:17:20.624+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_NOTIFICATION-SERVICE/localhost:NOTIFICATION-SERVICE:7507 - registration status: 204
+2026-03-27T10:17:20.633+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2026-03-27T10:17:20.635+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2026-03-27T10:17:20.637+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2026-03-27T10:17:21.623+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2026-03-27T10:17:21.656+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [Thread-1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-27T10:17:21.670+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-03-27T10:17:21.681+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-03-27T10:17:21.683+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [Thread-1] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2026-03-27T10:17:24.687+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [Thread-1] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2026-03-27T10:17:24.687+05:30  WARN 19144 --- [NOTIFICATION-SERVICE] [DiscoveryClient-%d] c.netflix.discovery.TimedSupervisorTask  : task supervisor shutting down, can't accept the task
+2026-03-27T10:17:24.697+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [Thread-1] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_NOTIFICATION-SERVICE/localhost:NOTIFICATION-SERVICE:7507 - deregister  status: 200
+2026-03-27T10:17:24.697+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [Thread-1] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2026-03-27T10:17:25.812+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [restartedMain] c.n.NotificationServiceApplication       : Starting NotificationServiceApplication using Java 21.0.6 with PID 19144 (C:\Users\Asus\Desktop\Payment-wallet\Notification-Service\target\classes started by Asus in C:\Users\Asus\Desktop\Payment-wallet\Notification-Service)
+2026-03-27T10:17:25.812+05:30 DEBUG 19144 --- [NOTIFICATION-SERVICE] [restartedMain] c.n.NotificationServiceApplication       : Running with Spring Boot v3.3.5, Spring v6.1.14
+2026-03-27T10:17:25.813+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [restartedMain] c.n.NotificationServiceApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-03-27T10:17:26.248+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-27T10:17:26.257+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 1 JPA repository interface.
+2026-03-27T10:17:26.386+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=a582e15e-15b6-305c-bc29-c3b8e0002aa5
+2026-03-27T10:17:26.702+05:30  WARN 19144 --- [NOTIFICATION-SERVICE] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-03-27T10:17:26.860+05:30  WARN 19144 --- [NOTIFICATION-SERVICE] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected/applied to a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies/advisors. If this bean does not have to be post-processed, declare it with ROLE_INFRASTRUCTURE.
+2026-03-27T10:17:27.117+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 7507 (http)
+2026-03-27T10:17:27.234+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-27T10:17:27.408+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2026-03-27T10:17:27.511+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-03-27T10:17:27.589+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1773 ms
+2026-03-27T10:17:27.761+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-27T10:17:27.833+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-03-27T10:17:27.849+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-27T10:17:27.899+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2026-03-27T10:17:27.950+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection org.postgresql.jdbc.PgConnection@123ccdb5
+2026-03-27T10:17:27.959+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2026-03-27T10:17:27.967+05:30  WARN 19144 --- [NOTIFICATION-SERVICE] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-27T10:17:28.152+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-27T10:17:28.510+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-27T10:17:28.793+05:30  WARN 19144 --- [NOTIFICATION-SERVICE] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-27T10:17:30.145+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-03-27T10:17:30.432+05:30  WARN 19144 --- [NOTIFICATION-SERVICE] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2026-03-27T10:17:31.479+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-03-27T10:17:31.592+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2026-03-27T10:17:31.674+05:30  WARN 19144 --- [NOTIFICATION-SERVICE] [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-03-27T10:17:31.765+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoints beneath base path '/actuator'
+2026-03-27T10:17:31.921+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-03-27T10:17:32.012+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-03-27T10:17:32.066+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-27T10:17:32.068+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-03-27T10:17:32.069+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-03-27T10:17:32.070+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-03-27T10:17:32.070+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-03-27T10:17:32.134+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-03-27T10:17:32.198+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-03-27T10:17:32.260+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-03-27T10:17:32.343+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-03-27T10:17:32.346+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-03-27T10:17:32.347+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-03-27T10:17:32.347+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1774586852347 with initial instances count: 8
+2026-03-27T10:17:32.352+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application NOTIFICATION-SERVICE with eureka with status UP
+2026-03-27T10:17:32.353+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1774586852353, current=UP, previous=STARTING]
+2026-03-27T10:17:32.354+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_NOTIFICATION-SERVICE/localhost:NOTIFICATION-SERVICE:7507: registering service...
+2026-03-27T10:17:32.359+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 7507 (http) with context path '/'
+2026-03-27T10:17:32.360+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 7507
+2026-03-27T10:17:32.366+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_NOTIFICATION-SERVICE/localhost:NOTIFICATION-SERVICE:7507 - registration status: 204
+2026-03-27T10:17:33.375+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-03-27T10:17:33.483+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [restartedMain] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-27T10:17:33.733+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [restartedMain] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#368f0bdd:0/SimpleConnection@e7cba45 [delegate=amqp://guest@127.0.0.1:5672/, localPort=52713]
+2026-03-27T10:17:34.238+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [restartedMain] c.n.NotificationServiceApplication       : Started NotificationServiceApplication in 9.473 seconds (process running for 1701.858)
+2026-03-27T10:17:34.759+05:30  INFO 19144 --- [NOTIFICATION-SERVICE] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation delta:
+
+
+==========================
+CONDITION EVALUATION DELTA
+==========================
+
+
+Positive matches:
+-----------------
+
+   ServletWebServerFactoryAutoConfiguration.ForwardedHeaderFilterConfiguration matched:
+      - @ConditionalOnProperty (server.forward-headers-strategy=framework) matched (OnPropertyCondition)
+      - @ConditionalOnMissingBean (types: org.springframework.web.filter.ForwardedHeaderFilter; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   ServletWebServerFactoryAutoConfiguration.ForwardedHeaderFilterConfiguration#tomcatForwardedHeaderFilterCustomizer matched:
+      - @ConditionalOnClass found required class 'org.apache.catalina.startup.Tomcat' (OnClassCondition)
+
+
+Negative matches:
+-----------------
+
+    None
+
+
+Exclusions:
+-----------
+
+    None
+
+
+Unconditional classes:
+----------------------
+
+    None
+
+
+
+2026-03-27T10:54:06.365+05:30  INFO 42480 --- [NOTIFICATION-SERVICE] [restartedMain] c.n.NotificationServiceApplication       : Starting NotificationServiceApplication using Java 21.0.6 with PID 42480 (C:\Users\Asus\Desktop\Payment-wallet\Notification-Service\target\classes started by Asus in C:\Users\Asus\Desktop\Payment-wallet\Notification-Service)
+2026-03-27T10:54:06.367+05:30 DEBUG 42480 --- [NOTIFICATION-SERVICE] [restartedMain] c.n.NotificationServiceApplication       : Running with Spring Boot v3.3.5, Spring v6.1.14
+2026-03-27T10:54:06.368+05:30  INFO 42480 --- [NOTIFICATION-SERVICE] [restartedMain] c.n.NotificationServiceApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-03-27T10:54:06.411+05:30  INFO 42480 --- [NOTIFICATION-SERVICE] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-03-27T10:54:06.413+05:30  INFO 42480 --- [NOTIFICATION-SERVICE] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-03-27T10:54:07.482+05:30  INFO 42480 --- [NOTIFICATION-SERVICE] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-27T10:54:07.617+05:30  INFO 42480 --- [NOTIFICATION-SERVICE] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 125 ms. Found 1 JPA repository interface.
+2026-03-27T10:54:07.857+05:30  INFO 42480 --- [NOTIFICATION-SERVICE] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=999cae6d-c25b-3596-96d9-d025f4955cc3
+2026-03-27T10:54:08.164+05:30  WARN 42480 --- [NOTIFICATION-SERVICE] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-03-27T10:54:08.169+05:30  WARN 42480 --- [NOTIFICATION-SERVICE] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected/applied to a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies/advisors. If this bean does not have to be post-processed, declare it with ROLE_INFRASTRUCTURE.
+2026-03-27T10:54:08.674+05:30  INFO 42480 --- [NOTIFICATION-SERVICE] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 7507 (http)
+2026-03-27T10:54:08.692+05:30  INFO 42480 --- [NOTIFICATION-SERVICE] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-27T10:54:08.692+05:30  INFO 42480 --- [NOTIFICATION-SERVICE] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2026-03-27T10:54:08.754+05:30  INFO 42480 --- [NOTIFICATION-SERVICE] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-03-27T10:54:08.755+05:30  INFO 42480 --- [NOTIFICATION-SERVICE] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2342 ms
+2026-03-27T10:54:09.150+05:30  INFO 42480 --- [NOTIFICATION-SERVICE] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-27T10:54:09.234+05:30  INFO 42480 --- [NOTIFICATION-SERVICE] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2026-03-27T10:54:09.276+05:30  INFO 42480 --- [NOTIFICATION-SERVICE] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-03-27T10:54:09.603+05:30  INFO 42480 --- [NOTIFICATION-SERVICE] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-27T10:54:09.638+05:30  INFO 42480 --- [NOTIFICATION-SERVICE] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-27T10:54:09.812+05:30  INFO 42480 --- [NOTIFICATION-SERVICE] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@40c87779
+2026-03-27T10:54:09.814+05:30  INFO 42480 --- [NOTIFICATION-SERVICE] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-03-27T10:54:09.856+05:30  WARN 42480 --- [NOTIFICATION-SERVICE] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-27T10:54:10.809+05:30  INFO 42480 --- [NOTIFICATION-SERVICE] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-27T10:54:10.878+05:30  INFO 42480 --- [NOTIFICATION-SERVICE] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-27T10:54:11.684+05:30  WARN 42480 --- [NOTIFICATION-SERVICE] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-27T10:54:13.268+05:30  INFO 42480 --- [NOTIFICATION-SERVICE] [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-03-27T10:54:14.402+05:30  WARN 42480 --- [NOTIFICATION-SERVICE] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2026-03-27T10:54:15.991+05:30  INFO 42480 --- [NOTIFICATION-SERVICE] [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-03-27T10:54:16.683+05:30  INFO 42480 --- [NOTIFICATION-SERVICE] [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2026-03-27T10:54:16.802+05:30  WARN 42480 --- [NOTIFICATION-SERVICE] [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-03-27T10:54:16.880+05:30  INFO 42480 --- [NOTIFICATION-SERVICE] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoints beneath base path '/actuator'
+2026-03-27T10:54:17.281+05:30  INFO 42480 --- [NOTIFICATION-SERVICE] [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-03-27T10:54:17.317+05:30  INFO 42480 --- [NOTIFICATION-SERVICE] [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-03-27T10:54:17.330+05:30  INFO 42480 --- [NOTIFICATION-SERVICE] [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-27T10:54:17.347+05:30  INFO 42480 --- [NOTIFICATION-SERVICE] [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-03-27T10:54:17.394+05:30  INFO 42480 --- [NOTIFICATION-SERVICE] [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-03-27T10:54:17.395+05:30  INFO 42480 --- [NOTIFICATION-SERVICE] [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-03-27T10:54:17.398+05:30  INFO 42480 --- [NOTIFICATION-SERVICE] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-03-27T10:54:17.400+05:30  INFO 42480 --- [NOTIFICATION-SERVICE] [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-03-27T10:54:17.402+05:30  INFO 42480 --- [NOTIFICATION-SERVICE] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-03-27T10:54:17.404+05:30  INFO 42480 --- [NOTIFICATION-SERVICE] [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-03-27T10:54:18.193+05:30  INFO 42480 --- [NOTIFICATION-SERVICE] [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-03-27T10:54:18.197+05:30  INFO 42480 --- [NOTIFICATION-SERVICE] [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-03-27T10:54:18.199+05:30  INFO 42480 --- [NOTIFICATION-SERVICE] [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-03-27T10:54:18.205+05:30  INFO 42480 --- [NOTIFICATION-SERVICE] [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1774589058202 with initial instances count: 8
+2026-03-27T10:54:18.219+05:30  INFO 42480 --- [NOTIFICATION-SERVICE] [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application NOTIFICATION-SERVICE with eureka with status UP
+2026-03-27T10:54:18.222+05:30  INFO 42480 --- [NOTIFICATION-SERVICE] [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1774589058222, current=UP, previous=STARTING]
+2026-03-27T10:54:18.225+05:30  INFO 42480 --- [NOTIFICATION-SERVICE] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_NOTIFICATION-SERVICE/localhost:NOTIFICATION-SERVICE:7507: registering service...
+2026-03-27T10:54:18.276+05:30  INFO 42480 --- [NOTIFICATION-SERVICE] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 7507 (http) with context path '/'
+2026-03-27T10:54:18.278+05:30  INFO 42480 --- [NOTIFICATION-SERVICE] [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 7507
+2026-03-27T10:54:18.297+05:30  INFO 42480 --- [NOTIFICATION-SERVICE] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_NOTIFICATION-SERVICE/localhost:NOTIFICATION-SERVICE:7507 - registration status: 204
+2026-03-27T10:54:19.299+05:30  INFO 42480 --- [NOTIFICATION-SERVICE] [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-03-27T10:54:19.324+05:30  INFO 42480 --- [NOTIFICATION-SERVICE] [restartedMain] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-27T10:54:19.577+05:30  INFO 42480 --- [NOTIFICATION-SERVICE] [restartedMain] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#2b549529:0/SimpleConnection@4063fa64 [delegate=amqp://guest@127.0.0.1:5672/, localPort=56603]
+2026-03-27T10:54:19.860+05:30  INFO 42480 --- [NOTIFICATION-SERVICE] [restartedMain] c.n.NotificationServiceApplication       : Started NotificationServiceApplication in 14.994 seconds (process running for 15.525)
+2026-03-27T10:59:17.427+05:30  INFO 42480 --- [NOTIFICATION-SERVICE] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-27T11:04:17.436+05:30  INFO 42480 --- [NOTIFICATION-SERVICE] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-27T11:09:17.443+05:30  INFO 42480 --- [NOTIFICATION-SERVICE] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-27T11:14:17.471+05:30  INFO 42480 --- [NOTIFICATION-SERVICE] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-27T12:00:32.749+05:30  INFO 34596 --- [NOTIFICATION-SERVICE] [restartedMain] c.n.NotificationServiceApplication       : Starting NotificationServiceApplication using Java 21.0.6 with PID 34596 (C:\Users\Asus\Desktop\Payment-wallet\Notification-Service\target\classes started by Asus in C:\Users\Asus\Desktop\Payment-wallet\Notification-Service)
+2026-03-27T12:00:32.757+05:30 DEBUG 34596 --- [NOTIFICATION-SERVICE] [restartedMain] c.n.NotificationServiceApplication       : Running with Spring Boot v3.3.5, Spring v6.1.14
+2026-03-27T12:00:32.760+05:30  INFO 34596 --- [NOTIFICATION-SERVICE] [restartedMain] c.n.NotificationServiceApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-03-27T12:00:32.896+05:30  INFO 34596 --- [NOTIFICATION-SERVICE] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-03-27T12:00:32.897+05:30  INFO 34596 --- [NOTIFICATION-SERVICE] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-03-27T12:00:35.423+05:30  INFO 34596 --- [NOTIFICATION-SERVICE] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-27T12:00:35.686+05:30  INFO 34596 --- [NOTIFICATION-SERVICE] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 249 ms. Found 1 JPA repository interface.
+2026-03-27T12:00:36.185+05:30  INFO 34596 --- [NOTIFICATION-SERVICE] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=999cae6d-c25b-3596-96d9-d025f4955cc3
+2026-03-27T12:00:36.803+05:30  WARN 34596 --- [NOTIFICATION-SERVICE] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-03-27T12:00:36.811+05:30  WARN 34596 --- [NOTIFICATION-SERVICE] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected/applied to a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies/advisors. If this bean does not have to be post-processed, declare it with ROLE_INFRASTRUCTURE.
+2026-03-27T12:00:37.693+05:30  INFO 34596 --- [NOTIFICATION-SERVICE] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 7507 (http)
+2026-03-27T12:00:37.722+05:30  INFO 34596 --- [NOTIFICATION-SERVICE] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-27T12:00:37.723+05:30  INFO 34596 --- [NOTIFICATION-SERVICE] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2026-03-27T12:00:37.836+05:30  INFO 34596 --- [NOTIFICATION-SERVICE] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-03-27T12:00:37.837+05:30  INFO 34596 --- [NOTIFICATION-SERVICE] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4936 ms
+2026-03-27T12:00:38.532+05:30  INFO 34596 --- [NOTIFICATION-SERVICE] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-27T12:00:38.695+05:30  INFO 34596 --- [NOTIFICATION-SERVICE] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2026-03-27T12:00:38.776+05:30  INFO 34596 --- [NOTIFICATION-SERVICE] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-03-27T12:00:39.402+05:30  INFO 34596 --- [NOTIFICATION-SERVICE] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-27T12:00:39.484+05:30  INFO 34596 --- [NOTIFICATION-SERVICE] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-27T12:00:39.785+05:30  INFO 34596 --- [NOTIFICATION-SERVICE] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@61f2c1ae
+2026-03-27T12:00:39.787+05:30  INFO 34596 --- [NOTIFICATION-SERVICE] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-03-27T12:00:39.890+05:30  WARN 34596 --- [NOTIFICATION-SERVICE] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-27T12:00:42.250+05:30  INFO 34596 --- [NOTIFICATION-SERVICE] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-27T12:00:42.476+05:30  INFO 34596 --- [NOTIFICATION-SERVICE] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-27T12:00:44.018+05:30  WARN 34596 --- [NOTIFICATION-SERVICE] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-27T12:00:45.793+05:30  INFO 34596 --- [NOTIFICATION-SERVICE] [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-03-27T12:00:46.256+05:30  WARN 34596 --- [NOTIFICATION-SERVICE] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2026-03-27T12:00:47.280+05:30  INFO 34596 --- [NOTIFICATION-SERVICE] [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-03-27T12:00:47.310+05:30  INFO 34596 --- [NOTIFICATION-SERVICE] [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2026-03-27T12:00:47.403+05:30  WARN 34596 --- [NOTIFICATION-SERVICE] [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-03-27T12:00:47.417+05:30  INFO 34596 --- [NOTIFICATION-SERVICE] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoints beneath base path '/actuator'
+2026-03-27T12:00:47.547+05:30  INFO 34596 --- [NOTIFICATION-SERVICE] [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-03-27T12:00:47.576+05:30  INFO 34596 --- [NOTIFICATION-SERVICE] [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-03-27T12:00:47.582+05:30  INFO 34596 --- [NOTIFICATION-SERVICE] [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-27T12:00:47.592+05:30  INFO 34596 --- [NOTIFICATION-SERVICE] [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-03-27T12:00:47.592+05:30  INFO 34596 --- [NOTIFICATION-SERVICE] [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-03-27T12:00:47.593+05:30  INFO 34596 --- [NOTIFICATION-SERVICE] [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-03-27T12:00:47.594+05:30  INFO 34596 --- [NOTIFICATION-SERVICE] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-03-27T12:00:47.594+05:30  INFO 34596 --- [NOTIFICATION-SERVICE] [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-03-27T12:00:47.595+05:30  INFO 34596 --- [NOTIFICATION-SERVICE] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-03-27T12:00:47.595+05:30  INFO 34596 --- [NOTIFICATION-SERVICE] [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-03-27T12:00:47.975+05:30  INFO 34596 --- [NOTIFICATION-SERVICE] [restartedMain] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://127.0.0.1:8761/eureka/}, exception=I/O error on GET request for "http://127.0.0.1:8761/eureka/apps/": Connect to http://127.0.0.1:8761 [/127.0.0.1] failed: Connection refused: getsockopt stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://127.0.0.1:8761/eureka/apps/": Connect to http://127.0.0.1:8761 [/127.0.0.1] failed: Connection refused: getsockopt
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:915)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:895)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:790)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:672)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.getApplicationsInternal(RestTemplateEurekaHttpClient.java:145)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.getApplications(RestTemplateEurekaHttpClient.java:135)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
+	at com.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry(DiscoveryClient.java:1046)
+	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:961)
+	at com.netflix.discovery.DiscoveryClient.<init>(DiscoveryClient.java:410)
+	at com.netflix.discovery.DiscoveryClient.<init>(DiscoveryClient.java:245)
+	at com.netflix.discovery.DiscoveryClient.<init>(DiscoveryClient.java:240)
+	at org.springframework.cloud.netflix.eureka.CloudEurekaClient.<init>(CloudEurekaClient.java:68)
+	at org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration$RefreshableEurekaClientConfiguration.eurekaClient(EurekaClientAutoConfiguration.java:321)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:146)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:644)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:636)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1355)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1185)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$1(AbstractBeanFactory.java:376)
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.getBean(GenericScope.java:375)
+	at org.springframework.cloud.context.scope.GenericScope.get(GenericScope.java:179)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:373)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.aop.target.SimpleBeanTargetSource.getTarget(SimpleBeanTargetSource.java:35)
+	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaRegistration.getTargetObject(EurekaRegistration.java:128)
+	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaRegistration.getEurekaClient(EurekaRegistration.java:116)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:281)
+	at org.springframework.cloud.context.scope.GenericScope$LockedScopedProxyFactoryBean.invoke(GenericScope.java:482)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:720)
+	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaRegistration$$SpringCGLIB$$0.getEurekaClient(<generated>)
+	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry.maybeInitializeClient(EurekaServiceRegistry.java:83)
+	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry.register(EurekaServiceRegistry.java:66)
+	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration.start(EurekaAutoServiceRegistration.java:89)
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:285)
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:472)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:257)
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:202)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:990)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:628)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at com.notification.NotificationServiceApplication.main(NotificationServiceApplication.java:10)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://127.0.0.1:8761 [/127.0.0.1] failed: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:751)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.lambda$connectSocket$0(PlainConnectionSocketFactory.java:91)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:571)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:90)
+	at org.apache.hc.client5.http.socket.ConnectionSocketFactory.connectSocket(ConnectionSocketFactory.java:123)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:189)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:450)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:162)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:172)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:142)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:113)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:152)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:116)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:70)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:112)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$3(RestTemplateTransportClientFactory.java:170)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:88)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:72)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:889)
+	... 66 more
+
+2026-03-27T12:00:47.977+05:30  WARN 34596 --- [NOTIFICATION-SERVICE] [restartedMain] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on GET request for "http://127.0.0.1:8761/eureka/apps/": Connect to http://127.0.0.1:8761 [/127.0.0.1] failed: Connection refused: getsockopt
+2026-03-27T12:00:47.978+05:30  INFO 34596 --- [NOTIFICATION-SERVICE] [restartedMain] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_NOTIFICATION-SERVICE/localhost:NOTIFICATION-SERVICE:7507 - was unable to refresh its cache! This periodic background refresh will be retried in 30 seconds. status = Cannot execute request on any known server stacktrace = com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
+	at com.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry(DiscoveryClient.java:1046)
+	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:961)
+	at com.netflix.discovery.DiscoveryClient.<init>(DiscoveryClient.java:410)
+	at com.netflix.discovery.DiscoveryClient.<init>(DiscoveryClient.java:245)
+	at com.netflix.discovery.DiscoveryClient.<init>(DiscoveryClient.java:240)
+	at org.springframework.cloud.netflix.eureka.CloudEurekaClient.<init>(CloudEurekaClient.java:68)
+	at org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration$RefreshableEurekaClientConfiguration.eurekaClient(EurekaClientAutoConfiguration.java:321)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:146)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:644)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:636)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1355)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1185)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$1(AbstractBeanFactory.java:376)
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.getBean(GenericScope.java:375)
+	at org.springframework.cloud.context.scope.GenericScope.get(GenericScope.java:179)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:373)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.aop.target.SimpleBeanTargetSource.getTarget(SimpleBeanTargetSource.java:35)
+	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaRegistration.getTargetObject(EurekaRegistration.java:128)
+	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaRegistration.getEurekaClient(EurekaRegistration.java:116)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:281)
+	at org.springframework.cloud.context.scope.GenericScope$LockedScopedProxyFactoryBean.invoke(GenericScope.java:482)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:720)
+	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaRegistration$$SpringCGLIB$$0.getEurekaClient(<generated>)
+	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry.maybeInitializeClient(EurekaServiceRegistry.java:83)
+	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry.register(EurekaServiceRegistry.java:66)
+	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration.start(EurekaAutoServiceRegistration.java:89)
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:285)
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:472)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:257)
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:202)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:990)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:628)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at com.notification.NotificationServiceApplication.main(NotificationServiceApplication.java:10)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+
+2026-03-27T12:00:47.979+05:30  INFO 34596 --- [NOTIFICATION-SERVICE] [restartedMain] com.netflix.discovery.DiscoveryClient    : Initial registry fetch from primary servers failed
+2026-03-27T12:00:47.980+05:30  WARN 34596 --- [NOTIFICATION-SERVICE] [restartedMain] com.netflix.discovery.DiscoveryClient    : Using default backup registry implementation which does not do anything.
+2026-03-27T12:00:47.980+05:30  INFO 34596 --- [NOTIFICATION-SERVICE] [restartedMain] com.netflix.discovery.DiscoveryClient    : Initial registry fetch from backup servers failed
+2026-03-27T12:00:47.981+05:30  INFO 34596 --- [NOTIFICATION-SERVICE] [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-03-27T12:00:47.984+05:30  INFO 34596 --- [NOTIFICATION-SERVICE] [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-03-27T12:00:47.989+05:30  INFO 34596 --- [NOTIFICATION-SERVICE] [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1774593047987 with initial instances count: 0
+2026-03-27T12:00:47.999+05:30  INFO 34596 --- [NOTIFICATION-SERVICE] [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application NOTIFICATION-SERVICE with eureka with status UP
+2026-03-27T12:00:48.001+05:30  INFO 34596 --- [NOTIFICATION-SERVICE] [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1774593048001, current=UP, previous=STARTING]
+2026-03-27T12:00:48.004+05:30  INFO 34596 --- [NOTIFICATION-SERVICE] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_NOTIFICATION-SERVICE/localhost:NOTIFICATION-SERVICE:7507: registering service...
+2026-03-27T12:00:48.054+05:30  INFO 34596 --- [NOTIFICATION-SERVICE] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 7507 (http) with context path '/'
+2026-03-27T12:00:48.055+05:30  INFO 34596 --- [NOTIFICATION-SERVICE] [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 7507
+2026-03-27T12:00:48.107+05:30  INFO 34596 --- [NOTIFICATION-SERVICE] [DiscoveryClient-InstanceInfoReplicator-%d] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://127.0.0.1:8761/eureka/}, exception=I/O error on POST request for "http://127.0.0.1:8761/eureka/apps/NOTIFICATION-SERVICE": Connect to http://127.0.0.1:8761 [/127.0.0.1] failed: Connection refused: getsockopt stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://127.0.0.1:8761/eureka/apps/NOTIFICATION-SERVICE": Connect to http://127.0.0.1:8761 [/127.0.0.1] failed: Connection refused: getsockopt
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:915)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:895)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:790)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:672)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.register(RestTemplateEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:828)
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:125)
+	at com.netflix.discovery.InstanceInfoReplicator$2.run(InstanceInfoReplicator.java:105)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://127.0.0.1:8761 [/127.0.0.1] failed: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:751)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.lambda$connectSocket$0(PlainConnectionSocketFactory.java:91)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:571)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:90)
+	at org.apache.hc.client5.http.socket.ConnectionSocketFactory.connectSocket(ConnectionSocketFactory.java:123)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:189)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:450)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:162)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:172)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:142)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:113)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:152)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:116)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:70)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:112)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$3(RestTemplateTransportClientFactory.java:170)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:88)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:72)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:889)
+	... 22 more
+
+2026-03-27T12:00:48.107+05:30  WARN 34596 --- [NOTIFICATION-SERVICE] [DiscoveryClient-InstanceInfoReplicator-%d] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on POST request for "http://127.0.0.1:8761/eureka/apps/NOTIFICATION-SERVICE": Connect to http://127.0.0.1:8761 [/127.0.0.1] failed: Connection refused: getsockopt
+2026-03-27T12:00:48.109+05:30  WARN 34596 --- [NOTIFICATION-SERVICE] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_NOTIFICATION-SERVICE/localhost:NOTIFICATION-SERVICE:7507 - registration failed Cannot execute request on any known server
+
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-2.0.3.jar:2.0.3]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-2.0.3.jar:2.0.3]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) ~[eureka-client-2.0.3.jar:2.0.3]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76) ~[eureka-client-2.0.3.jar:2.0.3]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-2.0.3.jar:2.0.3]
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:828) ~[eureka-client-2.0.3.jar:2.0.3]
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:125) ~[eureka-client-2.0.3.jar:2.0.3]
+	at com.netflix.discovery.InstanceInfoReplicator$2.run(InstanceInfoReplicator.java:105) ~[eureka-client-2.0.3.jar:2.0.3]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2026-03-27T12:00:48.114+05:30  WARN 34596 --- [NOTIFICATION-SERVICE] [DiscoveryClient-InstanceInfoReplicator-%d] c.n.discovery.InstanceInfoReplicator     : There was a problem with the instance info replicator
+
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-2.0.3.jar:2.0.3]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-2.0.3.jar:2.0.3]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) ~[eureka-client-2.0.3.jar:2.0.3]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76) ~[eureka-client-2.0.3.jar:2.0.3]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-2.0.3.jar:2.0.3]
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:828) ~[eureka-client-2.0.3.jar:2.0.3]
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:125) ~[eureka-client-2.0.3.jar:2.0.3]
+	at com.netflix.discovery.InstanceInfoReplicator$2.run(InstanceInfoReplicator.java:105) ~[eureka-client-2.0.3.jar:2.0.3]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+

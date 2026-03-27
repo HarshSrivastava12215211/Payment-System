@@ -1,0 +1,87 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------------< com.payment-app:Eureka-Server >--------------------
+[INFO] Building Eureka-Server 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:3.3.5:run (default-cli) > test-compile @ Eureka-Server >>>
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ Eureka-Server ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 0 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ Eureka-Server ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ Eureka-Server ---
+[INFO] skip non existing resourceDirectory C:\Users\Asus\Desktop\Payment-wallet\Eureka-Server\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ Eureka-Server ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] <<< spring-boot:3.3.5:run (default-cli) < test-compile @ Eureka-Server <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:3.3.5:run (default-cli) @ Eureka-Server ---
+[INFO] Attaching agents: []
+Standard Commons Logging discovery in action with spring-jcl: please remove commons-logging.jar from classpath in order to avoid potential conflicts
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.5)
+
+2026-03-27T11:21:51.054+05:30  INFO 24876 --- [Eureka-Server] [           main] com.admin.EurekaServerApplication        : Starting EurekaServerApplication using Java 21.0.6 with PID 24876 (C:\Users\Asus\Desktop\Payment-wallet\Eureka-Server\target\classes started by Asus in C:\Users\Asus\Desktop\Payment-wallet\Eureka-Server)
+2026-03-27T11:21:51.057+05:30  INFO 24876 --- [Eureka-Server] [           main] com.admin.EurekaServerApplication        : No active profile set, falling back to 1 default profile: "default"
+2026-03-27T11:21:52.062+05:30  INFO 24876 --- [Eureka-Server] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=af7a06c7-96c4-3a79-8e65-2b528cc99d42
+2026-03-27T11:21:52.110+05:30  WARN 24876 --- [Eureka-Server] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-03-27T11:21:52.113+05:30  WARN 24876 --- [Eureka-Server] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected/applied to a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies/advisors. If this bean does not have to be post-processed, declare it with ROLE_INFRASTRUCTURE.
+2026-03-27T11:21:52.315+05:30  INFO 24876 --- [Eureka-Server] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8761 (http)
+2026-03-27T11:21:52.327+05:30  INFO 24876 --- [Eureka-Server] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-27T11:21:52.328+05:30  INFO 24876 --- [Eureka-Server] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2026-03-27T11:21:52.396+05:30  INFO 24876 --- [Eureka-Server] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-03-27T11:21:52.397+05:30  INFO 24876 --- [Eureka-Server] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1293 ms
+Standard Commons Logging discovery in action with spring-jcl: please remove commons-logging.jar from classpath in order to avoid potential conflicts
+2026-03-27T11:21:53.196+05:30  INFO 24876 --- [Eureka-Server] [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2026-03-27T11:21:53.198+05:30  INFO 24876 --- [Eureka-Server] [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2026-03-27T11:21:53.355+05:30  INFO 24876 --- [Eureka-Server] [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2026-03-27T11:21:53.356+05:30  INFO 24876 --- [Eureka-Server] [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2026-03-27T11:21:54.765+05:30  INFO 24876 --- [Eureka-Server] [           main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-03-27T11:21:55.976+05:30  INFO 24876 --- [Eureka-Server] [           main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-03-27T11:21:56.050+05:30  WARN 24876 --- [Eureka-Server] [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-03-27T11:21:56.078+05:30  INFO 24876 --- [Eureka-Server] [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-03-27T11:21:56.093+05:30  INFO 24876 --- [Eureka-Server] [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-03-27T11:21:56.094+05:30  INFO 24876 --- [Eureka-Server] [           main] com.netflix.discovery.DiscoveryClient    : Client configured to neither register nor query for data.
+2026-03-27T11:21:56.096+05:30  INFO 24876 --- [Eureka-Server] [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1774590716096 with initial instances count: 0
+2026-03-27T11:21:56.129+05:30  INFO 24876 --- [Eureka-Server] [           main] c.n.eureka.DefaultEurekaServerContext    : Initializing ...
+2026-03-27T11:21:56.131+05:30  WARN 24876 --- [Eureka-Server] [           main] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+2026-03-27T11:21:56.141+05:30  INFO 24876 --- [Eureka-Server] [           main] c.n.e.registry.AbstractInstanceRegistry  : Finished initializing remote region registries. All known remote regions: []
+2026-03-27T11:21:56.141+05:30  INFO 24876 --- [Eureka-Server] [           main] c.n.eureka.DefaultEurekaServerContext    : Initialized
+2026-03-27T11:21:56.153+05:30  INFO 24876 --- [Eureka-Server] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoints beneath base path '/actuator'
+2026-03-27T11:21:56.194+05:30  INFO 24876 --- [Eureka-Server] [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application EUREKA-SERVER with eureka with status UP
+2026-03-27T11:21:56.203+05:30  INFO 24876 --- [Eureka-Server] [       Thread-9] o.s.c.n.e.server.EurekaServerBootstrap   : isAws returned false
+2026-03-27T11:21:56.204+05:30  INFO 24876 --- [Eureka-Server] [       Thread-9] o.s.c.n.e.server.EurekaServerBootstrap   : Initialized server context
+2026-03-27T11:21:56.204+05:30  INFO 24876 --- [Eureka-Server] [       Thread-9] c.n.e.r.PeerAwareInstanceRegistryImpl    : Got 1 instances from neighboring DS node
+2026-03-27T11:21:56.205+05:30  INFO 24876 --- [Eureka-Server] [       Thread-9] c.n.e.r.PeerAwareInstanceRegistryImpl    : Renew threshold is: 1
+2026-03-27T11:21:56.205+05:30  INFO 24876 --- [Eureka-Server] [       Thread-9] c.n.e.r.PeerAwareInstanceRegistryImpl    : Changing status to UP
+2026-03-27T11:21:56.209+05:30  INFO 24876 --- [Eureka-Server] [       Thread-9] e.s.EurekaServerInitializerConfiguration : Started Eureka Server
+2026-03-27T11:21:56.218+05:30  INFO 24876 --- [Eureka-Server] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8761 (http) with context path '/'
+2026-03-27T11:21:56.219+05:30  INFO 24876 --- [Eureka-Server] [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8761
+2026-03-27T11:21:57.208+05:30  INFO 24876 --- [Eureka-Server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2026-03-27T11:21:57.225+05:30  INFO 24876 --- [Eureka-Server] [           main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-03-27T11:21:57.241+05:30  INFO 24876 --- [Eureka-Server] [           main] com.admin.EurekaServerApplication        : Started EurekaServerApplication in 7.67 seconds (process running for 8.041)
+2026-03-27T11:21:58.208+05:30  INFO 24876 --- [Eureka-Server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2026-03-27T11:21:59.209+05:30  INFO 24876 --- [Eureka-Server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2026-03-27T11:21:59.862+05:30  INFO 24876 --- [Eureka-Server] [nio-8761-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-27T11:21:59.863+05:30  INFO 24876 --- [Eureka-Server] [nio-8761-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-03-27T11:21:59.865+05:30  INFO 24876 --- [Eureka-Server] [nio-8761-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-03-27T11:22:00.087+05:30  INFO 24876 --- [Eureka-Server] [nio-8761-exec-2] c.n.e.registry.AbstractInstanceRegistry  : Registered instance CONFIG-SERVIER/localhost:Config-Servier:7512 with status UP (replication=false)
+2026-03-27T11:22:00.209+05:30  INFO 24876 --- [Eureka-Server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2026-03-27T11:22:01.210+05:30  INFO 24876 --- [Eureka-Server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 1ms
+2026-03-27T11:22:02.211+05:30  INFO 24876 --- [Eureka-Server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2026-03-27T11:22:03.211+05:30  INFO 24876 --- [Eureka-Server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms

@@ -1,0 +1,114 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.payment:Transaction-Service:jar:0.0.1-SNAPSHOT
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: org.springframework.boot:spring-boot-starter-actuator:jar -> duplicate declaration of version (?) @ line 110, column 15
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ------------------< com.payment:Transaction-Service >-------------------
+[INFO] Building Transaction-Service 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:3.3.5:run (default-cli) > test-compile @ Transaction-Service >>>
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ Transaction-Service ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 0 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ Transaction-Service ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ Transaction-Service ---
+[INFO] skip non existing resourceDirectory C:\Users\Asus\Desktop\Payment-wallet\Transaction-Service\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ Transaction-Service ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] <<< spring-boot:3.3.5:run (default-cli) < test-compile @ Transaction-Service <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:3.3.5:run (default-cli) @ Transaction-Service ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.5)
+
+2026-03-27T10:53:45.932+05:30  INFO 2312 --- [Transaction-Service] [  restartedMain] c.t.TransactionServiceApplication        : Starting TransactionServiceApplication using Java 21.0.6 with PID 2312 (C:\Users\Asus\Desktop\Payment-wallet\Transaction-Service\target\classes started by Asus in C:\Users\Asus\Desktop\Payment-wallet\Transaction-Service)
+2026-03-27T10:53:45.935+05:30 DEBUG 2312 --- [Transaction-Service] [  restartedMain] c.t.TransactionServiceApplication        : Running with Spring Boot v3.3.5, Spring v6.1.14
+2026-03-27T10:53:45.936+05:30  INFO 2312 --- [Transaction-Service] [  restartedMain] c.t.TransactionServiceApplication        : No active profile set, falling back to 1 default profile: "default"
+2026-03-27T10:53:45.981+05:30  INFO 2312 --- [Transaction-Service] [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-03-27T10:53:45.982+05:30  INFO 2312 --- [Transaction-Service] [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-03-27T10:53:47.018+05:30  INFO 2312 --- [Transaction-Service] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-27T10:53:47.134+05:30  INFO 2312 --- [Transaction-Service] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 109 ms. Found 2 JPA repository interfaces.
+2026-03-27T10:53:47.440+05:30  INFO 2312 --- [Transaction-Service] [  restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=bd9023a4-6dac-3546-b66a-f0a87a060745
+2026-03-27T10:53:47.732+05:30  WARN 2312 --- [Transaction-Service] [  restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-03-27T10:53:47.737+05:30  WARN 2312 --- [Transaction-Service] [  restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected/applied to a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies/advisors. If this bean does not have to be post-processed, declare it with ROLE_INFRASTRUCTURE.
+2026-03-27T10:53:48.160+05:30  INFO 2312 --- [Transaction-Service] [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 7506 (http)
+2026-03-27T10:53:48.172+05:30  INFO 2312 --- [Transaction-Service] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-27T10:53:48.173+05:30  INFO 2312 --- [Transaction-Service] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2026-03-27T10:53:48.216+05:30  INFO 2312 --- [Transaction-Service] [  restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-03-27T10:53:48.218+05:30  INFO 2312 --- [Transaction-Service] [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2235 ms
+2026-03-27T10:53:48.606+05:30  INFO 2312 --- [Transaction-Service] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-27T10:53:48.746+05:30  INFO 2312 --- [Transaction-Service] [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4e46fe70
+2026-03-27T10:53:48.748+05:30  INFO 2312 --- [Transaction-Service] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-03-27T10:53:48.783+05:30  INFO 2312 --- [Transaction-Service] [  restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-27T10:53:48.833+05:30  INFO 2312 --- [Transaction-Service] [  restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2026-03-27T10:53:48.861+05:30  INFO 2312 --- [Transaction-Service] [  restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-03-27T10:53:49.108+05:30  INFO 2312 --- [Transaction-Service] [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-27T10:53:49.915+05:30  INFO 2312 --- [Transaction-Service] [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-27T10:53:49.918+05:30  INFO 2312 --- [Transaction-Service] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-27T10:53:50.525+05:30  WARN 2312 --- [Transaction-Service] [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-27T10:53:52.523+05:30  INFO 2312 --- [Transaction-Service] [  restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-03-27T10:53:52.980+05:30  WARN 2312 --- [Transaction-Service] [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2026-03-27T10:53:54.018+05:30  INFO 2312 --- [Transaction-Service] [  restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-03-27T10:53:54.067+05:30  INFO 2312 --- [Transaction-Service] [  restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2026-03-27T10:53:54.162+05:30  WARN 2312 --- [Transaction-Service] [  restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-03-27T10:53:54.207+05:30  INFO 2312 --- [Transaction-Service] [  restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoints beneath base path '/actuator'
+2026-03-27T10:53:54.290+05:30  INFO 2312 --- [Transaction-Service] [  restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-03-27T10:53:54.313+05:30  INFO 2312 --- [Transaction-Service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-03-27T10:53:54.318+05:30  INFO 2312 --- [Transaction-Service] [  restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-27T10:53:54.324+05:30  INFO 2312 --- [Transaction-Service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-03-27T10:53:54.325+05:30  INFO 2312 --- [Transaction-Service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-03-27T10:53:54.325+05:30  INFO 2312 --- [Transaction-Service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-03-27T10:53:54.325+05:30  INFO 2312 --- [Transaction-Service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-03-27T10:53:54.326+05:30  INFO 2312 --- [Transaction-Service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-03-27T10:53:54.326+05:30  INFO 2312 --- [Transaction-Service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-03-27T10:53:54.326+05:30  INFO 2312 --- [Transaction-Service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-03-27T10:53:54.639+05:30  INFO 2312 --- [Transaction-Service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-03-27T10:53:54.642+05:30  INFO 2312 --- [Transaction-Service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-03-27T10:53:54.644+05:30  INFO 2312 --- [Transaction-Service] [  restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-03-27T10:53:54.646+05:30  INFO 2312 --- [Transaction-Service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1774589034645 with initial instances count: 5
+2026-03-27T10:53:54.661+05:30  INFO 2312 --- [Transaction-Service] [  restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application TRANSACTION-SERVICE with eureka with status UP
+2026-03-27T10:53:54.662+05:30  INFO 2312 --- [Transaction-Service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1774589034662, current=UP, previous=STARTING]
+2026-03-27T10:53:54.664+05:30  INFO 2312 --- [Transaction-Service] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_TRANSACTION-SERVICE/localhost:Transaction-Service:7506: registering service...
+2026-03-27T10:53:54.683+05:30  INFO 2312 --- [Transaction-Service] [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 7506 (http) with context path '/'
+2026-03-27T10:53:54.683+05:30  INFO 2312 --- [Transaction-Service] [  restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 7506
+2026-03-27T10:53:54.699+05:30  INFO 2312 --- [Transaction-Service] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_TRANSACTION-SERVICE/localhost:Transaction-Service:7506 - registration status: 204
+2026-03-27T10:53:55.693+05:30  INFO 2312 --- [Transaction-Service] [  restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-03-27T10:53:55.710+05:30  INFO 2312 --- [Transaction-Service] [  restartedMain] c.t.TransactionServiceApplication        : Started TransactionServiceApplication in 11.214 seconds (process running for 11.679)
+2026-03-27T10:58:54.337+05:30  INFO 2312 --- [Transaction-Service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-27T11:03:54.351+05:30  INFO 2312 --- [Transaction-Service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-27T11:08:54.369+05:30  INFO 2312 --- [Transaction-Service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  17:42 min
+[INFO] Finished at: 2026-03-27T11:11:24+05:30
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.springframework.boot:spring-boot-maven-plugin:3.3.5:run (default-cli) on project Transaction-Service: Process terminated with exit code: 1 -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
