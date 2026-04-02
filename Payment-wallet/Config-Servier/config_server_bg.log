@@ -1,9 +1,0 @@
-[INFO] Scanning for projects...
-[INFO] 
-[INFO] -------------------< com.payment-app:Config-Servier >-------------------
-[INFO] Building Config-Servier 0.0.1-SNAPSHOT
-[INFO]   from pom.xml
-[INFO] --------------------------------[ jar ]---------------------------------
-[INFO] 
-[INFO] >>> spring-boot:3.3.5:run (default-cli) > test-compile @ Config-Servier >>>
-Terminate batch job (Y/N)? Terminate batch job (Y/N)? 
