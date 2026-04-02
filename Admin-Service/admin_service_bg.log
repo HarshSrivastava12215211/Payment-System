@@ -1,0 +1,263 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------------< com.payment-app:Admin-Service >--------------------
+[INFO] Building Admin-Service 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:3.3.5:run (default-cli) > test-compile @ Admin-Service >>>
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ Admin-Service ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 0 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ Admin-Service ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ Admin-Service ---
+[INFO] skip non existing resourceDirectory C:\Users\Asus\Desktop\Payment-wallet\Admin-Service\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ Admin-Service ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] <<< spring-boot:3.3.5:run (default-cli) < test-compile @ Admin-Service <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:3.3.5:run (default-cli) @ Admin-Service ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.5)
+
+2026-03-27T09:46:22.742+05:30  INFO 11820 --- [Admin-Service] [  restartedMain] com.admin.AdminServiceApplication        : Starting AdminServiceApplication using Java 21.0.6 with PID 11820 (C:\Users\Asus\Desktop\Payment-wallet\Admin-Service\target\classes started by Asus in C:\Users\Asus\Desktop\Payment-wallet\Admin-Service)
+2026-03-27T09:46:22.746+05:30 DEBUG 11820 --- [Admin-Service] [  restartedMain] com.admin.AdminServiceApplication        : Running with Spring Boot v3.3.5, Spring v6.1.14
+2026-03-27T09:46:22.747+05:30  INFO 11820 --- [Admin-Service] [  restartedMain] com.admin.AdminServiceApplication        : No active profile set, falling back to 1 default profile: "default"
+2026-03-27T09:46:22.799+05:30  INFO 11820 --- [Admin-Service] [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-03-27T09:46:22.800+05:30  INFO 11820 --- [Admin-Service] [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-03-27T09:46:24.396+05:30  INFO 11820 --- [Admin-Service] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-27T09:46:24.600+05:30  INFO 11820 --- [Admin-Service] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 121 ms. Found 1 JPA repository interface.
+2026-03-27T09:46:25.163+05:30  INFO 11820 --- [Admin-Service] [  restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=1477ad1a-6aef-3c91-b5e6-b59a60e8a724
+2026-03-27T09:46:25.514+05:30  WARN 11820 --- [Admin-Service] [  restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-03-27T09:46:25.530+05:30  WARN 11820 --- [Admin-Service] [  restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected/applied to a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies/advisors. If this bean does not have to be post-processed, declare it with ROLE_INFRASTRUCTURE.
+2026-03-27T09:46:26.006+05:30  INFO 11820 --- [Admin-Service] [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 7501 (http)
+2026-03-27T09:46:26.020+05:30  INFO 11820 --- [Admin-Service] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-27T09:46:26.021+05:30  INFO 11820 --- [Admin-Service] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2026-03-27T09:46:26.074+05:30  INFO 11820 --- [Admin-Service] [  restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-03-27T09:46:26.083+05:30  INFO 11820 --- [Admin-Service] [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3282 ms
+2026-03-27T09:46:26.357+05:30 DEBUG 11820 --- [Admin-Service] [  restartedMain] com.admin.config.JwtFilter               : Filter 'jwtFilter' configured for use
+2026-03-27T09:46:26.509+05:30  INFO 11820 --- [Admin-Service] [  restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-27T09:46:26.564+05:30  INFO 11820 --- [Admin-Service] [  restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2026-03-27T09:46:26.599+05:30  INFO 11820 --- [Admin-Service] [  restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-03-27T09:46:26.883+05:30  INFO 11820 --- [Admin-Service] [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-27T09:46:28.116+05:30  INFO 11820 --- [Admin-Service] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-27T09:46:30.539+05:30  INFO 11820 --- [Admin-Service] [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@22c789ed
+2026-03-27T09:46:30.544+05:30  INFO 11820 --- [Admin-Service] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-03-27T09:46:30.690+05:30  WARN 11820 --- [Admin-Service] [  restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-27T09:46:31.461+05:30  INFO 11820 --- [Admin-Service] [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+Hibernate: 
+    alter table if exists admin_actions 
+       alter column details set data type TEXT
+2026-03-27T09:46:39.648+05:30  INFO 11820 --- [Admin-Service] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-27T09:46:39.924+05:30  WARN 11820 --- [Admin-Service] [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-27T09:46:39.990+05:30  WARN 11820 --- [Admin-Service] [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2026-03-27T09:46:41.022+05:30  INFO 11820 --- [Admin-Service] [  restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-03-27T09:46:41.068+05:30  INFO 11820 --- [Admin-Service] [  restartedMain] o.s.c.openfeign.FeignClientFactoryBean   : For 'User-Service' URL not provided. Will try picking an instance via load-balancing.
+2026-03-27T09:46:41.154+05:30  INFO 11820 --- [Admin-Service] [  restartedMain] o.s.c.openfeign.FeignClientFactoryBean   : For 'Wallet-Service' URL not provided. Will try picking an instance via load-balancing.
+2026-03-27T09:46:41.182+05:30  INFO 11820 --- [Admin-Service] [  restartedMain] o.s.c.openfeign.FeignClientFactoryBean   : For 'Transaction-Service' URL not provided. Will try picking an instance via load-balancing.
+2026-03-27T09:46:41.201+05:30  INFO 11820 --- [Admin-Service] [  restartedMain] o.s.c.openfeign.FeignClientFactoryBean   : For 'KYC-Service' URL not provided. Will try picking an instance via load-balancing.
+2026-03-27T09:46:41.220+05:30  INFO 11820 --- [Admin-Service] [  restartedMain] o.s.c.openfeign.FeignClientFactoryBean   : For 'Payment-Service' URL not provided. Will try picking an instance via load-balancing.
+2026-03-27T09:46:41.245+05:30  INFO 11820 --- [Admin-Service] [  restartedMain] o.s.c.openfeign.FeignClientFactoryBean   : For 'Rewards-Service' URL not provided. Will try picking an instance via load-balancing.
+2026-03-27T09:46:41.270+05:30  INFO 11820 --- [Admin-Service] [  restartedMain] o.s.c.openfeign.FeignClientFactoryBean   : For 'Notification-Service' URL not provided. Will try picking an instance via load-balancing.
+2026-03-27T09:46:41.684+05:30  WARN 11820 --- [Admin-Service] [  restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: cd2e62a3-050e-424b-a220-8fd40ce703e5
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-03-27T09:46:41.697+05:30  INFO 11820 --- [Admin-Service] [  restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-03-27T09:46:42.299+05:30  INFO 11820 --- [Admin-Service] [  restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoints beneath base path '/actuator'
+2026-03-27T09:46:44.132+05:30  INFO 11820 --- [Admin-Service] [  restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-03-27T09:46:44.164+05:30  INFO 11820 --- [Admin-Service] [  restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2026-03-27T09:46:44.238+05:30  WARN 11820 --- [Admin-Service] [  restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-03-27T09:46:44.345+05:30  INFO 11820 --- [Admin-Service] [  restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-03-27T09:46:44.381+05:30  INFO 11820 --- [Admin-Service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-03-27T09:46:44.388+05:30  INFO 11820 --- [Admin-Service] [  restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-27T09:46:44.399+05:30  INFO 11820 --- [Admin-Service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-03-27T09:46:44.400+05:30  INFO 11820 --- [Admin-Service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-03-27T09:46:44.401+05:30  INFO 11820 --- [Admin-Service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-03-27T09:46:44.402+05:30  INFO 11820 --- [Admin-Service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-03-27T09:46:44.402+05:30  INFO 11820 --- [Admin-Service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-03-27T09:46:44.402+05:30  INFO 11820 --- [Admin-Service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-03-27T09:46:44.403+05:30  INFO 11820 --- [Admin-Service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-03-27T09:46:44.956+05:30  INFO 11820 --- [Admin-Service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-03-27T09:46:44.958+05:30  INFO 11820 --- [Admin-Service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-03-27T09:46:44.960+05:30  INFO 11820 --- [Admin-Service] [  restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-03-27T09:46:44.964+05:30  INFO 11820 --- [Admin-Service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1774585004961 with initial instances count: 2
+2026-03-27T09:46:44.975+05:30  INFO 11820 --- [Admin-Service] [  restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application ADMIN-SERVICE with eureka with status UP
+2026-03-27T09:46:44.976+05:30  INFO 11820 --- [Admin-Service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1774585004976, current=UP, previous=STARTING]
+2026-03-27T09:46:44.978+05:30  INFO 11820 --- [Admin-Service] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ADMIN-SERVICE/localhost:Admin-Service:7501: registering service...
+2026-03-27T09:46:45.007+05:30  INFO 11820 --- [Admin-Service] [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 7501 (http) with context path '/'
+2026-03-27T09:46:45.009+05:30  INFO 11820 --- [Admin-Service] [  restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 7501
+2026-03-27T09:46:45.025+05:30  INFO 11820 --- [Admin-Service] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ADMIN-SERVICE/localhost:Admin-Service:7501 - registration status: 204
+2026-03-27T09:46:46.016+05:30  INFO 11820 --- [Admin-Service] [  restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-03-27T09:46:46.031+05:30  INFO 11820 --- [Admin-Service] [  restartedMain] com.admin.AdminServiceApplication        : Started AdminServiceApplication in 24.728 seconds (process running for 25.176)
+2026-03-27T09:51:44.407+05:30  INFO 11820 --- [Admin-Service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-27T09:52:00.941+05:30  INFO 11820 --- [Admin-Service] [nio-7501-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-27T09:52:00.942+05:30  INFO 11820 --- [Admin-Service] [nio-7501-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-03-27T09:52:00.947+05:30  INFO 11820 --- [Admin-Service] [nio-7501-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+HEADER: null
+2026-03-27T09:52:01.933+05:30  INFO 11820 --- [Admin-Service] [nio-7501-exec-1] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 795 ms
+2026-03-27T09:56:44.426+05:30  INFO 11820 --- [Admin-Service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-27T10:01:44.435+05:30  INFO 11820 --- [Admin-Service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-27T10:06:44.442+05:30  INFO 11820 --- [Admin-Service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-27T10:11:44.449+05:30  INFO 11820 --- [Admin-Service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+HEADER: null
+2026-03-27T10:16:44.458+05:30  INFO 11820 --- [Admin-Service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-27T10:17:17.044+05:30  INFO 11820 --- [Admin-Service] [   File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-03-27T10:17:17.055+05:30  INFO 11820 --- [Admin-Service] [       Thread-1] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application ADMIN-SERVICE with eureka with status DOWN
+2026-03-27T10:17:17.056+05:30  INFO 11820 --- [Admin-Service] [       Thread-1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1774586837056, current=DOWN, previous=UP]
+2026-03-27T10:17:17.057+05:30  INFO 11820 --- [Admin-Service] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ADMIN-SERVICE/localhost:Admin-Service:7501: registering service...
+2026-03-27T10:17:17.069+05:30  INFO 11820 --- [Admin-Service] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ADMIN-SERVICE/localhost:Admin-Service:7501 - registration status: 204
+2026-03-27T10:17:17.110+05:30  INFO 11820 --- [Admin-Service] [       Thread-1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-27T10:17:17.124+05:30  INFO 11820 --- [Admin-Service] [       Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-03-27T10:17:17.134+05:30  INFO 11820 --- [Admin-Service] [       Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-03-27T10:17:17.137+05:30  INFO 11820 --- [Admin-Service] [       Thread-1] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2026-03-27T10:17:20.144+05:30  INFO 11820 --- [Admin-Service] [       Thread-1] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2026-03-27T10:17:20.163+05:30  INFO 11820 --- [Admin-Service] [       Thread-1] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ADMIN-SERVICE/localhost:Admin-Service:7501 - deregister  status: 200
+2026-03-27T10:17:20.164+05:30  INFO 11820 --- [Admin-Service] [       Thread-1] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.5)
+
+2026-03-27T10:17:21.378+05:30  INFO 11820 --- [Admin-Service] [  restartedMain] com.admin.AdminServiceApplication        : Starting AdminServiceApplication using Java 21.0.6 with PID 11820 (C:\Users\Asus\Desktop\Payment-wallet\Admin-Service\target\classes started by Asus in C:\Users\Asus\Desktop\Payment-wallet\Admin-Service)
+2026-03-27T10:17:21.378+05:30 DEBUG 11820 --- [Admin-Service] [  restartedMain] com.admin.AdminServiceApplication        : Running with Spring Boot v3.3.5, Spring v6.1.14
+2026-03-27T10:17:21.379+05:30  INFO 11820 --- [Admin-Service] [  restartedMain] com.admin.AdminServiceApplication        : No active profile set, falling back to 1 default profile: "default"
+2026-03-27T10:17:21.799+05:30  INFO 11820 --- [Admin-Service] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-27T10:17:21.807+05:30  INFO 11820 --- [Admin-Service] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 1 JPA repository interface.
+2026-03-27T10:17:22.200+05:30  INFO 11820 --- [Admin-Service] [  restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=7e1df61a-e2a1-338b-8166-8c840fa8fd5f
+2026-03-27T10:17:22.281+05:30  WARN 11820 --- [Admin-Service] [  restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-03-27T10:17:22.284+05:30  WARN 11820 --- [Admin-Service] [  restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected/applied to a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies/advisors. If this bean does not have to be post-processed, declare it with ROLE_INFRASTRUCTURE.
+2026-03-27T10:17:22.411+05:30  INFO 11820 --- [Admin-Service] [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 7501 (http)
+2026-03-27T10:17:22.414+05:30  INFO 11820 --- [Admin-Service] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-27T10:17:22.414+05:30  INFO 11820 --- [Admin-Service] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2026-03-27T10:17:22.443+05:30  INFO 11820 --- [Admin-Service] [  restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-03-27T10:17:22.443+05:30  INFO 11820 --- [Admin-Service] [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1062 ms
+2026-03-27T10:17:22.592+05:30 DEBUG 11820 --- [Admin-Service] [  restartedMain] com.admin.config.JwtFilter               : Filter 'jwtFilter' configured for use
+2026-03-27T10:17:22.658+05:30  INFO 11820 --- [Admin-Service] [  restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-27T10:17:22.662+05:30  INFO 11820 --- [Admin-Service] [  restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-03-27T10:17:22.680+05:30  INFO 11820 --- [Admin-Service] [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-27T10:17:22.683+05:30  INFO 11820 --- [Admin-Service] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2026-03-27T10:17:22.728+05:30  INFO 11820 --- [Admin-Service] [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection org.postgresql.jdbc.PgConnection@30948db4
+2026-03-27T10:17:22.730+05:30  INFO 11820 --- [Admin-Service] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2026-03-27T10:17:22.739+05:30  WARN 11820 --- [Admin-Service] [  restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-27T10:17:22.807+05:30  INFO 11820 --- [Admin-Service] [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+Hibernate: 
+    alter table if exists admin_actions 
+       alter column details set data type TEXT
+2026-03-27T10:17:22.822+05:30  INFO 11820 --- [Admin-Service] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-27T10:17:22.956+05:30  WARN 11820 --- [Admin-Service] [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-27T10:17:22.999+05:30  WARN 11820 --- [Admin-Service] [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2026-03-27T10:17:24.022+05:30  INFO 11820 --- [Admin-Service] [  restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-03-27T10:17:24.052+05:30  INFO 11820 --- [Admin-Service] [  restartedMain] o.s.c.openfeign.FeignClientFactoryBean   : For 'User-Service' URL not provided. Will try picking an instance via load-balancing.
+2026-03-27T10:17:24.090+05:30  INFO 11820 --- [Admin-Service] [  restartedMain] o.s.c.openfeign.FeignClientFactoryBean   : For 'Wallet-Service' URL not provided. Will try picking an instance via load-balancing.
+2026-03-27T10:17:24.106+05:30  INFO 11820 --- [Admin-Service] [  restartedMain] o.s.c.openfeign.FeignClientFactoryBean   : For 'Transaction-Service' URL not provided. Will try picking an instance via load-balancing.
+2026-03-27T10:17:24.122+05:30  INFO 11820 --- [Admin-Service] [  restartedMain] o.s.c.openfeign.FeignClientFactoryBean   : For 'KYC-Service' URL not provided. Will try picking an instance via load-balancing.
+2026-03-27T10:17:24.135+05:30  INFO 11820 --- [Admin-Service] [  restartedMain] o.s.c.openfeign.FeignClientFactoryBean   : For 'Payment-Service' URL not provided. Will try picking an instance via load-balancing.
+2026-03-27T10:17:24.148+05:30  INFO 11820 --- [Admin-Service] [  restartedMain] o.s.c.openfeign.FeignClientFactoryBean   : For 'Rewards-Service' URL not provided. Will try picking an instance via load-balancing.
+2026-03-27T10:17:24.165+05:30  INFO 11820 --- [Admin-Service] [  restartedMain] o.s.c.openfeign.FeignClientFactoryBean   : For 'Notification-Service' URL not provided. Will try picking an instance via load-balancing.
+2026-03-27T10:17:24.308+05:30  WARN 11820 --- [Admin-Service] [  restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 69c95138-9adf-4294-90df-1255843df9a4
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-03-27T10:17:24.314+05:30  INFO 11820 --- [Admin-Service] [  restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-03-27T10:17:24.572+05:30  INFO 11820 --- [Admin-Service] [  restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoints beneath base path '/actuator'
+2026-03-27T10:17:26.025+05:30  INFO 11820 --- [Admin-Service] [  restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-03-27T10:17:26.042+05:30  INFO 11820 --- [Admin-Service] [  restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2026-03-27T10:17:26.075+05:30  WARN 11820 --- [Admin-Service] [  restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-03-27T10:17:26.112+05:30  INFO 11820 --- [Admin-Service] [  restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-03-27T10:17:26.117+05:30  INFO 11820 --- [Admin-Service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-03-27T10:17:26.118+05:30  INFO 11820 --- [Admin-Service] [  restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-27T10:17:26.119+05:30  INFO 11820 --- [Admin-Service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-03-27T10:17:26.120+05:30  INFO 11820 --- [Admin-Service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-03-27T10:17:26.120+05:30  INFO 11820 --- [Admin-Service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-03-27T10:17:26.121+05:30  INFO 11820 --- [Admin-Service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-03-27T10:17:26.121+05:30  INFO 11820 --- [Admin-Service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-03-27T10:17:26.122+05:30  INFO 11820 --- [Admin-Service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-03-27T10:17:26.122+05:30  INFO 11820 --- [Admin-Service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-03-27T10:17:26.184+05:30  INFO 11820 --- [Admin-Service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-03-27T10:17:26.185+05:30  INFO 11820 --- [Admin-Service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-03-27T10:17:26.187+05:30  INFO 11820 --- [Admin-Service] [  restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-03-27T10:17:26.187+05:30  INFO 11820 --- [Admin-Service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1774586846187 with initial instances count: 10
+2026-03-27T10:17:26.194+05:30  INFO 11820 --- [Admin-Service] [  restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application ADMIN-SERVICE with eureka with status UP
+2026-03-27T10:17:26.195+05:30  INFO 11820 --- [Admin-Service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1774586846195, current=UP, previous=STARTING]
+2026-03-27T10:17:26.195+05:30  INFO 11820 --- [Admin-Service] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ADMIN-SERVICE/localhost:Admin-Service:7501: registering service...
+2026-03-27T10:17:26.201+05:30  INFO 11820 --- [Admin-Service] [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 7501 (http) with context path '/'
+2026-03-27T10:17:26.202+05:30  INFO 11820 --- [Admin-Service] [  restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 7501
+2026-03-27T10:17:26.210+05:30  INFO 11820 --- [Admin-Service] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ADMIN-SERVICE/localhost:Admin-Service:7501 - registration status: 204
+2026-03-27T10:17:27.217+05:30  INFO 11820 --- [Admin-Service] [  restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-03-27T10:17:27.368+05:30  INFO 11820 --- [Admin-Service] [  restartedMain] com.admin.AdminServiceApplication        : Started AdminServiceApplication in 7.046 seconds (process running for 1866.513)
+2026-03-27T10:17:27.530+05:30  INFO 11820 --- [Admin-Service] [  restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation delta:
+
+
+==========================
+CONDITION EVALUATION DELTA
+==========================
+
+
+Positive matches:
+-----------------
+
+   ServletWebServerFactoryAutoConfiguration.ForwardedHeaderFilterConfiguration matched:
+      - @ConditionalOnProperty (server.forward-headers-strategy=framework) matched (OnPropertyCondition)
+      - @ConditionalOnMissingBean (types: org.springframework.web.filter.ForwardedHeaderFilter; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   ServletWebServerFactoryAutoConfiguration.ForwardedHeaderFilterConfiguration#tomcatForwardedHeaderFilterCustomizer matched:
+      - @ConditionalOnClass found required class 'org.apache.catalina.startup.Tomcat' (OnClassCondition)
+
+
+Negative matches:
+-----------------
+
+    None
+
+
+Exclusions:
+-----------
+
+    None
+
+
+Unconditional classes:
+----------------------
+
+    None
+
+
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  31:54 min
+[INFO] Finished at: 2026-03-27T10:18:13+05:30
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.springframework.boot:spring-boot-maven-plugin:3.3.5:run (default-cli) on project Admin-Service: Process terminated with exit code: -1 -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException

@@ -1,0 +1,268 @@
+services:
+  postgres:
+    image: postgres:15-alpine
+    container_name: payment-postgres
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: "9305"
+      POSTGRES_DB: postgres
+    volumes:
+      - ./postgres/init-db.sh:/docker-entrypoint-initdb.d/init-db.sh
+      - pgdata:/var/lib/postgresql/data
+    networks:
+      - payment-network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
+    container_name: payment-rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    networks:
+      - payment-network
+    healthcheck:
+      test: ["CMD", "rabbitmq-diagnostics", "-q", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  eureka-server:
+    build: 
+      context: ./Eureka-Server
+      dockerfile: Dockerfile
+    image: harsh12215211/eureka-server:latest
+    container_name: eureka-server
+    ports:
+      - "8761:8761"
+    networks:
+      - payment-network
+
+  config-server:
+    build: 
+      context: ./Config-Servier
+      dockerfile: Dockerfile
+    image: harsh12215211/config-server:latest
+    container_name: config-server
+    ports:
+      - "7512:7512"
+    environment:
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eureka-server:8761/eureka/
+      EUREKA_INSTANCE_HOSTNAME: config-server
+    depends_on:
+      - eureka-server
+    networks:
+      - payment-network
+
+  api-gateway:
+    build: 
+      context: ./Api-Gateway
+      dockerfile: Dockerfile
+    image: harsh12215211/api-gateway:latest
+    container_name: api-gateway
+    ports:
+      - "7505:7505"
+    environment:
+      SPRING_CONFIG_IMPORT: optional:configserver:http://config-server:7512
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eureka-server:8761/eureka/
+      EUREKA_INSTANCE_HOSTNAME: api-gateway
+    depends_on:
+      - config-server
+      - eureka-server
+    networks:
+      - payment-network
+
+  user-service:
+    build: 
+      context: ./User-Service
+      dockerfile: Dockerfile
+    image: harsh12215211/user-service:latest
+    container_name: user-service
+    ports:
+      - "7500:7500"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/User_Db
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: "9305"
+      SPRING_RABBITMQ_HOST: rabbitmq
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eureka-server:8761/eureka/
+      SPRING_CONFIG_IMPORT: optional:configserver:http://config-server:7512
+      EUREKA_INSTANCE_HOSTNAME: user-service
+    depends_on:
+      postgres:
+        condition: service_healthy
+      rabbitmq:
+        condition: service_healthy
+      config-server:
+        condition: service_started
+    networks:
+      - payment-network
+
+  admin-service:
+    build: 
+      context: ./Admin-Service
+      dockerfile: Dockerfile
+    image: harsh12215211/admin-service:latest
+    container_name: admin-service
+    ports:
+      - "7501:7501"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/Admin_Db
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: "9305"
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eureka-server:8761/eureka/
+      SPRING_CONFIG_IMPORT: optional:configserver:http://config-server:7512
+      EUREKA_INSTANCE_HOSTNAME: admin-service
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks:
+      - payment-network
+
+  kyc-service:
+    build: 
+      context: ./KYC-Services
+      dockerfile: Dockerfile
+    image: harsh12215211/kyc-service:latest
+    container_name: kyc-service
+    ports:
+      - "7502:7502"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/Kyc_Db
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: "9305"
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eureka-server:8761/eureka/
+      SPRING_CONFIG_IMPORT: optional:configserver:http://config-server:7512
+      EUREKA_INSTANCE_HOSTNAME: kyc-service
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks:
+      - payment-network
+
+  wallet-service:
+    build: 
+      context: ./Wallet-Service
+      dockerfile: Dockerfile
+    image: harsh12215211/wallet-service:latest
+    container_name: wallet-service
+    ports:
+      - "7503:7503"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/Wallet_Db
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: "9305"
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eureka-server:8761/eureka/
+      SPRING_CONFIG_IMPORT: optional:configserver:http://config-server:7512
+      EUREKA_INSTANCE_HOSTNAME: wallet-service
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks:
+      - payment-network
+
+  payment-service:
+    build: 
+      context: ./Payment-Services
+      dockerfile: Dockerfile
+    image: harsh12215211/payment-service:latest
+    container_name: payment-service
+    ports:
+      - "7504:7504"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/Payment_Db
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: "9305"
+      SPRING_RABBITMQ_HOST: rabbitmq
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eureka-server:8761/eureka/
+      SPRING_CONFIG_IMPORT: optional:configserver:http://config-server:7512
+      EUREKA_INSTANCE_HOSTNAME: payment-service
+    depends_on:
+      postgres:
+        condition: service_healthy
+      rabbitmq:
+        condition: service_healthy
+    networks:
+      - payment-network
+
+  transaction-service:
+    build: 
+      context: ./Transaction-Service
+      dockerfile: Dockerfile
+    image: harsh12215211/transaction-service:latest
+    container_name: transaction-service
+    ports:
+      - "7506:7506"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/Transaction_Db
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: "9305"
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eureka-server:8761/eureka/
+      SPRING_CONFIG_IMPORT: optional:configserver:http://config-server:7512
+      EUREKA_INSTANCE_HOSTNAME: transaction-service
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks:
+      - payment-network
+
+  notification-service:
+    build: 
+      context: ./Notification-Service
+      dockerfile: Dockerfile
+    image: harsh12215211/notification-service:latest
+    container_name: notification-service
+    ports:
+      - "7507:7507"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/Notification_Db
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: "9305"
+      SPRING_RABBITMQ_HOST: rabbitmq
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eureka-server:8761/eureka/
+      SPRING_CONFIG_IMPORT: optional:configserver:http://config-server:7512
+      EUREKA_INSTANCE_HOSTNAME: notification-service
+    depends_on:
+      postgres:
+        condition: service_healthy
+      rabbitmq:
+        condition: service_healthy
+    networks:
+      - payment-network
+
+  rewards-service:
+    build: 
+      context: ./Rewards-Service
+      dockerfile: Dockerfile
+    image: harsh12215211/rewards-service:latest
+    container_name: rewards-service
+    ports:
+      - "7511:7511"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/Rewards_Db
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: "9305"
+      SPRING_RABBITMQ_HOST: rabbitmq
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eureka-server:8761/eureka/
+      SPRING_CONFIG_IMPORT: optional:configserver:http://config-server:7512
+      EUREKA_INSTANCE_HOSTNAME: rewards-service
+    depends_on:
+      postgres:
+        condition: service_healthy
+      rabbitmq:
+        condition: service_healthy
+    networks:
+      - payment-network
+
+networks:
+  payment-network:
+    driver: bridge
+
+volumes:
+  pgdata:

@@ -1,0 +1,985 @@
+[1m[33m
+Warning: This is a simple server for use in testing or debugging Angular applications
+locally. It hasn't been reviewed for security issues.
+
+Binding this server to an open connection can result in compromising your application or
+computer. Using a different host than the one passed to the "--host" flag might result in
+websocket connection issues.
+    [39m[22m
+[1m[31m[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'credit' does not exist on type 'WalletComponent'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:38:58:
+[37m      38 │ ...btn-success w-full" (click)="[32mcredit[37m()" [disabled]="loading">{{ ...
+         ╵                                 [32m~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'loading' does not exist on type 'WalletComponent'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:38:80:
+[37m      38 │ ...ick)="credit()" [disabled]="[32mloading[37m">{{ loading ? '⏳ Processi...
+         ╵                                [32m~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'loading' does not exist on type 'WalletComponent'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:38:92:
+[37m      38 │ ...()" [disabled]="loading">{{ [32mloading[37m ? '⏳ Processing...' : '+ ...
+         ╵                                [32m~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'debit' does not exist on type 'WalletComponent'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:47:57:
+[37m      47 │ ... btn-danger w-full" (click)="[32mdebit[37m()" [disabled]="loading">{{ l...
+         ╵                                 [32m~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'loading' does not exist on type 'WalletComponent'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:47:78:
+[37m      47 │ ...lick)="debit()" [disabled]="[32mloading[37m">{{ loading ? '⏳ Processi...
+         ╵                                [32m~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'loading' does not exist on type 'WalletComponent'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:47:90:
+[37m      47 │ ...()" [disabled]="loading">{{ [32mloading[37m ? '⏳ Processing...' : '- ...
+         ╵                                [32m~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'freeze' does not exist on type 'WalletComponent'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:55:92:
+[37m      55 │ ...et && !wallet.frozen" (click)="[32mfreeze[37m()">🔒 Enable Lock</button>
+         ╵                                   [32m~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'unfreeze' does not exist on type 'WalletComponent'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:56:83:
+[37m      56 │ ...f="wallet?.frozen" (click)="[32munfreeze[37m()">🔓 Release Lock</button>
+         ╵                                [32m~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'downloadStatement' does not exist on type 'WalletComponent'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:57:62:
+[37m      57 │ ...tn-secondary" (click)="[32mdownloadStatement[37m()">📥 Download Ledge...
+         ╵                           [32m~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'getLimitPct' does not exist on type 'WalletComponent'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:67:76:
+[37m      67 │ ...it-fill" [style.width.%]="[32mgetLimitPct[37m(limits.dailyUsed, limits....
+         ╵                              [32m~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'getLimitPct' does not exist on type 'WalletComponent'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:72:76:
+[37m      72 │ ...it-fill" [style.width.%]="[32mgetLimitPct[37m(limits.monthlyUsed, limit...
+         ╵                              [32m~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'toastMsg' does not exist on type 'WalletComponent'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:100:16:
+[37m      100 │     <div *ngIf="[32mtoastMsg[37m" class="toast-container">
+          ╵                 [32m~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'toastType' does not exist on type 'WalletComponent'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:101:48:
+[37m      101 │ ...st" [class.toast-success]="[32mtoastType[37m==='success'" [class.toast...
+          ╵                               [32m~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'toastType' does not exist on type 'WalletComponent'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:101:92:
+[37m      101 │ ...ess'" [class.toast-error]="[32mtoastType[37m==='error'">{{ toastMsg }}...
+          ╵                               [32m~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'toastMsg' does not exist on type 'WalletComponent'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:101:116:
+[37m      101 │ ...'" [class.toast-error]="toastType==='error'">{{ [32mtoastMsg[37m }}</div>
+          ╵                                                    [32m~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2420: Class 'WalletComponent' incorrectly implements interface 'OnInit'.
+  Property 'ngOnInit' is missing in type 'WalletComponent' but required in type 'OnInit'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:114:13:
+[37m      114 │ export class [32mWalletComponent[37m implements OnInit {
+          ╵              [32m~~~~~~~~~~~~~~~[0m
+
+  'ngOnInit' is declared here.
+
+    node_modules/@angular/core/types/core.d.ts:725:4:
+[37m      725 │     [32mngOnInit(): void;[37m
+          ╵     [32m~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS1068: Unexpected token. A constructor, method, accessor, or property was expected.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:123:24:
+[37m      123 │   creditLoading = false;[32m`r`[37mn  debitLoading = false;
+          ╵                         [32m~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS1005: ';' expected.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:123:27:
+[37m      123 │   creditLoading = false;`r`[32mn[37m  debitLoading = false;
+          ╵                            [32m^[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2304: Cannot find name 'n'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:123:27:
+[37m      123 │   creditLoading = false;`r`[32mn[37m  debitLoading = false;
+          ╵                            [32m^[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2304: Cannot find name 'debitLoading'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:123:30:
+[37m      123 │   creditLoading = false;`r`n  [32mdebitLoading[37m = false;
+          ╵                               [32m~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2304: Cannot find name 'toastMsg'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:124:2:
+[37m      124 │   [32mtoastMsg[37m = '';
+          ╵   [32m~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2304: Cannot find name 'toastType'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:125:2:
+[37m      125 │   [32mtoastType[37m = '';
+          ╵   [32m~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2304: Cannot find name 'userId'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:126:2:
+[37m      126 │   [32muserId[37m = 0;
+          ╵   [32m~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2304: Cannot find name 'ngOnInit'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:128:2:
+[37m      128 │   [32mngOnInit[37m() {
+          ╵   [32m~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS1005: ';' expected.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:128:13:
+[37m      128 │   ngOnInit() [32m{[37m
+          ╵              [32m^[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2532: Object is possibly 'undefined'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:129:4:
+[37m      129 │     [32mthis[37m.userId = this.auth.getCurrentUserId() || 1;
+          ╵     [32m~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2532: Object is possibly 'undefined'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:129:18:
+[37m      129 │     this.userId = [32mthis[37m.auth.getCurrentUserId() || 1;
+          ╵                   [32m~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2532: Object is possibly 'undefined'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:130:4:
+[37m      130 │     [32mthis[37m.loadWallet();
+          ╵     [32m~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2304: Cannot find name 'getLimitPct'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:133:2:
+[37m      133 │   [32mgetLimitPct[37m(used: number, limit: number): number {
+          ╵   [32m~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2304: Cannot find name 'used'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:133:14:
+[37m      133 │   getLimitPct([32mused[37m: number, limit: number): number {
+          ╵               [32m~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS1005: ',' expected.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:133:18:
+[37m      133 │   getLimitPct(used[32m:[37m number, limit: number): number {
+          ╵                   [32m^[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2693: 'number' only refers to a type, but is being used as a value here.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:133:20:
+[37m      133 │   getLimitPct(used: [32mnumber[37m, limit: number): number {
+          ╵                     [32m~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2304: Cannot find name 'limit'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:133:28:
+[37m      133 │   getLimitPct(used: number, [32mlimit[37m: number): number {
+          ╵                             [32m~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS1005: ',' expected.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:133:33:
+[37m      133 │   getLimitPct(used: number, limit[32m:[37m number): number {
+          ╵                                  [32m^[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2693: 'number' only refers to a type, but is being used as a value here.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:133:35:
+[37m      133 │   getLimitPct(used: number, limit: [32mnumber[37m): number {
+          ╵                                    [32m~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS1005: ';' expected.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:133:42:
+[37m      133 │   getLimitPct(used: number, limit: number)[32m:[37m number {
+          ╵                                           [32m^[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS1434: Unexpected keyword or identifier.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:133:44:
+[37m      133 │   getLimitPct(used: number, limit: number): [32mnumber[37m {
+          ╵                                             [32m~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2693: 'number' only refers to a type, but is being used as a value here.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:133:44:
+[37m      133 │   getLimitPct(used: number, limit: number): [32mnumber[37m {
+          ╵                                             [32m~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2304: Cannot find name 'loadWallet'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:137:2:
+[37m      137 │   [32mloadWallet[37m() {
+          ╵   [32m~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS1005: ';' expected.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:137:15:
+[37m      137 │   loadWallet() [32m{[37m
+          ╵                [32m^[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2532: Object is possibly 'undefined'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:138:4:
+[37m      138 │     [32mthis[37m.walletService.getWallet(this.userId).subscribe({ next: (...
+          ╵     [32m~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2532: Object is possibly 'undefined'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:138:33:
+[37m      138 │ ...this.walletService.getWallet([32mthis[37m.userId).subscribe({ next: (w...
+          ╵                                 [32m~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS7006: Parameter 'w' implicitly has an 'any' type.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:138:65:
+[37m      138 │ ...his.userId).subscribe({ next: ([32mw[37m) => this.wallet = w, error: (...
+          ╵                                   [32m^[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2532: Object is possibly 'undefined'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:138:71:
+[37m      138 │ ...Id).subscribe({ next: (w) => [32mthis[37m.wallet = w, error: () => {} });
+          ╵                                 [32m~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2532: Object is possibly 'undefined'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:139:4:
+[37m      139 │     [32mthis[37m.walletService.getLedger(this.userId).subscribe({ next: (...
+          ╵     [32m~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2532: Object is possibly 'undefined'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:139:33:
+[37m      139 │ ...this.walletService.getLedger([32mthis[37m.userId).subscribe({ next: (l...
+          ╵                                 [32m~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS7006: Parameter 'l' implicitly has an 'any' type.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:139:65:
+[37m      139 │ ...his.userId).subscribe({ next: ([32ml[37m) => this.ledger = l, error: (...
+          ╵                                   [32m^[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2532: Object is possibly 'undefined'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:139:71:
+[37m      139 │ ...Id).subscribe({ next: (l) => [32mthis[37m.ledger = l, error: () => {} });
+          ╵                                 [32m~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2532: Object is possibly 'undefined'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:140:4:
+[37m      140 │     [32mthis[37m.walletService.getWalletLimits(this.userId).subscribe({ n...
+          ╵     [32m~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2532: Object is possibly 'undefined'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:140:39:
+[37m      140 │ ...alletService.getWalletLimits([32mthis[37m.userId).subscribe({ next: (l...
+          ╵                                 [32m~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS7006: Parameter 'l' implicitly has an 'any' type.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:140:71:
+[37m      140 │ ...his.userId).subscribe({ next: ([32ml[37m) => this.limits = l, error: (...
+          ╵                                   [32m^[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2532: Object is possibly 'undefined'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:140:77:
+[37m      140 │ ...Id).subscribe({ next: (l) => [32mthis[37m.limits = l, error: () => {} });
+          ╵                                 [32m~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2304: Cannot find name 'credit'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:143:2:
+[37m      143 │   [32mcredit[37m() {
+          ╵   [32m~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS1005: ';' expected.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:143:11:
+[37m      143 │   credit() [32m{[37m
+          ╵            [32m^[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2532: Object is possibly 'undefined'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:144:8:
+[37m      144 │     if ([32mthis[37m.creditAmount <= 0) { this.showToast('Enter a valid a...
+          ╵         [32m~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2532: Object is possibly 'undefined'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:144:34:
+[37m      144 │ ...f (this.creditAmount <= 0) { [32mthis[37m.showToast('Enter a valid amo...
+          ╵                                 [32m~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2532: Object is possibly 'undefined'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:145:4:
+[37m      145 │     [32mthis[37m.creditLoading = true;
+          ╵     [32m~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2532: Object is possibly 'undefined'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:146:4:
+[37m      146 │     [32mthis[37m.walletService.credit({ userId: this.userId, amount: this...
+          ╵     [32m~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2532: Object is possibly 'undefined'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:146:40:
+[37m      146 │ ...lletService.credit({ userId: [32mthis[37m.userId, amount: this.creditA...
+          ╵                                 [32m~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2532: Object is possibly 'undefined'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:146:61:
+[37m      146 │ ...userId: this.userId, amount: [32mthis[37m.creditAmount, currency: 'INR...
+          ╵                                 [32m~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS7006: Parameter 'w' implicitly has an 'any' type.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:147:13:
+[37m      147 │       next: ([32mw[37m) => { this.wallet = w; this.showToast('Funds added...
+          ╵              [32m^[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2532: Object is possibly 'undefined'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:147:21:
+[37m      147 │       next: (w) => { [32mthis[37m.wallet = w; this.showToast('Funds added...
+          ╵                      [32m~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2532: Object is possibly 'undefined'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:147:38:
+[37m      147 │ ...t: (w) => { this.wallet = w; [32mthis[37m.showToast('Funds added!', 's...
+          ╵                                 [32m~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2532: Object is possibly 'undefined'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:147:81:
+[37m      147 │ ...('Funds added!', 'success'); [32mthis[37m.loadWallet(); this.creditLoa...
+          ╵                                 [32m~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2532: Object is possibly 'undefined'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:147:100:
+[37m      147 │ ...uccess'); this.loadWallet(); [32mthis[37m.creditLoading = false;`r`n  ...
+          ╵                                 [32m~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS1005: ';' expected.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:147:130:
+[37m      147 │ ... this.creditLoading = false;`r`[32mn[37m  debitLoading = false; this.c...
+          ╵                                   [32m^[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2304: Cannot find name 'n'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:147:130:
+[37m      147 │ ... this.creditLoading = false;`r`[32mn[37m  debitLoading = false; this.c...
+          ╵                                   [32m^[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2304: Cannot find name 'debitLoading'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:147:133:
+[37m      147 │ ...ditLoading = false;`r`n  [32mdebitLoading[37m = false; this.creditAmou...
+          ╵                             [32m~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2532: Object is possibly 'undefined'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:147:155:
+[37m      147 │ ...ing = false;`r`n  debitLoading = false; [32mthis[37m.creditAmount = 0; },
+          ╵                                            [32m~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS7006: Parameter 'e' implicitly has an 'any' type.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:148:14:
+[37m      148 │       error: ([32me[37m) => { this.showToast(e.error || 'Failed', 'error'...
+          ╵               [32m^[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2532: Object is possibly 'undefined'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:148:22:
+[37m      148 │       error: (e) => { [32mthis[37m.showToast(e.error || 'Failed', 'error'...
+          ╵                       [32m~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2532: Object is possibly 'undefined'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:148:68:
+[37m      148 │ ...error || 'Failed', 'error'); [32mthis[37m.debitLoading = false;`r`n  d...
+          ╵                                 [32m~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS1005: ';' expected.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:148:97:
+[37m      148 │ ...'error'); this.debitLoading = false;`r`[32mn[37m  debitLoading = false; }
+          ╵                                           [32m^[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2304: Cannot find name 'n'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:148:97:
+[37m      148 │ ...'error'); this.debitLoading = false;`r`[32mn[37m  debitLoading = false; }
+          ╵                                           [32m^[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2304: Cannot find name 'debitLoading'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:148:100:
+[37m      148 │ ...'error'); this.debitLoading = false;`r`n  [32mdebitLoading[37m = false; }
+          ╵                                              [32m~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2304: Cannot find name 'debit'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:152:2:
+[37m      152 │   [32mdebit[37m() {
+          ╵   [32m~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS1005: ';' expected.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:152:10:
+[37m      152 │   debit() [32m{[37m
+          ╵           [32m^[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2532: Object is possibly 'undefined'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:153:8:
+[37m      153 │     if ([32mthis[37m.debitAmount <= 0) { this.showToast('Enter a valid am...
+          ╵         [32m~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2532: Object is possibly 'undefined'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:153:33:
+[37m      153 │ ...if (this.debitAmount <= 0) { [32mthis[37m.showToast('Enter a valid amo...
+          ╵                                 [32m~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2532: Object is possibly 'undefined'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:154:4:
+[37m      154 │     [32mthis[37m.creditLoading = true;
+          ╵     [32m~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2532: Object is possibly 'undefined'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:155:4:
+[37m      155 │     [32mthis[37m.walletService.debit({ userId: this.userId, amount: this....
+          ╵     [32m~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2532: Object is possibly 'undefined'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:155:39:
+[37m      155 │ ...alletService.debit({ userId: [32mthis[37m.userId, amount: this.debitAm...
+          ╵                                 [32m~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2532: Object is possibly 'undefined'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:155:60:
+[37m      155 │ ...userId: this.userId, amount: [32mthis[37m.debitAmount, currency: 'INR'...
+          ╵                                 [32m~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS7006: Parameter 'w' implicitly has an 'any' type.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:156:13:
+[37m      156 │       next: ([32mw[37m) => { this.wallet = w; this.showToast('Withdrawn!'...
+          ╵              [32m^[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2532: Object is possibly 'undefined'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:156:21:
+[37m      156 │       next: (w) => { [32mthis[37m.wallet = w; this.showToast('Withdrawn!'...
+          ╵                      [32m~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2532: Object is possibly 'undefined'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:156:38:
+[37m      156 │ ...t: (w) => { this.wallet = w; [32mthis[37m.showToast('Withdrawn!', 'suc...
+          ╵                                 [32m~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2532: Object is possibly 'undefined'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:156:79:
+[37m      156 │ ...st('Withdrawn!', 'success'); [32mthis[37m.loadWallet(); this.creditLoa...
+          ╵                                 [32m~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2532: Object is possibly 'undefined'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:156:98:
+[37m      156 │ ...uccess'); this.loadWallet(); [32mthis[37m.creditLoading = false;`r`n  ...
+          ╵                                 [32m~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS1005: ';' expected.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:156:128:
+[37m      156 │ ... this.creditLoading = false;`r`[32mn[37m  debitLoading = false; this.d...
+          ╵                                   [32m^[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2304: Cannot find name 'n'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:156:128:
+[37m      156 │ ... this.creditLoading = false;`r`[32mn[37m  debitLoading = false; this.d...
+          ╵                                   [32m^[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2304: Cannot find name 'debitLoading'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:156:131:
+[37m      156 │ ...ditLoading = false;`r`n  [32mdebitLoading[37m = false; this.debitAmoun...
+          ╵                             [32m~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2532: Object is possibly 'undefined'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:156:153:
+[37m      156 │ ...ding = false;`r`n  debitLoading = false; [32mthis[37m.debitAmount = 0; },
+          ╵                                             [32m~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS7006: Parameter 'e' implicitly has an 'any' type.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:157:14:
+[37m      157 │       error: ([32me[37m) => { this.showToast(e.error || 'Failed', 'error'...
+          ╵               [32m^[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2532: Object is possibly 'undefined'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:157:22:
+[37m      157 │       error: (e) => { [32mthis[37m.showToast(e.error || 'Failed', 'error'...
+          ╵                       [32m~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2532: Object is possibly 'undefined'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:157:68:
+[37m      157 │ ...error || 'Failed', 'error'); [32mthis[37m.debitLoading = false;`r`n  d...
+          ╵                                 [32m~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS1005: ';' expected.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:157:97:
+[37m      157 │ ...'error'); this.debitLoading = false;`r`[32mn[37m  debitLoading = false; }
+          ╵                                           [32m^[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2304: Cannot find name 'n'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:157:97:
+[37m      157 │ ...'error'); this.debitLoading = false;`r`[32mn[37m  debitLoading = false; }
+          ╵                                           [32m^[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2304: Cannot find name 'debitLoading'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:157:100:
+[37m      157 │ ...'error'); this.debitLoading = false;`r`n  [32mdebitLoading[37m = false; }
+          ╵                                              [32m~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2304: Cannot find name 'freeze'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:161:2:
+[37m      161 │   [32mfreeze[37m() {
+          ╵   [32m~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS1005: ';' expected.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:161:11:
+[37m      161 │   freeze() [32m{[37m
+          ╵            [32m^[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2532: Object is possibly 'undefined'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:162:4:
+[37m      162 │     [32mthis[37m.walletService.freezeWallet(this.userId).subscribe({
+          ╵     [32m~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2532: Object is possibly 'undefined'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:162:36:
+[37m      162 │     this.walletService.freezeWallet([32mthis[37m.userId).subscribe({
+          ╵                                     [32m~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2532: Object is possibly 'undefined'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:163:20:
+[37m      163 │       next: () => { [32mthis[37m.showToast('Wallet frozen', 'success'); t...
+          ╵                     [32m~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2532: Object is possibly 'undefined'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:163:64:
+[37m      163 │ ...this.showToast('Wallet frozen', 'success'); [32mthis[37m.loadWallet(); },
+          ╵                                                [32m~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2532: Object is possibly 'undefined'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:164:19:
+[37m      164 │       error: () => [32mthis[37m.showToast('Failed', 'error')
+          ╵                    [32m~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2304: Cannot find name 'unfreeze'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:168:2:
+[37m      168 │   [32munfreeze[37m() {
+          ╵   [32m~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS1005: ';' expected.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:168:13:
+[37m      168 │   unfreeze() [32m{[37m
+          ╵              [32m^[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2532: Object is possibly 'undefined'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:169:4:
+[37m      169 │     [32mthis[37m.walletService.unfreezeWallet(this.userId).subscribe({
+          ╵     [32m~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2532: Object is possibly 'undefined'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:169:38:
+[37m      169 │     this.walletService.unfreezeWallet([32mthis[37m.userId).subscribe({
+          ╵                                       [32m~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2532: Object is possibly 'undefined'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:170:20:
+[37m      170 │       next: () => { [32mthis[37m.showToast('Wallet unfrozen', 'success');...
+          ╵                     [32m~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2532: Object is possibly 'undefined'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:170:66:
+[37m      170 │ ...is.showToast('Wallet unfrozen', 'success'); [32mthis[37m.loadWallet(); },
+          ╵                                                [32m~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2532: Object is possibly 'undefined'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:171:19:
+[37m      171 │       error: () => [32mthis[37m.showToast('Failed', 'error')
+          ╵                    [32m~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2304: Cannot find name 'downloadStatement'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:175:2:
+[37m      175 │   [32mdownloadStatement[37m() {
+          ╵   [32m~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS1005: ';' expected.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:175:22:
+[37m      175 │   downloadStatement() [32m{[37m
+          ╵                       [32m^[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2532: Object is possibly 'undefined'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:176:4:
+[37m      176 │     [32mthis[37m.walletService.exportStatementCsv(this.userId).subscribe({
+          ╵     [32m~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2532: Object is possibly 'undefined'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:176:42:
+[37m      176 │     this.walletService.exportStatementCsv([32mthis[37m.userId).subscribe({
+          ╵                                           [32m~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS7006: Parameter 'blob' implicitly has an 'any' type.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:177:13:
+[37m      177 │       next: ([32mblob[37m) => {
+          ╵              [32m~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2532: Object is possibly 'undefined'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:179:87:
+[37m      179 │ ...ef = url; a.download = `statement_${[32mthis[37m.userId}.csv`; a.click();
+          ╵                                        [32m~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2532: Object is possibly 'undefined'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:182:19:
+[37m      182 │       error: () => [32mthis[37m.showToast('Failed to download', 'error')
+          ╵                    [32m~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2304: Cannot find name 'showToast'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:186:2:
+[37m      186 │   [32mshowToast[37m(msg: string, type: string) {
+          ╵   [32m~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2304: Cannot find name 'msg'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:186:12:
+[37m      186 │   showToast([32mmsg[37m: string, type: string) {
+          ╵             [32m~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS1005: ',' expected.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:186:15:
+[37m      186 │   showToast(msg[32m:[37m string, type: string) {
+          ╵                [32m^[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2693: 'string' only refers to a type, but is being used as a value here.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:186:17:
+[37m      186 │   showToast(msg: [32mstring[37m, type: string) {
+          ╵                  [32m~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2304: Cannot find name 'type'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:186:25:
+[37m      186 │   showToast(msg: string, [32mtype[37m: string) {
+          ╵                          [32m~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS1005: ',' expected.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:186:29:
+[37m      186 │   showToast(msg: string, type[32m:[37m string) {
+          ╵                              [32m^[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2693: 'string' only refers to a type, but is being used as a value here.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:186:31:
+[37m      186 │   showToast(msg: string, type: [32mstring[37m) {
+          ╵                                [32m~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS1005: ';' expected.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:186:39:
+[37m      186 │   showToast(msg: string, type: string) [32m{[37m
+          ╵                                        [32m^[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2532: Object is possibly 'undefined'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:187:4:
+[37m      187 │     [32mthis[37m.toastMsg = msg; this.toastType = type;
+          ╵     [32m~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2304: Cannot find name 'msg'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:187:20:
+[37m      187 │     this.toastMsg = [32mmsg[37m; this.toastType = type;
+          ╵                     [32m~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2532: Object is possibly 'undefined'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:187:25:
+[37m      187 │     this.toastMsg = msg; [32mthis[37m.toastType = type;
+          ╵                          [32m~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2304: Cannot find name 'type'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:187:42:
+[37m      187 │     this.toastMsg = msg; this.toastType = [32mtype[37m;
+          ╵                                           [32m~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2532: Object is possibly 'undefined'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:188:21:
+[37m      188 │     setTimeout(() => [32mthis[37m.toastMsg = '', 3000);
+          ╵                      [32m~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS1128: Declaration or statement expected.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/pages/wallet/wallet.component.ts:190:0:
+[37m      190 │ [32m}[37m
+          ╵ [32m^[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTop-level return cannot be used inside an ECMAScript module[0m
+
+    src/app/pages/wallet/wallet.component.ts:362:4:
+[37m      362 │     [32mreturn[37m limit > 0 ? Math.min((used / limit) * 100, 100) : 0;
+          ╵     [32m~~~~~~[0m
+
+  This file is considered to be an ECMAScript module because of the "export" keyword here:
+
+    src/app/pages/wallet/wallet.component.ts:147:0:
+[37m      147 │ [32mexport[37m class WalletComponent {
+          ╵ [32m~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTop-level return cannot be used inside an ECMAScript module[0m
+
+    src/app/pages/wallet/wallet.component.ts:374:8:
+[37m      374 │         [32mreturn[37m;
+          ╵         [32m~~~~~~[0m
+
+  This file is considered to be an ECMAScript module because of the "export" keyword here:
+
+    src/app/pages/wallet/wallet.component.ts:147:0:
+[37m      147 │ [32mexport[37m class WalletComponent {
+          ╵ [32m~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTop-level return cannot be used inside an ECMAScript module[0m
+
+    src/app/pages/wallet/wallet.component.ts:386:8:
+[37m      386 │         [32mreturn[37m;
+          ╵         [32m~~~~~~[0m
+
+  This file is considered to be an ECMAScript module because of the "export" keyword here:
+
+    src/app/pages/wallet/wallet.component.ts:147:0:
+[37m      147 │ [32mexport[37m class WalletComponent {
+          ╵ [32m~~~~~~[0m
+
+[39m[22m

@@ -1,0 +1,100 @@
+﻿{
+    "applications":  {
+                         "versions__delta":  "1",
+                         "apps__hashcode":  "UP_2_",
+                         "application":  [
+                                             {
+                                                 "name":  "API-GATEWAY",
+                                                 "instance":  [
+                                                                  {
+                                                                      "instanceId":  "localhost:Api-Gateway:7510",
+                                                                      "hostName":  "localhost",
+                                                                      "app":  "API-GATEWAY",
+                                                                      "ipAddr":  "192.168.150.1",
+                                                                      "status":  "UP",
+                                                                      "overriddenStatus":  "UNKNOWN",
+                                                                      "port":  {
+                                                                                   "$":  7510,
+                                                                                   "@enabled":  "true"
+                                                                               },
+                                                                      "securePort":  {
+                                                                                         "$":  443,
+                                                                                         "@enabled":  "false"
+                                                                                     },
+                                                                      "countryId":  1,
+                                                                      "dataCenterInfo":  {
+                                                                                             "@class":  "com.netflix.appinfo.InstanceInfo$DefaultDataCenterInfo",
+                                                                                             "name":  "MyOwn"
+                                                                                         },
+                                                                      "leaseInfo":  {
+                                                                                        "renewalIntervalInSecs":  30,
+                                                                                        "durationInSecs":  90,
+                                                                                        "registrationTimestamp":  1774458132538,
+                                                                                        "lastRenewalTimestamp":  1774458312625,
+                                                                                        "evictionTimestamp":  0,
+                                                                                        "serviceUpTimestamp":  1774458132538
+                                                                                    },
+                                                                      "metadata":  {
+                                                                                       "management.port":  "7510"
+                                                                                   },
+                                                                      "homePageUrl":  "http://localhost:7510/",
+                                                                      "statusPageUrl":  "http://localhost:7510/actuator/info",
+                                                                      "healthCheckUrl":  "http://localhost:7510/actuator/health",
+                                                                      "vipAddress":  "Api-Gateway",
+                                                                      "secureVipAddress":  "Api-Gateway",
+                                                                      "isCoordinatingDiscoveryServer":  "false",
+                                                                      "lastUpdatedTimestamp":  "1774458132538",
+                                                                      "lastDirtyTimestamp":  "1774458132533",
+                                                                      "actionType":  "ADDED"
+                                                                  }
+                                                              ]
+                                             },
+                                             {
+                                                 "name":  "USER-SERVICE",
+                                                 "instance":  [
+                                                                  {
+                                                                      "instanceId":  "localhost:user-service:7500",
+                                                                      "hostName":  "192.168.150.1",
+                                                                      "app":  "USER-SERVICE",
+                                                                      "ipAddr":  "192.168.150.1",
+                                                                      "status":  "UP",
+                                                                      "overriddenStatus":  "UNKNOWN",
+                                                                      "port":  {
+                                                                                   "$":  7500,
+                                                                                   "@enabled":  "true"
+                                                                               },
+                                                                      "securePort":  {
+                                                                                         "$":  443,
+                                                                                         "@enabled":  "false"
+                                                                                     },
+                                                                      "countryId":  1,
+                                                                      "dataCenterInfo":  {
+                                                                                             "@class":  "com.netflix.appinfo.InstanceInfo$DefaultDataCenterInfo",
+                                                                                             "name":  "MyOwn"
+                                                                                         },
+                                                                      "leaseInfo":  {
+                                                                                        "renewalIntervalInSecs":  30,
+                                                                                        "durationInSecs":  90,
+                                                                                        "registrationTimestamp":  1774458218034,
+                                                                                        "lastRenewalTimestamp":  1774458218034,
+                                                                                        "evictionTimestamp":  0,
+                                                                                        "serviceUpTimestamp":  1774458218034
+                                                                                    },
+                                                                      "metadata":  {
+                                                                                       "management.port":  "7500"
+                                                                                   },
+                                                                      "homePageUrl":  "http://192.168.150.1:7500/",
+                                                                      "statusPageUrl":  "http://192.168.150.1:7500/actuator/info",
+                                                                      "healthCheckUrl":  "http://192.168.150.1:7500/actuator/health",
+                                                                      "vipAddress":  "user-service",
+                                                                      "secureVipAddress":  "user-service",
+                                                                      "isCoordinatingDiscoveryServer":  "false",
+                                                                      "lastUpdatedTimestamp":  "1774458218034",
+                                                                      "lastDirtyTimestamp":  "1774458218029",
+                                                                      "actionType":  "ADDED"
+                                                                  }
+                                                              ]
+                                             }
+                                         ]
+                     }
+}

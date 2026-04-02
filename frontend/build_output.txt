@@ -1,0 +1,60 @@
+﻿[33mΓ¥»[39m Building...
+[32mΓ£ö[39m Building...
+Application bundle generation failed. [2.260 seconds] - 2026-03-25T16:38:04.816Z
+
+node.exe : [1m[31m[31mX 
+[41;31m[[41;97mERROR[41;31m][0m 
+[1mTS2307: Cannot find module 
+'../../services/auth.service' or its 
+corresponding type declarations.[0m 
+[1m[35m[plugin angular-compiler][0m
+At line:1 char:1
++ & "C:\Program Files\nodejs/node.exe" 
+"C:\Program Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpeci 
+   fied: ([1m[31m[31mX...r-compile  
+  r][0m:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCo 
+   mmandError
+ 
+
+    src/app/layout/layout.component.ts:
+4:28:
+[37m      4 Γöé import { AuthService 
+} from [32m'../../services/auth.servic
+e'[37m;
+        Γò╡                            
+ [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX 
+[41;31m[[41;97mERROR[41;31m][0m 
+[1mTS2571: Object is of type 
+'unknown'.[0m [1m[35m[plugin 
+angular-compiler][0m
+
+    src/app/layout/layout.component.ts:
+36:13:
+[37m      36 Γöé   logout() { 
+[32mthis.auth[37m.logout(); 
+this.router.navigate(['/login']); }
+         Γò╡              
+[32m~~~~~~~~~[0m
+
+
+[31mX 
+[41;31m[[41;97mERROR[41;31m][0m 
+[1mCould not resolve 
+"../../services/auth.service"[0m
+
+    src/app/layout/layout.component.ts:
+4:28:
+[37m      4 Γöé import { AuthService 
+} from [32m'../../services/auth.servic
+e'[37m;
+        Γò╡                            
+ [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[39m[22m

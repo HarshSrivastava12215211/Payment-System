@@ -1,0 +1,13 @@
+﻿node.exe : [1m[31mError: Unknown 
+argument: disable-host-check[39m[22m
+At line:1 char:1
++ & "C:\Program Files\nodejs/node.exe" 
+"C:\Program Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecif 
+   ied: ([1m[31mError:...check[39m  
+  [22m:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCom 
+   mandError
+ 
