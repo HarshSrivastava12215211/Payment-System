@@ -71,7 +71,7 @@ class WalletServiceTest {
 
         userDto = UserDto.builder()
                 .id(1L)
-                .isKycApproved(true)
+                .kycApproved(true)
                 .build();
     }
 
