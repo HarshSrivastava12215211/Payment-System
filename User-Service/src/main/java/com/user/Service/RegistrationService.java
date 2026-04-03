@@ -98,7 +98,11 @@ public class RegistrationService {
 			throw new RuntimeException("Please verify your account first via registration OTP");
 		}
 			
-		notificationPublisher.sendLoginNotification(user.getEmail(), user.getId());
+		try {
+			notificationPublisher.sendLoginNotification(user.getEmail(), user.getId());
+		} catch (Exception e) {
+			log.warn("Login notification failed (non-critical, continuing login): {}", e.getMessage());
+		}
 		return jwtService.generateToken(user.getEmail(), user.getRole());
 	}
 
@@ -134,7 +138,11 @@ public class RegistrationService {
 			throw new RuntimeException("Invalid Password");
 		}
 		
-		notificationPublisher.sendLoginNotification(user.getEmail(), user.getId());
+		try {
+			notificationPublisher.sendLoginNotification(user.getEmail(), user.getId());
+		} catch (Exception e) {
+			log.warn("Password login notification failed (non-critical, continuing login): {}", e.getMessage());
+		}
 		return jwtService.generateToken(user.getEmail(), user.getRole());
 	}
 

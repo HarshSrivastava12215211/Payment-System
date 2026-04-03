@@ -14,6 +14,6 @@ import lombok.Setter;
 public class RazorpayOrderResponse {
     private String orderId;
     private String currency;
-    private Integer amount;
+    private Long amount;  // Razorpay returns amount in paise — use Long to avoid overflow
     private String status;
 }
