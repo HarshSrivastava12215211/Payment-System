@@ -106,7 +106,7 @@ export class RegisterComponent {
         this.cdr.detectChanges();
       },
       error: (err) => { 
-        this.errorMsg = err.error || 'Registration failed'; 
+        this.errorMsg = typeof err.error === 'string' ? err.error : (err.error?.message || err.message || 'Registration failed'); 
         this.loading = false; 
         this.cdr.detectChanges();
       }
@@ -124,7 +124,7 @@ export class RegisterComponent {
         setTimeout(() => this.router.navigate(['/login']), 2000);
       },
       error: (err) => { 
-        this.errorMsg = err.error || 'Verification failed'; 
+        this.errorMsg = typeof err.error === 'string' ? err.error : (err.error?.message || err.message || 'Verification failed'); 
         this.loading = false;
         this.cdr.detectChanges();
       }

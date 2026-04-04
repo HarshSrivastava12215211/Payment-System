@@ -1,0 +1,110 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: user-service
+  namespace: payment-system
+  labels:
+    app: user-service
+spec:
+  replicas: 1
+  strategy:
+    type: Recreate
+  selector:
+    matchLabels:
+      app: user-service
+  template:
+    metadata:
+      labels:
+        app: user-service
+    spec:
+      initContainers:
+        - name: wait-for-config
+          image: busybox:1.36
+          command: ['sh', '-c',
+            'until wget -qO- http://config-server:7512/actuator/health | grep -q "UP"; do echo "Waiting for Config Server..."; sleep 5; done']
+      containers:
+        - name: user-service
+          image: harsh12215211/user-service:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 7500
+          env:
+            - name: DB_HOST
+              valueFrom:
+                secretKeyRef:
+                  name: payment-secrets
+                  key: DB_HOST
+            - name: DB_PORT
+              valueFrom:
+                configMapKeyRef:
+                  name: payment-config
+                  key: DB_PORT
+            - name: DB_NAME
+              value: "user_db"
+            - name: DB_USER
+              valueFrom:
+                secretKeyRef:
+                  name: payment-secrets
+                  key: DB_USERNAME
+            - name: DB_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: payment-secrets
+                  key: DB_PASSWORD
+            - name: SPRING_RABBITMQ_HOST
+              valueFrom:
+                configMapKeyRef:
+                  name: payment-config
+                  key: SPRING_RABBITMQ_HOST
+            - name: SPRING_RABBITMQ_PORT
+              valueFrom:
+                configMapKeyRef:
+                  name: payment-config
+                  key: SPRING_RABBITMQ_PORT
+            - name: EUREKA_CLIENT_SERVICEURL_DEFAULTZONE
+              valueFrom:
+                configMapKeyRef:
+                  name: payment-config
+                  key: EUREKA_CLIENT_SERVICEURL_DEFAULTZONE
+            - name: SPRING_CONFIG_IMPORT
+              valueFrom:
+                configMapKeyRef:
+                  name: payment-config
+                  key: SPRING_CONFIG_IMPORT
+            - name: EUREKA_INSTANCE_HOSTNAME
+              value: "user-service"
+          resources:
+            requests:
+              memory: "256Mi"
+              cpu: "10m"
+            limits:
+              memory: "512Mi"
+              cpu: "500m"
+          readinessProbe:
+            httpGet:
+              path: /actuator/health
+              port: 7500
+            initialDelaySeconds: 180
+            timeoutSeconds: 10
+            periodSeconds: 20
+          livenessProbe:
+            httpGet:
+              path: /actuator/health
+              port: 7500
+            initialDelaySeconds: 180
+            timeoutSeconds: 10
+            periodSeconds: 20
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: user-service
+  namespace: payment-system
+spec:
+  selector:
+    app: user-service
+  ports:
+    - protocol: TCP
+      port: 7500
+      targetPort: 7500
+  type: ClusterIP

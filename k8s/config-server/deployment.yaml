@@ -1,0 +1,57 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: config-server
+  namespace: payment-system
+  labels:
+    app: config-server
+spec:
+  replicas: 1
+  strategy:
+    type: Recreate
+  selector:
+    matchLabels:
+      app: config-server
+  template:
+    metadata:
+      labels:
+        app: config-server
+    spec:
+      initContainers:
+        - name: wait-for-eureka
+          image: busybox:1.36
+          command: ['sh', '-c',
+            'until wget -qO- http://eureka-server:8761/actuator/health | grep -q "UP"; do echo "Waiting for Eureka..."; sleep 5; done']
+      containers:
+        - name: config-server
+          image: harsh12215211/config-server:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 7512
+          env:
+            - name: EUREKA_CLIENT_SERVICEURL_DEFAULTZONE
+              valueFrom:
+                configMapKeyRef:
+                  name: payment-config
+                  key: EUREKA_CLIENT_SERVICEURL_DEFAULTZONE
+            - name: EUREKA_INSTANCE_HOSTNAME
+              value: "config-server"
+          resources:
+            requests:
+              memory: "128Mi"
+              cpu: "10m"
+            limits:
+              memory: "512Mi"
+              cpu: "300m"
+          readinessProbe:
+            httpGet:
+              path: /actuator/health
+              port: 7512
+            initialDelaySeconds: 30
+            periodSeconds: 10
+          livenessProbe:
+            httpGet:
+              path: /actuator/health
+              port: 7512
+            initialDelaySeconds: 60
+            periodSeconds: 15

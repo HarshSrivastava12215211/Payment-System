@@ -1,0 +1,94 @@
+# ═══════════════════════════════════════════════════════════════
+#  AWS ALB Ingress Controller
+#  NOTE: I have replaced <YOUR_DOMAIN> with "payment.example.com"
+#  to pass DNS validation. YOU MUST update this to your real domain.
+# ═══════════════════════════════════════════════════════════════
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: payment-ingress
+  namespace: payment-system
+  annotations:
+    alb.ingress.kubernetes.io/scheme: internet-facing
+    alb.ingress.kubernetes.io/target-type: ip
+    alb.ingress.kubernetes.io/listen-ports: '[{"HTTP":80}]'
+    alb.ingress.kubernetes.io/healthcheck-path: /actuator/health
+    alb.ingress.kubernetes.io/healthcheck-interval-seconds: "30"
+    alb.ingress.kubernetes.io/healthy-threshold-count: "2"
+    alb.ingress.kubernetes.io/unhealthy-threshold-count: "3"
+spec:
+  ingressClassName: alb
+  rules:
+    # ── Default (no custom domain): ALB URL routes directly ──────
+    - http:
+        paths:
+          - path: /api
+            pathType: Prefix
+            backend:
+              service:
+                name: api-gateway
+                port:
+                  number: 7505
+          - path: /auth
+            pathType: Prefix
+            backend:
+              service:
+                name: api-gateway
+                port:
+                  number: 7505
+          - path: /users
+            pathType: Prefix
+            backend:
+              service:
+                name: api-gateway
+                port:
+                  number: 7505
+          - path: /admin
+            pathType: Prefix
+            backend:
+              service:
+                name: api-gateway
+                port:
+                  number: 7505
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: frontend
+                port:
+                  number: 80
+
+    # ── API traffic (all microservices via API Gateway) ──────────
+    - host: api.payment.example.com
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: api-gateway
+                port:
+                  number: 7505
+
+    # ── Frontend ─────────────────────────────────────────────────
+    - host: payment.example.com
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: frontend
+                port:
+                  number: 80
+
+    - host: www.payment.example.com
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: frontend
+                port:
+                  number: 80
