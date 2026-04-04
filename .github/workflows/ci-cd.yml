@@ -120,13 +120,14 @@ jobs:
 
     - name: Verify GitHub Secrets
       run: |
-        SECRETS=("RDS_ENDPOINT" "DB_USERNAME" "DB_PASSWORD" "RABBITMQ_PASSWORD" "RAZORPAY_KEY_ID" "RAZORPAY_KEY_SECRET")
-        for secret in "${SECRETS[@]}"; do
-          if [ -z "${{ secrets[secret] }}" ]; then
-            echo "ERROR: Missing GitHub Secret: $secret"
-            exit 1
-          fi
-        done
+        missing=0
+        if [ -z "${{ secrets.RDS_ENDPOINT }}" ]; then echo "ERROR: Missing RDS_ENDPOINT"; missing=1; fi
+        if [ -z "${{ secrets.DB_USERNAME }}" ]; then echo "ERROR: Missing DB_USERNAME"; missing=1; fi
+        if [ -z "${{ secrets.DB_PASSWORD }}" ]; then echo "ERROR: Missing DB_PASSWORD"; missing=1; fi
+        if [ -z "${{ secrets.RABBITMQ_PASSWORD }}" ]; then echo "ERROR: Missing RABBITMQ_PASSWORD"; missing=1; fi
+        if [ -z "${{ secrets.RAZORPAY_KEY_ID }}" ]; then echo "ERROR: Missing RAZORPAY_KEY_ID"; missing=1; fi
+        if [ -z "${{ secrets.RAZORPAY_KEY_SECRET }}" ]; then echo "ERROR: Missing RAZORPAY_KEY_SECRET"; missing=1; fi
+        if [ "$missing" -eq 1 ]; then exit 1; fi
         echo "All required secrets are present."
 
     - name: Apply Namespace & Config
