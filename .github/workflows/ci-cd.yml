@@ -128,7 +128,7 @@ jobs:
         # Populate the secret from GitHub Secrets at deploy time
         kubectl create secret generic payment-secrets \
           --namespace payment-system \
-          --from-literal=RDS_ENDPOINT="${{ secrets.RDS_ENDPOINT }}" \
+          --from-literal=DB_HOST="${{ secrets.RDS_ENDPOINT }}" \
           --from-literal=DB_USERNAME="${{ secrets.DB_USERNAME }}" \
           --from-literal=DB_PASSWORD="${{ secrets.DB_PASSWORD }}" \
           --from-literal=RABBITMQ_PASSWORD="${{ secrets.RABBITMQ_PASSWORD }}" \

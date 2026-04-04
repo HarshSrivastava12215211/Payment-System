@@ -1,0 +1,14 @@
+﻿NAME                                    READY   STATUS                       RESTARTS   AGE
+admin-service-795796b7b4-nv7lh          0/1     CreateContainerConfigError   0          38m
+api-gateway-6c596bddc5-ck4x4            1/1     Running                      0          38m
+config-server-7d8b9c8876-6mkt4          1/1     Running                      0          38m
+eureka-server-5cbb4b557c-6tmfd          1/1     Running                      0          38m
+frontend-686b7dbfb9-79fd2               1/1     Running                      0          38m
+kyc-service-7c5c894f86-rw8h7            0/1     CreateContainerConfigError   0          38m
+notification-service-788cbb7b6f-cqntz   0/1     CreateContainerConfigError   0          38m
+payment-service-7dd848796c-jhtvg        0/1     CreateContainerConfigError   0          38m
+rabbitmq-67cfd4f989-kb8dv               1/1     Running                      0          12h
+rewards-service-86d9b769d9-hgm6v        0/1     CreateContainerConfigError   0          38m
+transaction-service-85c687455b-zd656    0/1     CreateContainerConfigError   0          38m
+user-service-5c7844d895-gwql8           0/1     CreateContainerConfigError   0          38m
+wallet-service-9c76db47b-tckbw          0/1     CreateContainerConfigError   0          38m

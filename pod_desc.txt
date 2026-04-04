@@ -1,0 +1,105 @@
+﻿Name:             user-service-5c7844d895-gwql8
+Namespace:        payment-system
+Priority:         0
+Service Account:  default
+Node:             ip-192-168-45-109.ap-southeast-1.compute.internal/192.168.45.109
+Start Time:       Sat, 04 Apr 2026 10:40:33 +0530
+Labels:           app=user-service
+                  pod-template-hash=5c7844d895
+Annotations:      kubectl.kubernetes.io/restartedAt: 2026-04-03T23:08:41+05:30
+Status:           Pending
+IP:               192.168.48.100
+IPs:
+  IP:           192.168.48.100
+Controlled By:  ReplicaSet/user-service-5c7844d895
+Init Containers:
+  wait-for-config:
+    Container ID:  containerd://b2c46f79c3424b339134457a11025d82b89bbd8a71e8069a87787bd09be9fcd7
+    Image:         busybox:1.36
+    Image ID:      docker.io/library/busybox@sha256:73aaf090f3d85aa34ee199857f03fa3a95c8ede2ffd4cc2cdb5b94e566b11662
+    Port:          <none>
+    Host Port:     <none>
+    Command:
+      sh
+      -c
+      until wget -qO- http://config-server:7512/actuator/health | grep -q "UP"; do echo "Waiting for Config Server..."; sleep 5; done
+    State:          Terminated
+      Reason:       Completed
+      Exit Code:    0
+      Started:      Sat, 04 Apr 2026 10:40:57 +0530
+      Finished:     Sat, 04 Apr 2026 10:42:51 +0530
+    Ready:          True
+    Restart Count:  0
+    Environment:    <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-9zvhg (ro)
+Containers:
+  user-service:
+    Container ID:   
+    Image:          harsh12215211/user-service:9c8547f4505540ddbce60e298790bf0b43541cb5
+    Image ID:       
+    Port:           7500/TCP
+    Host Port:      0/TCP
+    State:          Waiting
+      Reason:       CreateContainerConfigError
+    Ready:          False
+    Restart Count:  0
+    Limits:
+      cpu:     500m
+      memory:  512Mi
+    Requests:
+      cpu:      10m
+      memory:   256Mi
+    Liveness:   http-get http://:7500/actuator/health delay=180s timeout=10s period=20s #success=1 #failure=3
+    Readiness:  http-get http://:7500/actuator/health delay=180s timeout=10s period=20s #success=1 #failure=3
+    Environment:
+      DB_HOST:                               <set to the key 'DB_HOST' in secret 'payment-secrets'>     Optional: false
+      DB_PORT:                               <set to the key 'DB_PORT' of config map 'payment-config'>  Optional: false
+      DB_NAME:                               user_db
+      DB_USER:                               <set to the key 'DB_USERNAME' in secret 'payment-secrets'>                              Optional: false
+      DB_PASSWORD:                           <set to the key 'DB_PASSWORD' in secret 'payment-secrets'>                              Optional: false
+      SPRING_RABBITMQ_HOST:                  <set to the key 'SPRING_RABBITMQ_HOST' of config map 'payment-config'>                  Optional: false
+      SPRING_RABBITMQ_PORT:                  <set to the key 'SPRING_RABBITMQ_PORT' of config map 'payment-config'>                  Optional: false
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE:  <set to the key 'EUREKA_CLIENT_SERVICEURL_DEFAULTZONE' of config map 'payment-config'>  Optional: false
+      SPRING_CONFIG_IMPORT:                  <set to the key 'SPRING_CONFIG_IMPORT' of config map 'payment-config'>                  Optional: false
+      EUREKA_INSTANCE_HOSTNAME:              user-service
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-9zvhg (ro)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   True 
+  Initialized                 True 
+  Ready                       False 
+  ContainersReady             False 
+  PodScheduled                True 
+Volumes:
+  kube-api-access-9zvhg:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    Optional:                false
+    DownwardAPI:             true
+QoS Class:                   Burstable
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type     Reason                  Age                    From               Message
+  ----     ------                  ----                   ----               -------
+  Normal   Scheduled               38m                    default-scheduler  Successfully assigned payment-system/user-service-5c7844d895-gwql8 to ip-192-168-45-109.ap-southeast-1.compute.internal
+  Warning  FailedCreatePodSandBox  38m                    kubelet            Failed to create pod sandbox: rpc error: code = Unknown desc = failed to setup network for sandbox "9c57755960da49d714890891d7c054f6ce70608d16eb6d57e31e5cfb2a4f9ec0": plugin type="aws-cni" name="aws-cni" failed (add): add cmd: failed to assign an IP address to container
+  Warning  FailedCreatePodSandBox  37m                    kubelet            Failed to create pod sandbox: rpc error: code = Unknown desc = failed to setup network for sandbox "3ecf8036ce084f255dff457c53245d23ec13bf2b5ea04e3c30370815079f0ec7": plugin type="aws-cni" name="aws-cni" failed (add): add cmd: failed to assign an IP address to container
+  Normal   Pulled                  37m                    kubelet            Container image "busybox:1.36" already present on machine
+  Normal   Created                 37m                    kubelet            Created container: wait-for-config
+  Normal   Started                 37m                    kubelet            Started container wait-for-config
+  Normal   Pulled                  35m                    kubelet            Successfully pulled image "harsh12215211/user-service:9c8547f4505540ddbce60e298790bf0b43541cb5" in 10.208s (10.208s including waiting). Image size: 264520088 bytes.
+  Normal   Pulled                  35m                    kubelet            Successfully pulled image "harsh12215211/user-service:9c8547f4505540ddbce60e298790bf0b43541cb5" in 1.245s (1.245s including waiting). Image size: 264520088 bytes.
+  Normal   Pulled                  35m                    kubelet            Successfully pulled image "harsh12215211/user-service:9c8547f4505540ddbce60e298790bf0b43541cb5" in 1.228s (1.228s including waiting). Image size: 264520088 bytes.
+  Normal   Pulled                  34m                    kubelet            Successfully pulled image "harsh12215211/user-service:9c8547f4505540ddbce60e298790bf0b43541cb5" in 1.26s (1.26s including waiting). Image size: 264520088 bytes.
+  Normal   Pulled                  34m                    kubelet            Successfully pulled image "harsh12215211/user-service:9c8547f4505540ddbce60e298790bf0b43541cb5" in 1.307s (1.307s including waiting). Image size: 264520088 bytes.
+  Normal   Pulled                  34m                    kubelet            Successfully pulled image "harsh12215211/user-service:9c8547f4505540ddbce60e298790bf0b43541cb5" in 1.198s (1.198s including waiting). Image size: 264520088 bytes.
+  Normal   Pulled                  34m                    kubelet            Successfully pulled image "harsh12215211/user-service:9c8547f4505540ddbce60e298790bf0b43541cb5" in 1.271s (1.271s including waiting). Image size: 264520088 bytes.
+  Normal   Pulled                  33m                    kubelet            Successfully pulled image "harsh12215211/user-service:9c8547f4505540ddbce60e298790bf0b43541cb5" in 1.209s (1.209s including waiting). Image size: 264520088 bytes.
+  Normal   Pulled                  33m (x3 over 33m)      kubelet            (combined from similar events): Successfully pulled image "harsh12215211/user-service:9c8547f4505540ddbce60e298790bf0b43541cb5" in 1.233s (1.233s including waiting). Image size: 264520088 bytes.
+  Warning  Failed                  3m3s (x139 over 35m)   kubelet            Error: couldn't find key DB_HOST in Secret payment-system/payment-secrets
+  Normal   Pulling                 2m34s (x141 over 35m)  kubelet            Pulling image "harsh12215211/user-service:9c8547f4505540ddbce60e298790bf0b43541cb5"

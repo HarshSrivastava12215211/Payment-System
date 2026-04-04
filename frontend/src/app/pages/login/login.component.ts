@@ -98,7 +98,7 @@ export class LoginComponent {
         this.cdr.detectChanges();
       },
       error: (err) => { 
-        this.errorMsg = err.error || 'Connection failed. Please try again later.'; 
+        this.errorMsg = typeof err.error === 'string' ? err.error : (err.error?.message || err.message || 'Connection failed. Please try again later.'); 
         this.loading = false; 
         this.cdr.detectChanges();
       }
