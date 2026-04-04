@@ -142,42 +142,41 @@ jobs:
         kubectl apply -f k8s/eureka/
         kubectl apply -f k8s/config-server/
         # Wait for Eureka and Config Server to be ready
-        kubectl rollout status deployment/eureka-server   -n payment-system --timeout=120s
-        kubectl rollout status deployment/config-server   -n payment-system --timeout=120s
+        kubectl rollout status deployment/eureka-server   -n payment-system --timeout=180s
+        kubectl rollout status deployment/config-server   -n payment-system --timeout=180s
 
-    - name: Deploy API Gateway
+    - name: Deploy API Gateway & Microservices
       run: |
+        # Apply all manifests
         kubectl apply -f k8s/api-gateway/
-        kubectl rollout status deployment/api-gateway -n payment-system --timeout=120s
-
-    - name: Deploy All Microservices
-      run: |
         kubectl apply -f k8s/services/
-        for svc in user-service admin-service kyc-service wallet-service \
-                   payment-service transaction-service notification-service rewards-service; do
-          kubectl rollout status deployment/$svc -n payment-system --timeout=180s
-        done
-
-    - name: Deploy Frontend
-      run: |
         kubectl apply -f k8s/frontend/
-        kubectl rollout status deployment/frontend -n payment-system --timeout=60s
 
-    - name: Apply Ingress
-      run: |
-        kubectl apply -f k8s/ingress.yaml
-
-    - name: Force rolling image update (use the new sha tag)
-      run: |
+        # Update all deployments to the new SHA tag immediately
         IMAGES=(admin-service api-gateway config-server eureka-server kyc-service \
                 notification-service payment-service rewards-service transaction-service \
-                user-service wallet-service)
+                user-service wallet-service frontend)
+        
         for img in "${IMAGES[@]}"; do
           kubectl set image deployment/$img $img=${{ secrets.DOCKER_USERNAME }}/$img:${{ github.sha }} \
             -n payment-system --record || true
         done
-        kubectl set image deployment/frontend frontend=${{ secrets.DOCKER_USERNAME }}/frontend:${{ github.sha }} \
-          -n payment-system --record || true
+
+    - name: Wait for Rollout Completion
+      run: |
+        echo "Waiting for all services to stabilize (600s timeout)..."
+        # Wait for everything in parallel
+        SERVICES=(api-gateway user-service admin-service kyc-service wallet-service \
+                  payment-service transaction-service notification-service rewards-service frontend)
+        
+        for svc in "${SERVICES[@]}"; do
+          kubectl rollout status deployment/$svc -n payment-system --timeout=600s &
+        done
+        wait
+
+    - name: Apply Ingress
+      run: |
+        kubectl apply -f k8s/ingress.yaml
 
     - name: Verify cluster health
       run: |
