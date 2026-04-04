@@ -1,0 +1,621 @@
+﻿NAME                                    READY   STATUS     RESTARTS   AGE
+admin-service-6b4c4896f-54xwg           0/1     Init:0/1   0          31s
+api-gateway-7f886fff4d-7zqz5            1/1     Running    0          34m
+config-server-5bdb8bc975-f8gpv          1/1     Running    0          37m
+eureka-server-7796b59454-x8pmt          1/1     Running    0          37m
+frontend-686b7dbfb9-79fd2               1/1     Running    0          79m
+kyc-service-7779dc9749-lzg78            0/1     Init:0/1   0          31s
+notification-service-79fc5cd765-ssdfg   0/1     Running    0          32s
+payment-service-5b688ffc75-lxk95        0/1     Running    0          33s
+rabbitmq-67cfd4f989-kb8dv               1/1     Running    0          12h
+rewards-service-7d46494c69-tzr86        0/1     Running    0          33s
+transaction-service-fd77fcd6-gcsr9      0/1     Running    0          33s
+user-service-c58b6fd9-5ttdm             0/1     Running    0          33s
+wallet-service-68ff985b65-fqg7l         0/1     Init:0/1   0          31s
+user-service-c58b6fd9-5ttdm             0/1     Error      0          40s
+user-service-c58b6fd9-5ttdm             0/1     Running    1 (4s ago)   42s
+wallet-service-68ff985b65-fqg7l         0/1     Init:0/1   0            41s
+kyc-service-7779dc9749-lzg78            0/1     Init:0/1   0            41s
+kyc-service-7779dc9749-lzg78            0/1     PodInitializing   0            42s
+wallet-service-68ff985b65-fqg7l         0/1     PodInitializing   0            42s
+admin-service-6b4c4896f-54xwg           0/1     PodInitializing   0            43s
+wallet-service-68ff985b65-fqg7l         0/1     Running           0            44s
+rewards-service-7d46494c69-tzr86        0/1     Error             0            47s
+rewards-service-7d46494c69-tzr86        0/1     Running           1 (2s ago)   49s
+kyc-service-7779dc9749-lzg78            0/1     Running           0            49s
+admin-service-6b4c4896f-54xwg           0/1     Running           0            50s
+transaction-service-fd77fcd6-gcsr9      0/1     Error             0            59s
+transaction-service-fd77fcd6-gcsr9      0/1     Running           1 (2s ago)   61s
+payment-service-5b688ffc75-lxk95        0/1     Error             0            77s
+payment-service-5b688ffc75-lxk95        0/1     Running           1 (3s ago)   79s
+rewards-service-7d46494c69-tzr86        0/1     Error             1 (51s ago)   98s
+rewards-service-7d46494c69-tzr86        0/1     CrashLoopBackOff   1 (4s ago)    100s
+user-service-c58b6fd9-5ttdm             0/1     Error              1 (67s ago)   105s
+notification-service-79fc5cd765-ssdfg   0/1     Error              0             106s
+notification-service-79fc5cd765-ssdfg   0/1     Running            1 (3s ago)    108s
+rewards-service-7d46494c69-tzr86        0/1     Running            2 (18s ago)   114s
+user-service-c58b6fd9-5ttdm             0/1     CrashLoopBackOff   1 (16s ago)   2m
+user-service-c58b6fd9-5ttdm             0/1     Running            2 (18s ago)   2m2s
+wallet-service-68ff985b65-fqg7l         0/1     Error              0             2m14s
+transaction-service-fd77fcd6-gcsr9      0/1     Error              1 (78s ago)   2m17s
+wallet-service-68ff985b65-fqg7l         0/1     Running            1 (2s ago)    2m16s
+transaction-service-fd77fcd6-gcsr9      0/1     CrashLoopBackOff   1 (4s ago)    2m21s
+kyc-service-7779dc9749-lzg78            0/1     Error              0             2m25s
+kyc-service-7779dc9749-lzg78            0/1     Running            1 (2s ago)    2m27s
+transaction-service-fd77fcd6-gcsr9      0/1     Running            2 (17s ago)   2m34s
+admin-service-6b4c4896f-54xwg           0/1     Error              0             2m33s
+admin-service-6b4c4896f-54xwg           0/1     Running            1 (3s ago)    2m35s
+rewards-service-7d46494c69-tzr86        0/1     Error              2 (62s ago)   2m38s
+rewards-service-7d46494c69-tzr86        0/1     CrashLoopBackOff   2 (2s ago)    2m40s
+payment-service-5b688ffc75-lxk95        0/1     Error              1 (86s ago)   2m42s
+user-service-c58b6fd9-5ttdm             0/1     Error              2 (67s ago)   2m51s
+payment-service-5b688ffc75-lxk95        0/1     CrashLoopBackOff   1 (12s ago)   2m53s
+payment-service-5b688ffc75-lxk95        0/1     Running            2 (14s ago)   2m55s
+user-service-c58b6fd9-5ttdm             0/1     CrashLoopBackOff   2 (10s ago)   3m
+rewards-service-7d46494c69-tzr86        0/1     Running            3 (29s ago)   3m7s
+user-service-c58b6fd9-5ttdm             0/1     Running            3 (27s ago)   3m17s
+notification-service-79fc5cd765-ssdfg   0/1     Error              1 (94s ago)   3m19s
+notification-service-79fc5cd765-ssdfg   0/1     CrashLoopBackOff   1 (2s ago)    3m20s
+wallet-service-68ff985b65-fqg7l         0/1     Error              1 (71s ago)   3m25s
+transaction-service-fd77fcd6-gcsr9      0/1     Error              2 (73s ago)   3m30s
+notification-service-79fc5cd765-ssdfg   0/1     Running            2 (17s ago)   3m35s
+transaction-service-fd77fcd6-gcsr9      0/1     CrashLoopBackOff   2 (11s ago)   3m41s
+wallet-service-68ff985b65-fqg7l         0/1     CrashLoopBackOff   1 (15s ago)   3m40s
+wallet-service-68ff985b65-fqg7l         0/1     Running            2 (17s ago)   3m42s
+rewards-service-7d46494c69-tzr86        0/1     Error              3 (69s ago)   3m47s
+user-service-c58b6fd9-5ttdm             0/1     Error              3 (61s ago)   3m51s
+kyc-service-7779dc9749-lzg78            0/1     Error              1 (84s ago)   3m49s
+transaction-service-fd77fcd6-gcsr9      0/1     Running            3 (23s ago)   3m53s
+payment-service-5b688ffc75-lxk95        0/1     Error              2 (78s ago)   3m59s
+rewards-service-7d46494c69-tzr86        0/1     CrashLoopBackOff   3 (13s ago)   4m
+user-service-c58b6fd9-5ttdm             0/1     CrashLoopBackOff   3 (9s ago)    4m
+payment-service-5b688ffc75-lxk95        0/1     CrashLoopBackOff   2 (3s ago)    4m1s
+admin-service-6b4c4896f-54xwg           0/1     Error              1 (88s ago)   4m
+kyc-service-7779dc9749-lzg78            0/1     CrashLoopBackOff   1 (11s ago)   4m
+admin-service-6b4c4896f-54xwg           0/1     CrashLoopBackOff   1 (3s ago)    4m1s
+kyc-service-7779dc9749-lzg78            0/1     Running            2 (13s ago)   4m2s
+admin-service-6b4c4896f-54xwg           0/1     Running            2 (16s ago)   4m14s
+payment-service-5b688ffc75-lxk95        0/1     Running            3 (28s ago)   4m26s
+rewards-service-7d46494c69-tzr86        0/1     Running            4 (42s ago)   4m29s
+user-service-c58b6fd9-5ttdm             0/1     Running            4 (48s ago)   4m39s
+transaction-service-fd77fcd6-gcsr9      0/1     Error              3 (72s ago)   4m42s
+wallet-service-68ff985b65-fqg7l         0/1     Error              2 (77s ago)   4m42s
+transaction-service-fd77fcd6-gcsr9      0/1     CrashLoopBackOff   3 (15s ago)   4m56s
+wallet-service-68ff985b65-fqg7l         0/1     CrashLoopBackOff   2 (13s ago)   4m54s
+notification-service-79fc5cd765-ssdfg   0/1     Error              2 (98s ago)   4m56s
+notification-service-79fc5cd765-ssdfg   0/1     CrashLoopBackOff   2 (5s ago)    5m
+rewards-service-7d46494c69-tzr86        0/1     Error              4 (81s ago)   5m8s
+user-service-c58b6fd9-5ttdm             0/1     Error              4 (79s ago)   5m10s
+wallet-service-68ff985b65-fqg7l         0/1     Running            3 (34s ago)   5m15s
+kyc-service-7779dc9749-lzg78            0/1     Error              2 (87s ago)   5m16s
+rewards-service-7d46494c69-tzr86        0/1     CrashLoopBackOff   4 (12s ago)   5m20s
+user-service-c58b6fd9-5ttdm             0/1     CrashLoopBackOff   4 (10s ago)   5m20s
+kyc-service-7779dc9749-lzg78            0/1     CrashLoopBackOff   2 (5s ago)    5m20s
+notification-service-79fc5cd765-ssdfg   0/1     Running            3 (30s ago)   5m25s
+payment-service-5b688ffc75-lxk95        0/1     Error              3 (89s ago)   5m27s
+transaction-service-fd77fcd6-gcsr9      0/1     Running            4 (49s ago)   5m30s
+admin-service-6b4c4896f-54xwg           0/1     Error              2 (94s ago)   5m32s
+payment-service-5b688ffc75-lxk95        0/1     CrashLoopBackOff   3 (14s ago)   5m41s
+admin-service-6b4c4896f-54xwg           0/1     CrashLoopBackOff   2 (9s ago)    5m41s
+kyc-service-7779dc9749-lzg78            0/1     Running            3 (31s ago)   5m46s
+admin-service-6b4c4896f-54xwg           0/1     Running            3 (26s ago)   5m58s
+user-service-c58b6fd9-5ttdm             0/1     Terminating        4 (51s ago)   6m1s
+user-service-c58b6fd9-5ttdm             0/1     Terminating        4             6m1s
+transaction-service-fd77fcd6-gcsr9      0/1     Terminating        4 (81s ago)   6m2s
+transaction-service-fd77fcd6-gcsr9      0/1     Terminating        4 (81s ago)   6m2s
+user-service-c58b6fd9-5ttdm             0/1     Error              4             6m2s
+user-service-c58b6fd9-5ttdm             0/1     Error              4             6m2s
+user-service-c58b6fd9-5ttdm             0/1     Error              4             6m2s
+rewards-service-7d46494c69-tzr86        0/1     Terminating        4 (54s ago)   6m2s
+rewards-service-7d46494c69-tzr86        0/1     Terminating        4             6m2s
+user-service-6c6fb6dfd5-w7kxd           0/1     Pending            0             0s
+user-service-6c6fb6dfd5-w7kxd           0/1     Pending            0             0s
+user-service-6c6fb6dfd5-w7kxd           0/1     Init:0/1           0             1s
+rewards-service-7d46494c69-tzr86        0/1     Error              4             6m3s
+payment-service-5b688ffc75-lxk95        0/1     Terminating        3 (36s ago)   6m3s
+payment-service-5b688ffc75-lxk95        0/1     Terminating        3             6m3s
+notification-service-79fc5cd765-ssdfg   0/1     Terminating        3 (67s ago)   6m2s
+notification-service-79fc5cd765-ssdfg   0/1     Terminating        3 (67s ago)   6m2s
+payment-service-5b688ffc75-lxk95        0/1     Error              3             6m3s
+kyc-service-7779dc9749-lzg78            0/1     Terminating        3 (46s ago)   6m1s
+kyc-service-7779dc9749-lzg78            0/1     Terminating        3 (46s ago)   6m1s
+payment-service-5b688ffc75-lxk95        0/1     Error              3             6m3s
+admin-service-6b4c4896f-54xwg           0/1     Terminating        3 (29s ago)   6m1s
+payment-service-5b688ffc75-lxk95        0/1     Error              3             6m3s
+wallet-service-68ff985b65-fqg7l         0/1     Terminating        3 (80s ago)   6m1s
+admin-service-6b4c4896f-54xwg           0/1     Terminating        3 (29s ago)   6m1s
+rewards-service-7d46494c69-tzr86        0/1     Error              4             6m3s
+rewards-service-7d46494c69-tzr86        0/1     Error              4             6m3s
+wallet-service-68ff985b65-fqg7l         0/1     Terminating        3 (80s ago)   6m1s
+payment-service-659659875-zpd8j         0/1     Pending            0             1s
+payment-service-659659875-zpd8j         0/1     Pending            0             1s
+payment-service-659659875-zpd8j         0/1     Init:0/2           0             1s
+rewards-service-6b4b687997-pgcvd        0/1     Pending            0             0s
+rewards-service-6b4b687997-pgcvd        0/1     Pending            0             0s
+rewards-service-6b4b687997-pgcvd        0/1     Init:0/2           0             0s
+admin-service-6b4c4896f-54xwg           0/1     Error              3 (30s ago)   6m2s
+user-service-6c6fb6dfd5-w7kxd           0/1     PodInitializing    0             2s
+admin-service-6b4c4896f-54xwg           0/1     Error              3 (30s ago)   6m2s
+admin-service-6b4c4896f-54xwg           0/1     Error              3 (30s ago)   6m2s
+admin-service-768bfccdbb-tjg8k          0/1     Pending            0             0s
+admin-service-768bfccdbb-tjg8k          0/1     Pending            0             0s
+admin-service-768bfccdbb-tjg8k          0/1     Init:0/1           0             0s
+payment-service-659659875-zpd8j         0/1     Init:0/2           0             2s
+rewards-service-6b4b687997-pgcvd        0/1     Init:1/2           0             1s
+admin-service-768bfccdbb-tjg8k          0/1     Init:0/1           0             1s
+payment-service-659659875-zpd8j         0/1     Init:1/2           0             3s
+rewards-service-6b4b687997-pgcvd        0/1     PodInitializing    0             2s
+user-service-6c6fb6dfd5-w7kxd           0/1     Running            0             4s
+admin-service-768bfccdbb-tjg8k          0/1     PodInitializing    0             3s
+payment-service-659659875-zpd8j         0/1     PodInitializing    0             4s
+rewards-service-6b4b687997-pgcvd        0/1     Running            0             4s
+wallet-service-68ff985b65-fqg7l         0/1     Error              3 (86s ago)   6m7s
+admin-service-768bfccdbb-tjg8k          0/1     Running            0             5s
+wallet-service-68ff985b65-fqg7l         0/1     Error              3 (86s ago)   6m7s
+wallet-service-68ff985b65-fqg7l         0/1     Error              3 (86s ago)   6m7s
+payment-service-659659875-zpd8j         0/1     Running            0             6s
+wallet-service-cdf664586-v5gfd          0/1     Pending            0             0s
+wallet-service-cdf664586-v5gfd          0/1     Pending            0             0s
+wallet-service-cdf664586-v5gfd          0/1     Init:0/1           0             0s
+wallet-service-cdf664586-v5gfd          0/1     Init:0/1           0             1s
+wallet-service-cdf664586-v5gfd          0/1     PodInitializing    0             2s
+wallet-service-cdf664586-v5gfd          0/1     Running            0             4s
+transaction-service-fd77fcd6-gcsr9      0/1     Error              4 (97s ago)   6m18s
+transaction-service-fd77fcd6-gcsr9      0/1     Error              4 (97s ago)   6m18s
+transaction-service-fd77fcd6-gcsr9      0/1     Error              4 (97s ago)   6m18s
+transaction-service-8cdc97998-7zcvk     0/1     Pending            0             0s
+transaction-service-8cdc97998-7zcvk     0/1     Pending            0             0s
+transaction-service-8cdc97998-7zcvk     0/1     Init:0/1           0             0s
+notification-service-79fc5cd765-ssdfg   0/1     Error              3 (97s ago)   6m32s
+kyc-service-7779dc9749-lzg78            0/1     Error              3 (76s ago)   6m31s
+notification-service-79fc5cd765-ssdfg   0/1     Error              3 (98s ago)   6m33s
+notification-service-79fc5cd765-ssdfg   0/1     Error              3 (98s ago)   6m33s
+notification-service-758488686f-sw29v   0/1     Pending            0             0s
+notification-service-758488686f-sw29v   0/1     Pending            0             0s
+notification-service-758488686f-sw29v   0/1     Init:0/2           0             0s
+kyc-service-7779dc9749-lzg78            0/1     Error              3 (77s ago)   6m32s
+kyc-service-7779dc9749-lzg78            0/1     Error              3 (77s ago)   6m32s
+kyc-service-684555864-nsfd8             0/1     Pending            0             0s
+kyc-service-684555864-nsfd8             0/1     Pending            0             0s
+kyc-service-684555864-nsfd8             0/1     Init:0/1           0             0s
+transaction-service-8cdc97998-7zcvk     0/1     Init:0/1           0             16s
+transaction-service-8cdc97998-7zcvk     0/1     PodInitializing    0             17s
+kyc-service-684555864-nsfd8             0/1     Init:0/1           0             2s
+notification-service-758488686f-sw29v   0/1     Init:1/2           0             2s
+kyc-service-684555864-nsfd8             0/1     PodInitializing    0             3s
+notification-service-758488686f-sw29v   0/1     PodInitializing    0             3s
+transaction-service-8cdc97998-7zcvk     0/1     Running            0             19s
+kyc-service-684555864-nsfd8             0/1     Running            0             5s
+notification-service-758488686f-sw29v   0/1     Running            0             5s
+rewards-service-6b4b687997-pgcvd        0/1     Error              0             47s
+rewards-service-6b4b687997-pgcvd        0/1     Running            1 (3s ago)    49s
+user-service-6c6fb6dfd5-w7kxd           0/1     Error              0             64s
+user-service-6c6fb6dfd5-w7kxd           0/1     Running            1 (3s ago)    66s
+rewards-service-6b4b687997-pgcvd        0/1     Error              1 (47s ago)   93s
+rewards-service-6b4b687997-pgcvd        0/1     CrashLoopBackOff   1 (7s ago)    100s
+payment-service-659659875-zpd8j         0/1     Error              0             103s
+payment-service-659659875-zpd8j         0/1     Running            1 (2s ago)    105s
+wallet-service-cdf664586-v5gfd          0/1     Error              0             99s
+wallet-service-cdf664586-v5gfd          0/1     Running            1 (2s ago)    101s
+admin-service-768bfccdbb-tjg8k          0/1     Error              0             108s
+admin-service-768bfccdbb-tjg8k          0/1     Running            1 (3s ago)    110s
+transaction-service-8cdc97998-7zcvk     0/1     Error              0             95s
+transaction-service-8cdc97998-7zcvk     0/1     Running            1 (2s ago)    97s
+user-service-6c6fb6dfd5-w7kxd           0/1     Error              1 (51s ago)   114s
+rewards-service-6b4b687997-pgcvd        0/1     Running            2 (21s ago)   114s
+user-service-6c6fb6dfd5-w7kxd           0/1     CrashLoopBackOff   1 (8s ago)    2m1s
+kyc-service-684555864-nsfd8             0/1     Error              0             97s
+kyc-service-684555864-nsfd8             0/1     Running            1 (3s ago)    99s
+notification-service-758488686f-sw29v   0/1     Error              0             102s
+user-service-6c6fb6dfd5-w7kxd           0/1     Running            2 (22s ago)   2m15s
+notification-service-758488686f-sw29v   0/1     Running            1 (2s ago)    104s
+rewards-service-6b4b687997-pgcvd        0/1     Error              2 (63s ago)   2m36s
+rewards-service-6b4b687997-pgcvd        0/1     CrashLoopBackOff   2 (4s ago)    2m40s
+payment-service-659659875-zpd8j         0/1     Error              1 (78s ago)   3m1s
+transaction-service-8cdc97998-7zcvk     0/1     Error              1 (70s ago)   2m45s
+wallet-service-cdf664586-v5gfd          0/1     Error              1 (78s ago)   2m57s
+user-service-6c6fb6dfd5-w7kxd           0/1     Error              2 (72s ago)   3m5s
+wallet-service-cdf664586-v5gfd          0/1     CrashLoopBackOff   1 (4s ago)    3m1s
+rewards-service-6b4b687997-pgcvd        0/1     Running            3 (35s ago)   3m11s
+payment-service-659659875-zpd8j         0/1     CrashLoopBackOff   1 (13s ago)   3m14s
+payment-service-659659875-zpd8j         0/1     Running            2 (15s ago)   3m16s
+transaction-service-8cdc97998-7zcvk     0/1     CrashLoopBackOff   1 (15s ago)   3m
+user-service-6c6fb6dfd5-w7kxd           0/1     CrashLoopBackOff   2 (13s ago)   3m17s
+transaction-service-8cdc97998-7zcvk     0/1     Running            2 (17s ago)   3m2s
+admin-service-768bfccdbb-tjg8k          0/1     Error              1 (92s ago)   3m19s
+wallet-service-cdf664586-v5gfd          0/1     Running            2 (19s ago)   3m16s
+admin-service-768bfccdbb-tjg8k          0/1     CrashLoopBackOff   1 (3s ago)    3m21s
+kyc-service-684555864-nsfd8             0/1     Error              1 (85s ago)   3m1s
+user-service-6c6fb6dfd5-w7kxd           0/1     Running            3 (32s ago)   3m36s
+admin-service-768bfccdbb-tjg8k          0/1     Running            2 (20s ago)   3m38s
+notification-service-758488686f-sw29v   0/1     Error              1             3m10s
+rewards-service-6b4b687997-pgcvd        0/1     Error              3 (67s ago)   3m43s
+kyc-service-684555864-nsfd8             0/1     CrashLoopBackOff   1 (16s ago)   3m16s
+kyc-service-684555864-nsfd8             0/1     Running            2 (18s ago)   3m18s
+notification-service-758488686f-sw29v   0/1     CrashLoopBackOff   1 (11s ago)   3m20s
+notification-service-758488686f-sw29v   0/1     Running            2 (13s ago)   3m22s
+rewards-service-6b4b687997-pgcvd        0/1     CrashLoopBackOff   3 (14s ago)   3m56s
+user-service-6c6fb6dfd5-w7kxd           0/1     Error              3 (63s ago)   4m7s
+transaction-service-8cdc97998-7zcvk     0/1     Error              2 (67s ago)   3m52s
+payment-service-659659875-zpd8j         0/1     Error              2 (74s ago)   4m15s
+transaction-service-8cdc97998-7zcvk     0/1     CrashLoopBackOff   2 (8s ago)    4m
+wallet-service-cdf664586-v5gfd          0/1     Error              2 (75s ago)   4m12s
+user-service-6c6fb6dfd5-w7kxd           0/1     CrashLoopBackOff   3 (15s ago)   4m21s
+payment-service-659659875-zpd8j         0/1     CrashLoopBackOff   2 (7s ago)    4m21s
+wallet-service-cdf664586-v5gfd          0/1     CrashLoopBackOff   2 (9s ago)    4m21s
+rewards-service-6b4b687997-pgcvd        0/1     Running            4 (45s ago)   4m27s
+transaction-service-8cdc97998-7zcvk     0/1     Running            3 (23s ago)   4m15s
+wallet-service-cdf664586-v5gfd          0/1     Running            3 (25s ago)   4m37s
+payment-service-659659875-zpd8j         0/1     Running            3 (34s ago)   4m48s
+admin-service-768bfccdbb-tjg8k          0/1     Error              2 (98s ago)   4m56s
+user-service-6c6fb6dfd5-w7kxd           0/1     Running            4 (52s ago)   4m58s
+rewards-service-6b4b687997-pgcvd        0/1     Error              4 (78s ago)   5m
+kyc-service-684555864-nsfd8             0/1     Error              2 (90s ago)   4m30s
+admin-service-768bfccdbb-tjg8k          0/1     CrashLoopBackOff   2 (6s ago)    5m1s
+rewards-service-6b4b687997-pgcvd        0/1     CrashLoopBackOff   4 (1s ago)    5m1s
+notification-service-758488686f-sw29v   0/1     Error              2 (90s ago)   4m39s
+notification-service-758488686f-sw29v   0/1     CrashLoopBackOff   2 (1s ago)    4m40s
+kyc-service-684555864-nsfd8             0/1     CrashLoopBackOff   2 (11s ago)   4m40s
+transaction-service-8cdc97998-7zcvk     0/1     Error              3 (70s ago)   5m2s
+user-service-6c6fb6dfd5-w7kxd           0/1     Error              4 (77s ago)   5m23s
+kyc-service-684555864-nsfd8             0/1     Running            3 (28s ago)   4m57s
+transaction-service-8cdc97998-7zcvk     0/1     CrashLoopBackOff   3 (13s ago)   5m14s
+admin-service-768bfccdbb-tjg8k          0/1     Running            3 (34s ago)   5m29s
+user-service-6c6fb6dfd5-w7kxd           0/1     CrashLoopBackOff   4 (14s ago)   5m36s
+wallet-service-cdf664586-v5gfd          0/1     Error              3 (79s ago)   5m31s
+notification-service-758488686f-sw29v   0/1     Running            3 (30s ago)   5m9s
+payment-service-659659875-zpd8j         0/1     Error              3 (87s ago)   5m41s
+wallet-service-cdf664586-v5gfd          0/1     CrashLoopBackOff   3 (10s ago)   5m41s
+user-service-6c6fb6dfd5-w7kxd           0/1     Terminating        4 (26s ago)   5m48s
+user-service-6c6fb6dfd5-w7kxd           0/1     Terminating        4             5m48s
+admin-service-768bfccdbb-tjg8k          0/1     Terminating        3 (51s ago)   5m46s
+admin-service-768bfccdbb-tjg8k          0/1     Terminating        3 (51s ago)   5m46s
+user-service-6c6fb6dfd5-w7kxd           0/1     Error              4             5m48s
+kyc-service-684555864-nsfd8             0/1     Terminating        3 (47s ago)   5m16s
+kyc-service-684555864-nsfd8             0/1     Terminating        3 (47s ago)   5m16s
+wallet-service-cdf664586-v5gfd          0/1     Terminating        3 (10s ago)   5m41s
+payment-service-659659875-zpd8j         0/1     Terminating        3 (93s ago)   5m47s
+wallet-service-cdf664586-v5gfd          0/1     Terminating        3             5m42s
+user-service-6c6fb6dfd5-w7kxd           0/1     Error              4             5m49s
+transaction-service-8cdc97998-7zcvk     0/1     Terminating        3 (31s ago)   5m32s
+user-service-6c6fb6dfd5-w7kxd           0/1     Error              4             5m49s
+transaction-service-8cdc97998-7zcvk     0/1     Terminating        3             5m32s
+payment-service-659659875-zpd8j         0/1     Terminating        3             5m48s
+notification-service-758488686f-sw29v   0/1     Terminating        3 (38s ago)   5m17s
+wallet-service-cdf664586-v5gfd          0/1     Error              3             5m42s
+payment-service-659659875-zpd8j         0/1     Error              3             5m48s
+notification-service-758488686f-sw29v   0/1     Terminating        3 (38s ago)   5m17s
+user-service-6bc99c8d97-dktts           0/1     Pending            0             0s
+user-service-6bc99c8d97-dktts           0/1     Pending            0             0s
+transaction-service-8cdc97998-7zcvk     0/1     Error              3             5m32s
+rewards-service-6b4b687997-pgcvd        0/1     Terminating        4 (47s ago)   5m47s
+user-service-6bc99c8d97-dktts           0/1     Init:0/1           0             0s
+rewards-service-6b4b687997-pgcvd        0/1     Terminating        4             5m47s
+notification-service-758488686f-sw29v   0/1     Error              3 (38s ago)   5m17s
+rewards-service-6b4b687997-pgcvd        0/1     Error              4             5m47s
+transaction-service-8cdc97998-7zcvk     0/1     Error              3             5m32s
+transaction-service-8cdc97998-7zcvk     0/1     Error              3             5m32s
+notification-service-758488686f-sw29v   0/1     Error              3 (38s ago)   5m17s
+notification-service-758488686f-sw29v   0/1     Error              3 (38s ago)   5m17s
+transaction-service-5445767f6b-9xfzc    0/1     Pending            0             1s
+rewards-service-6b4b687997-pgcvd        0/1     Error              4             5m48s
+rewards-service-6b4b687997-pgcvd        0/1     Error              4             5m48s
+transaction-service-5445767f6b-9xfzc    0/1     Pending            0             1s
+wallet-service-cdf664586-v5gfd          0/1     Error              3             5m43s
+wallet-service-cdf664586-v5gfd          0/1     Error              3             5m43s
+payment-service-659659875-zpd8j         0/1     Error              3             5m49s
+payment-service-659659875-zpd8j         0/1     Error              3             5m49s
+notification-service-7b66cd6f8f-dzk5x   0/1     Pending            0             0s
+notification-service-7b66cd6f8f-dzk5x   0/1     Pending            0             0s
+transaction-service-5445767f6b-9xfzc    0/1     Init:0/1           0             1s
+rewards-service-df546b9c7-f79j6         0/1     Pending            0             0s
+rewards-service-df546b9c7-f79j6         0/1     Pending            0             0s
+notification-service-7b66cd6f8f-dzk5x   0/1     Init:0/2           0             0s
+rewards-service-df546b9c7-f79j6         0/1     Init:0/2           0             0s
+wallet-service-667f6fd6fd-gptb4         0/1     Pending            0             0s
+wallet-service-667f6fd6fd-gptb4         0/1     Pending            0             0s
+payment-service-6cc97f568c-p4s6c        0/1     Pending            0             0s
+payment-service-6cc97f568c-p4s6c        0/1     Pending            0             0s
+wallet-service-667f6fd6fd-gptb4         0/1     Init:0/1           0             0s
+payment-service-6cc97f568c-p4s6c        0/1     Init:0/2           0             0s
+user-service-6bc99c8d97-dktts           0/1     PodInitializing    0             2s
+transaction-service-5445767f6b-9xfzc    0/1     PodInitializing    0             3s
+rewards-service-df546b9c7-f79j6         0/1     Init:1/2           0             2s
+wallet-service-667f6fd6fd-gptb4         0/1     Init:0/1           0             2s
+notification-service-7b66cd6f8f-dzk5x   0/1     Init:1/2           0             2s
+wallet-service-667f6fd6fd-gptb4         0/1     PodInitializing    0             3s
+notification-service-7b66cd6f8f-dzk5x   0/1     PodInitializing    0             3s
+user-service-6bc99c8d97-dktts           0/1     Running            0             4s
+rewards-service-df546b9c7-f79j6         0/1     Init:1/2           0             3s
+transaction-service-5445767f6b-9xfzc    0/1     Running            0             5s
+rewards-service-df546b9c7-f79j6         0/1     PodInitializing    0             4s
+notification-service-7b66cd6f8f-dzk5x   0/1     Running            0             5s
+wallet-service-667f6fd6fd-gptb4         0/1     Running            0             5s
+rewards-service-df546b9c7-f79j6         0/1     Running            0             6s
+kyc-service-684555864-nsfd8             0/1     Error              3 (78s ago)   5m47s
+admin-service-768bfccdbb-tjg8k          0/1     Error              3 (82s ago)   6m17s
+kyc-service-684555864-nsfd8             0/1     Error              3 (78s ago)   5m47s
+kyc-service-684555864-nsfd8             0/1     Error              3 (78s ago)   5m47s
+admin-service-768bfccdbb-tjg8k          0/1     Error              3 (82s ago)   6m17s
+admin-service-768bfccdbb-tjg8k          0/1     Error              3 (82s ago)   6m17s
+kyc-service-858cc454fb-2wbjz            0/1     Pending            0             0s
+kyc-service-858cc454fb-2wbjz            0/1     Pending            0             0s
+kyc-service-858cc454fb-2wbjz            0/1     Init:0/1           0             0s
+admin-service-86864d7fc4-ddhv7          0/1     Pending            0             0s
+admin-service-86864d7fc4-ddhv7          0/1     Pending            0             0s
+admin-service-86864d7fc4-ddhv7          0/1     Init:0/1           0             0s
+kyc-service-858cc454fb-2wbjz            0/1     PodInitializing    0             2s
+admin-service-86864d7fc4-ddhv7          0/1     Init:0/1           0             2s
+admin-service-86864d7fc4-ddhv7          0/1     PodInitializing    0             3s
+kyc-service-858cc454fb-2wbjz            0/1     Running            0             4s
+admin-service-86864d7fc4-ddhv7          0/1     Running            0             5s
+payment-service-6cc97f568c-p4s6c        0/1     Init:0/2           0             39s
+payment-service-6cc97f568c-p4s6c        0/1     Init:1/2           0             40s
+payment-service-6cc97f568c-p4s6c        0/1     PodInitializing    0             41s
+payment-service-6cc97f568c-p4s6c        0/1     Running            0             43s
+rewards-service-df546b9c7-f79j6         0/1     Error              0             52s
+rewards-service-df546b9c7-f79j6         0/1     Running            1 (3s ago)    54s
+user-service-6bc99c8d97-dktts           0/1     Error              0             56s
+user-service-6bc99c8d97-dktts           0/1     Running            1 (2s ago)    58s
+transaction-service-5445767f6b-9xfzc    0/1     Error              0             81s
+transaction-service-5445767f6b-9xfzc    0/1     Running            1 (2s ago)    83s
+wallet-service-667f6fd6fd-gptb4         0/1     Error              0             98s
+rewards-service-df546b9c7-f79j6         0/1     Error              1 (47s ago)   98s
+rewards-service-df546b9c7-f79j6         0/1     CrashLoopBackOff   1 (2s ago)    100s
+wallet-service-667f6fd6fd-gptb4         0/1     Running            1 (3s ago)    100s
+notification-service-7b66cd6f8f-dzk5x   0/1     Error              0             109s
+notification-service-7b66cd6f8f-dzk5x   0/1     Running            1 (2s ago)    111s
+user-service-6bc99c8d97-dktts           0/1     Error              1             113s
+rewards-service-df546b9c7-f79j6         0/1     Running            2 (16s ago)   114s
+user-service-6bc99c8d97-dktts           0/1     CrashLoopBackOff   1 (7s ago)    2m
+kyc-service-858cc454fb-2wbjz            0/1     Error              0             99s
+payment-service-6cc97f568c-p4s6c        0/1     Error              0             2m8s
+admin-service-86864d7fc4-ddhv7          0/1     Error              0             101s
+payment-service-6cc97f568c-p4s6c        0/1     Running            1 (2s ago)    2m10s
+kyc-service-858cc454fb-2wbjz            0/1     Running            1 (3s ago)    102s
+admin-service-86864d7fc4-ddhv7          0/1     Running            1 (3s ago)    103s
+user-service-6bc99c8d97-dktts           0/1     Running            2 (21s ago)   2m14s
+transaction-service-5445767f6b-9xfzc    0/1     Error              1 (67s ago)   2m28s
+rewards-service-df546b9c7-f79j6         0/1     Error              2 (56s ago)   2m34s
+transaction-service-5445767f6b-9xfzc    0/1     CrashLoopBackOff   1 (14s ago)   2m41s
+rewards-service-df546b9c7-f79j6         0/1     CrashLoopBackOff   2 (7s ago)    2m40s
+transaction-service-5445767f6b-9xfzc    0/1     Running            2 (16s ago)   2m43s
+wallet-service-667f6fd6fd-gptb4         0/1     Error              1 (73s ago)   2m50s
+user-service-6bc99c8d97-dktts           0/1     Error              2 (60s ago)   2m53s
+user-service-6bc99c8d97-dktts           0/1     CrashLoopBackOff   2 (8s ago)    3m
+wallet-service-667f6fd6fd-gptb4         0/1     CrashLoopBackOff   1 (10s ago)   3m
+wallet-service-667f6fd6fd-gptb4         0/1     Running            2 (13s ago)   3m3s
+rewards-service-df546b9c7-f79j6         0/1     Running            3 (32s ago)   3m5s
+notification-service-7b66cd6f8f-dzk5x   0/1     Error              1 (84s ago)   3m13s
+user-service-6bc99c8d97-dktts           0/1     Running            3 (23s ago)   3m15s
+payment-service-6cc97f568c-p4s6c        0/1     Error              1 (67s ago)   3m15s
+notification-service-7b66cd6f8f-dzk5x   0/1     CrashLoopBackOff   1 (8s ago)    3m20s
+payment-service-6cc97f568c-p4s6c        0/1     CrashLoopBackOff   1 (6s ago)    3m20s
+kyc-service-858cc454fb-2wbjz            0/1     Error              1 (83s ago)   3m2s
+transaction-service-5445767f6b-9xfzc    0/1     Error              2 (68s ago)   3m35s
+payment-service-6cc97f568c-p4s6c        0/1     Running            2 (21s ago)   3m35s
+admin-service-86864d7fc4-ddhv7          0/1     Error              1 (88s ago)   3m8s
+notification-service-7b66cd6f8f-dzk5x   0/1     Running            2 (25s ago)   3m37s
+transaction-service-5445767f6b-9xfzc    0/1     CrashLoopBackOff   2 (6s ago)    3m41s
+kyc-service-858cc454fb-2wbjz            0/1     CrashLoopBackOff   1 (11s ago)   3m12s
+rewards-service-df546b9c7-f79j6         0/1     Error              3 (69s ago)   3m42s
+user-service-6bc99c8d97-dktts           0/1     Error              3 (52s ago)   3m44s
+kyc-service-858cc454fb-2wbjz            0/1     Running            2 (13s ago)   3m14s
+admin-service-86864d7fc4-ddhv7          0/1     CrashLoopBackOff   1 (14s ago)   3m21s
+admin-service-86864d7fc4-ddhv7          0/1     Running            2 (15s ago)   3m22s
+rewards-service-df546b9c7-f79j6         0/1     CrashLoopBackOff   3 (13s ago)   3m55s
+user-service-6bc99c8d97-dktts           0/1     CrashLoopBackOff   3 (15s ago)   3m59s
+wallet-service-667f6fd6fd-gptb4         0/1     Error              2 (71s ago)   4m1s
+transaction-service-5445767f6b-9xfzc    0/1     Running            3 (32s ago)   4m7s
+wallet-service-667f6fd6fd-gptb4         0/1     CrashLoopBackOff   2 (13s ago)   4m13s
+wallet-service-667f6fd6fd-gptb4         0/1     Running            3 (22s ago)   4m22s
+payment-service-6cc97f568c-p4s6c        0/1     Error              2 (72s ago)   4m26s
+user-service-6bc99c8d97-dktts           0/1     Running            4 (45s ago)   4m29s
+rewards-service-df546b9c7-f79j6         0/1     Running            4 (49s ago)   4m31s
+payment-service-6cc97f568c-p4s6c        0/1     CrashLoopBackOff   2 (13s ago)   4m38s
+payment-service-6cc97f568c-p4s6c        0/1     Running            3 (28s ago)   4m53s
+notification-service-7b66cd6f8f-dzk5x   0/1     Error              2 (102s ago)   4m54s
+kyc-service-858cc454fb-2wbjz            0/1     Error              2 (86s ago)    4m27s
+notification-service-7b66cd6f8f-dzk5x   0/1     CrashLoopBackOff   2 (6s ago)     5m
+transaction-service-5445767f6b-9xfzc    0/1     Error              3 (87s ago)    5m2s
+user-service-6bc99c8d97-dktts           0/1     Error              4 (86s ago)    5m10s
+kyc-service-858cc454fb-2wbjz            0/1     CrashLoopBackOff   2 (14s ago)    4m40s
+admin-service-86864d7fc4-ddhv7          0/1     Error              2 (96s ago)    4m43s
+rewards-service-df546b9c7-f79j6         0/1     Error              4 (91s ago)    5m13s
+transaction-service-5445767f6b-9xfzc    0/1     CrashLoopBackOff   3 (14s ago)    5m15s
+user-service-6bc99c8d97-dktts           0/1     CrashLoopBackOff   4 (11s ago)    5m20s
+rewards-service-df546b9c7-f79j6         0/1     CrashLoopBackOff   4 (8s ago)     5m20s
+admin-service-86864d7fc4-ddhv7          0/1     CrashLoopBackOff   2 (13s ago)    4m55s
+kyc-service-858cc454fb-2wbjz            0/1     Running            3 (30s ago)    4m56s
+wallet-service-667f6fd6fd-gptb4         0/1     Error              3 (85s ago)    5m25s
+notification-service-7b66cd6f8f-dzk5x   0/1     Running            3 (35s ago)    5m29s
+wallet-service-667f6fd6fd-gptb4         0/1     CrashLoopBackOff   3 (14s ago)    5m38s
+admin-service-86864d7fc4-ddhv7          0/1     Running            3 (36s ago)    5m18s
+payment-service-6cc97f568c-p4s6c        0/1     Error              3 (84s ago)    5m49s
+transaction-service-5445767f6b-9xfzc    0/1     Running            4 (50s ago)    5m51s
+payment-service-6cc97f568c-p4s6c        0/1     CrashLoopBackOff   3 (12s ago)    6m
+wallet-service-667f6fd6fd-gptb4         0/1     Running            4 (47s ago)    6m11s
+user-service-6bc99c8d97-dktts           0/1     Running            5 (84s ago)    6m33s
+kyc-service-858cc454fb-2wbjz            0/1     Error              3 (97s ago)    6m3s
+transaction-service-5445767f6b-9xfzc    0/1     Error              4 (94s ago)    6m35s
+transaction-service-5445767f6b-9xfzc    0/1     CrashLoopBackOff   4 (7s ago)     6m41s
+notification-service-7b66cd6f8f-dzk5x   0/1     Error              3 (106s ago)   6m40s
+notification-service-7b66cd6f8f-dzk5x   0/1     CrashLoopBackOff   3 (2s ago)     6m41s
+rewards-service-df546b9c7-f79j6         0/1     Running            5 (90s ago)    6m42s
+kyc-service-858cc454fb-2wbjz            0/1     CrashLoopBackOff   3 (12s ago)    6m14s
+payment-service-6cc97f568c-p4s6c        0/1     Running            4 (55s ago)    6m43s
+user-service-6bc99c8d97-dktts           0/1     Error              5 (107s ago)   6m56s
+admin-service-86864d7fc4-ddhv7          0/1     Error              3 (105s ago)   6m27s
+user-service-6bc99c8d97-dktts           0/1     CrashLoopBackOff   5 (5s ago)     7m
+wallet-service-667f6fd6fd-gptb4         0/1     Error              4 (97s ago)    7m1s
+admin-service-86864d7fc4-ddhv7          0/1     CrashLoopBackOff   3 (12s ago)    6m39s
+rewards-service-df546b9c7-f79j6         0/1     Error              5 (2m2s ago)   7m14s
+wallet-service-667f6fd6fd-gptb4         0/1     CrashLoopBackOff   4 (16s ago)    7m16s
+kyc-service-858cc454fb-2wbjz            0/1     Running            4 (48s ago)    6m50s
+rewards-service-df546b9c7-f79j6         0/1     CrashLoopBackOff   5 (7s ago)     7m20s
+notification-service-7b66cd6f8f-dzk5x   0/1     Running            4 (46s ago)    7m25s
+payment-service-6cc97f568c-p4s6c        0/1     Error              4 (107s ago)   7m35s
+payment-service-6cc97f568c-p4s6c        0/1     CrashLoopBackOff   4 (6s ago)     7m40s
+admin-service-86864d7fc4-ddhv7          0/1     Running            4 (49s ago)    7m16s
+transaction-service-5445767f6b-9xfzc    0/1     Running            5 (88s ago)    8m2s
+wallet-service-667f6fd6fd-gptb4         0/1     Running            5 (83s ago)    8m23s
+kyc-service-858cc454fb-2wbjz            0/1     Error              4 (112s ago)   7m54s
+kyc-service-858cc454fb-2wbjz            0/1     CrashLoopBackOff   4 (6s ago)     8m
+notification-service-7b66cd6f8f-dzk5x   0/1     Error              4 (115s ago)   8m34s
+notification-service-7b66cd6f8f-dzk5x   0/1     CrashLoopBackOff   4 (8s ago)     8m40s
+transaction-service-5445767f6b-9xfzc    0/1     Error              5 (2m11s ago)   8m45s
+admin-service-86864d7fc4-ddhv7          0/1     Error              4 (119s ago)    8m26s
+transaction-service-5445767f6b-9xfzc    0/1     CrashLoopBackOff   5 (12s ago)     8m56s
+payment-service-6cc97f568c-p4s6c        0/1     Running            5 (87s ago)     9m1s
+admin-service-86864d7fc4-ddhv7          0/1     CrashLoopBackOff   4 (14s ago)     8m39s
+wallet-service-667f6fd6fd-gptb4         0/1     Error              5 (2m15s ago)   9m15s
+wallet-service-667f6fd6fd-gptb4         0/1     CrashLoopBackOff   5 (6s ago)      9m20s
+user-service-6bc99c8d97-dktts           0/1     Running            6 (2m43s ago)   9m38s
+payment-service-6cc97f568c-p4s6c        0/1     Error              5 (2m18s ago)   9m52s
+kyc-service-858cc454fb-2wbjz            0/1     Running            5 (92s ago)     9m26s
+user-service-6bc99c8d97-dktts           0/1     Error              6 (3m6s ago)    10m
+payment-service-6cc97f568c-p4s6c        0/1     CrashLoopBackOff   5 (9s ago)      10m
+rewards-service-df546b9c7-f79j6         0/1     Running            6 (2m48s ago)   10m
+notification-service-7b66cd6f8f-dzk5x   0/1     Running            5 (91s ago)     10m
+user-service-6bc99c8d97-dktts           0/1     CrashLoopBackOff   6 (12s ago)     10m
+admin-service-86864d7fc4-ddhv7          0/1     Running            5 (86s ago)     9m51s
+rewards-service-df546b9c7-f79j6         0/1     Error              6 (3m20s ago)   10m
+rewards-service-df546b9c7-f79j6         0/1     CrashLoopBackOff   6 (8s ago)      10m
+kyc-service-858cc454fb-2wbjz            0/1     Error              5 (2m39s ago)   10m
+kyc-service-858cc454fb-2wbjz            0/1     CrashLoopBackOff   5 (7s ago)      10m
+notification-service-7b66cd6f8f-dzk5x   0/1     Error              5 (2m42s ago)   11m
+notification-service-7b66cd6f8f-dzk5x   0/1     CrashLoopBackOff   5 (7s ago)      11m
+admin-service-86864d7fc4-ddhv7          0/1     Error              5 (2m33s ago)   10m
+admin-service-86864d7fc4-ddhv7          0/1     CrashLoopBackOff   5 (2s ago)      11m
+transaction-service-5445767f6b-9xfzc    0/1     Running            6 (2m48s ago)   11m
+wallet-service-667f6fd6fd-gptb4         0/1     Running            6 (2m53s ago)   12m
+transaction-service-5445767f6b-9xfzc    0/1     Error              6 (3m30s ago)   12m
+transaction-service-5445767f6b-9xfzc    0/1     CrashLoopBackOff   6 (7s ago)      12m
+payment-service-6cc97f568c-p4s6c        0/1     Running            6 (2m53s ago)   12m
+wallet-service-667f6fd6fd-gptb4         0/1     Error              6 (3m44s ago)   12m
+wallet-service-667f6fd6fd-gptb4         0/1     CrashLoopBackOff   6 (2s ago)      13m
+payment-service-6cc97f568c-p4s6c        0/1     Error              6 (3m44s ago)   13m
+payment-service-6cc97f568c-p4s6c        0/1     CrashLoopBackOff   6 (6s ago)      13m
+kyc-service-858cc454fb-2wbjz            0/1     Running            6 (2m47s ago)   13m
+notification-service-7b66cd6f8f-dzk5x   0/1     Running            6 (2m45s ago)   13m
+admin-service-86864d7fc4-ddhv7          0/1     Running            6 (2m43s ago)   13m
+kyc-service-858cc454fb-2wbjz            0/1     Error              6 (3m51s ago)   14m
+user-service-6bc99c8d97-dktts           0/1     Running            7 (5m4s ago)    15m
+kyc-service-858cc454fb-2wbjz            0/1     CrashLoopBackOff   6 (13s ago)     14m
+notification-service-7b66cd6f8f-dzk5x   0/1     Error              6 (3m53s ago)   15m
+admin-service-86864d7fc4-ddhv7          0/1     Error              6 (3m53s ago)   14m
+notification-service-7b66cd6f8f-dzk5x   0/1     CrashLoopBackOff   6 (14s ago)     15m
+user-service-6bc99c8d97-dktts           0/1     Error              7 (5m26s ago)   15m
+admin-service-86864d7fc4-ddhv7          0/1     CrashLoopBackOff   6 (10s ago)     15m
+user-service-6bc99c8d97-dktts           0/1     CrashLoopBackOff   7 (15s ago)     15m
+rewards-service-df546b9c7-f79j6         0/1     Running            7 (5m10s ago)   15m
+rewards-service-df546b9c7-f79j6         0/1     Error              7 (5m41s ago)   16m
+rewards-service-df546b9c7-f79j6         0/1     CrashLoopBackOff   7 (8s ago)      16m
+transaction-service-5445767f6b-9xfzc    0/1     Running            7 (5m4s ago)    17m
+transaction-service-5445767f6b-9xfzc    0/1     Error              7 (5m48s ago)   18m
+wallet-service-667f6fd6fd-gptb4         0/1     Running            7 (5m13s ago)   18m
+transaction-service-5445767f6b-9xfzc    0/1     CrashLoopBackOff   7 (11s ago)     18m
+payment-service-6cc97f568c-p4s6c        0/1     Running            7 (5m10s ago)   18m
+wallet-service-667f6fd6fd-gptb4         0/1     Error              7 (6m5s ago)    19m
+wallet-service-667f6fd6fd-gptb4         0/1     CrashLoopBackOff   7 (12s ago)     19m
+payment-service-6cc97f568c-p4s6c        0/1     Error              7 (5m59s ago)   19m
+payment-service-6cc97f568c-p4s6c        0/1     CrashLoopBackOff   7 (8s ago)      19m
+kyc-service-858cc454fb-2wbjz            0/1     Running            7 (5m11s ago)   19m
+notification-service-7b66cd6f8f-dzk5x   0/1     Running            7 (5m8s ago)    20m
+admin-service-86864d7fc4-ddhv7          0/1     Running            7 (5m11s ago)   20m
+user-service-6bc99c8d97-dktts           0/1     Running            8 (5m9s ago)    20m
+user-service-6bc99c8d97-dktts           0/1     Error              8 (5m31s ago)   20m
+user-service-6bc99c8d97-dktts           0/1     CrashLoopBackOff   8 (4s ago)      21m
+kyc-service-858cc454fb-2wbjz            0/1     Error              7 (6m16s ago)   20m
+kyc-service-858cc454fb-2wbjz            0/1     CrashLoopBackOff   7 (1s ago)      20m
+rewards-service-df546b9c7-f79j6         0/1     Running            8 (5m11s ago)   21m
+notification-service-7b66cd6f8f-dzk5x   0/1     Error              7 (6m17s ago)   21m
+notification-service-7b66cd6f8f-dzk5x   0/1     CrashLoopBackOff   7 (11s ago)     21m
+admin-service-86864d7fc4-ddhv7          0/1     Error              7 (6m16s ago)   21m
+admin-service-86864d7fc4-ddhv7          0/1     CrashLoopBackOff   7 (12s ago)     21m
+rewards-service-df546b9c7-f79j6         0/1     Error              8 (5m43s ago)   21m
+rewards-service-df546b9c7-f79j6         0/1     CrashLoopBackOff   8 (6s ago)      22m
+transaction-service-5445767f6b-9xfzc    0/1     Running            8 (5m13s ago)   23m
+transaction-service-5445767f6b-9xfzc    0/1     Error              8 (5m55s ago)   23m
+transaction-service-5445767f6b-9xfzc    0/1     CrashLoopBackOff   8 (6s ago)      24m
+wallet-service-667f6fd6fd-gptb4         0/1     Running            8 (5m6s ago)    24m
+payment-service-6cc97f568c-p4s6c        0/1     Running            8 (5m6s ago)    24m
+wallet-service-667f6fd6fd-gptb4         0/1     Error              8 (5m55s ago)   24m
+wallet-service-667f6fd6fd-gptb4         0/1     CrashLoopBackOff   8 (3s ago)      25m
+payment-service-6cc97f568c-p4s6c        0/1     Error              8 (5m57s ago)   25m
+payment-service-6cc97f568c-p4s6c        0/1     CrashLoopBackOff   8 (11s ago)     25m
+user-service-6bc99c8d97-dktts           0/1     Running            9 (5m14s ago)   26m
+kyc-service-858cc454fb-2wbjz            0/1     Running            8 (5m7s ago)    25m
+notification-service-7b66cd6f8f-dzk5x   0/1     Running            8 (5m2s ago)    26m
+user-service-6bc99c8d97-dktts           0/1     Error              9 (5m35s ago)   26m
+admin-service-86864d7fc4-ddhv7          0/1     Running            8 (5m3s ago)    26m
+user-service-6bc99c8d97-dktts           0/1     CrashLoopBackOff   9 (9s ago)      26m
+rewards-service-df546b9c7-f79j6         0/1     Running            9 (5m9s ago)    27m
+kyc-service-858cc454fb-2wbjz            0/1     Error              8 (6m11s ago)   26m
+kyc-service-858cc454fb-2wbjz            0/1     CrashLoopBackOff   8 (10s ago)     27m
+notification-service-7b66cd6f8f-dzk5x   0/1     Error              8 (6m9s ago)    27m
+rewards-service-df546b9c7-f79j6         0/1     Error              9 (5m39s ago)   27m
+notification-service-7b66cd6f8f-dzk5x   0/1     CrashLoopBackOff   8 (8s ago)      27m
+rewards-service-df546b9c7-f79j6         0/1     CrashLoopBackOff   9 (7s ago)      27m
+admin-service-86864d7fc4-ddhv7          0/1     Error              8 (6m11s ago)   27m
+admin-service-86864d7fc4-ddhv7          0/1     CrashLoopBackOff   8 (4s ago)      27m
+transaction-service-5445767f6b-9xfzc    0/1     Running            9 (5m4s ago)    28m
+transaction-service-5445767f6b-9xfzc    0/1     Error              9 (5m47s ago)   29m
+transaction-service-5445767f6b-9xfzc    0/1     CrashLoopBackOff   9 (13s ago)     29m
+wallet-service-667f6fd6fd-gptb4         0/1     Running            9 (5m10s ago)   30m
+payment-service-6cc97f568c-p4s6c        0/1     Running            9 (5m11s ago)   30m
+wallet-service-667f6fd6fd-gptb4         0/1     Error              9 (6m ago)      30m
+wallet-service-667f6fd6fd-gptb4         0/1     CrashLoopBackOff   9 (3s ago)      31m
+payment-service-6cc97f568c-p4s6c        0/1     Error              9 (6m ago)      31m
+payment-service-6cc97f568c-p4s6c        0/1     CrashLoopBackOff   9 (12s ago)     31m
+user-service-6bc99c8d97-dktts           0/1     Running            10 (5m11s ago)   31m
+user-service-6bc99c8d97-dktts           0/1     Error              10 (5m33s ago)   32m
+user-service-6bc99c8d97-dktts           0/1     CrashLoopBackOff   10 (13s ago)     32m
+kyc-service-858cc454fb-2wbjz            0/1     Running            9 (5m11s ago)    32m
+rewards-service-df546b9c7-f79j6         0/1     Running            10 (5m5s ago)    32m
+notification-service-7b66cd6f8f-dzk5x   0/1     Running            9 (5m16s ago)    32m
+admin-service-86864d7fc4-ddhv7          0/1     Running            9 (5m9s ago)     32m
+rewards-service-df546b9c7-f79j6         0/1     Error              10 (5m37s ago)   33m
+rewards-service-df546b9c7-f79j6         0/1     CrashLoopBackOff   10 (11s ago)     33m
+kyc-service-858cc454fb-2wbjz            0/1     Error              9 (6m20s ago)    33m
+kyc-service-858cc454fb-2wbjz            0/1     CrashLoopBackOff   9 (11s ago)      33m
+notification-service-7b66cd6f8f-dzk5x   0/1     Error              9 (6m25s ago)    33m
+notification-service-7b66cd6f8f-dzk5x   0/1     CrashLoopBackOff   9 (4s ago)       34m
+admin-service-86864d7fc4-ddhv7          0/1     Error              9 (6m18s ago)    33m
+admin-service-86864d7fc4-ddhv7          0/1     CrashLoopBackOff   9 (7s ago)       33m
+transaction-service-5445767f6b-9xfzc    0/1     Running            10 (5m12s ago)   34m
+transaction-service-5445767f6b-9xfzc    0/1     Error              10 (5m54s ago)   35m
+transaction-service-5445767f6b-9xfzc    0/1     CrashLoopBackOff   10 (6s ago)      35m
+wallet-service-667f6fd6fd-gptb4         0/1     Running            10 (5m6s ago)    36m
+payment-service-6cc97f568c-p4s6c        0/1     Running            10 (5m5s ago)    36m
+wallet-service-667f6fd6fd-gptb4         0/1     Error              10 (5m56s ago)   36m
+wallet-service-667f6fd6fd-gptb4         0/1     CrashLoopBackOff   10 (7s ago)      37m
+user-service-6bc99c8d97-dktts           0/1     Running            11 (5m12s ago)   37m
+payment-service-6cc97f568c-p4s6c        0/1     Error              10 (5m55s ago)   37m
+payment-service-6cc97f568c-p4s6c        0/1     CrashLoopBackOff   10 (11s ago)     37m
+user-service-6bc99c8d97-dktts           0/1     Error              11 (5m35s ago)   37m
+user-service-6bc99c8d97-dktts           0/1     CrashLoopBackOff   11 (3s ago)      37m
+rewards-service-df546b9c7-f79j6         0/1     Running            11 (5m14s ago)   38m
+kyc-service-858cc454fb-2wbjz            0/1     Running            10 (5m5s ago)    38m
+rewards-service-df546b9c7-f79j6         0/1     Error              11 (5m45s ago)   38m
+rewards-service-df546b9c7-f79j6         0/1     CrashLoopBackOff   11 (7s ago)      39m
+notification-service-7b66cd6f8f-dzk5x   0/1     Running            10 (5m11s ago)   39m
+admin-service-86864d7fc4-ddhv7          0/1     Running            10 (5m15s ago)   38m
+kyc-service-858cc454fb-2wbjz            0/1     Error              10 (6m11s ago)   39m
+kyc-service-858cc454fb-2wbjz            0/1     CrashLoopBackOff   10 (2s ago)      39m
+notification-service-7b66cd6f8f-dzk5x   0/1     Error              10 (6m20s ago)   40m
+notification-service-7b66cd6f8f-dzk5x   0/1     CrashLoopBackOff   10 (5s ago)      40m
+admin-service-86864d7fc4-ddhv7          0/1     Error              10 (6m23s ago)   39m
+admin-service-86864d7fc4-ddhv7          0/1     CrashLoopBackOff   10 (5s ago)      40m
+transaction-service-5445767f6b-9xfzc    0/1     Running            11 (5m12s ago)   40m
+transaction-service-5445767f6b-9xfzc    0/1     Error              11 (5m53s ago)   41m
+transaction-service-5445767f6b-9xfzc    0/1     CrashLoopBackOff   11 (13s ago)     41m
+wallet-service-667f6fd6fd-gptb4         0/1     Running            11 (5m10s ago)   42m
+payment-service-6cc97f568c-p4s6c        0/1     Running            11 (5m6s ago)    42m
+user-service-6bc99c8d97-dktts           0/1     Running            12 (5m16s ago)   42m
+wallet-service-667f6fd6fd-gptb4         0/1     Error              11 (6m2s ago)    42m
+wallet-service-667f6fd6fd-gptb4         0/1     CrashLoopBackOff   11 (6s ago)      43m
+user-service-6bc99c8d97-dktts           0/1     Error              12 (5m38s ago)   43m
+user-service-6bc99c8d97-dktts           0/1     CrashLoopBackOff   12 (6s ago)      43m
+payment-service-6cc97f568c-p4s6c        0/1     Error              11 (5m58s ago)   43m
+payment-service-6cc97f568c-p4s6c        0/1     CrashLoopBackOff   11 (12s ago)     43m

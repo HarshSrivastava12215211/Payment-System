@@ -118,6 +118,17 @@ jobs:
           --region ${{ env.AWS_REGION }} \
           --name   ${{ env.EKS_CLUSTER_NAME }}
 
+    - name: Verify GitHub Secrets
+      run: |
+        SECRETS=("RDS_ENDPOINT" "DB_USERNAME" "DB_PASSWORD" "RABBITMQ_PASSWORD" "RAZORPAY_KEY_ID" "RAZORPAY_KEY_SECRET")
+        for secret in "${SECRETS[@]}"; do
+          if [ -z "${{ secrets[secret] }}" ]; then
+            echo "ERROR: Missing GitHub Secret: $secret"
+            exit 1
+          fi
+        done
+        echo "All required secrets are present."
+
     - name: Apply Namespace & Config
       run: |
         kubectl apply -f k8s/namespace.yaml
@@ -153,11 +164,13 @@ jobs:
         kubectl apply -f k8s/frontend/
 
         # Update all deployments to the new SHA tag immediately
+        # Using specific SHA ensures we always pull the exact code from this build
         IMAGES=(admin-service api-gateway config-server eureka-server kyc-service \
                 notification-service payment-service rewards-service transaction-service \
                 user-service wallet-service frontend)
         
         for img in "${IMAGES[@]}"; do
+          echo "Updating $img to tag ${{ github.sha }}..."
           kubectl set image deployment/$img $img=${{ secrets.DOCKER_USERNAME }}/$img:${{ github.sha }} \
             -n payment-system --record || true
         done

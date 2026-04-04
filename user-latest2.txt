@@ -1,0 +1,14 @@
+﻿
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.5)
+
+2026-04-04T06:46:25.420Z  INFO 1 --- [user-service] [           main] com.user.UserServiceApplication          : Starting UserServiceApplication v0.0.1-SNAPSHOT using Java 21.0.10 with PID 1 (/app.jar started by root in /)
+2026-04-04T06:46:25.464Z DEBUG 1 --- [user-service] [           main] com.user.UserServiceApplication          : Running with Spring Boot v3.3.5, Spring v6.1.14
+2026-04-04T06:46:25.520Z  INFO 1 --- [user-service] [           main] com.user.UserServiceApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-04-04T06:46:39.474Z  INFO 1 --- [user-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.

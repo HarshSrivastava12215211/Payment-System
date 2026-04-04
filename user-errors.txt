@@ -1,0 +1,74 @@
+﻿
+2026-04-04T06:46:56.360Z  INFO 1 --- 
+[user-service] [           main] 
+com.zaxxer.hikari.HikariDataSource       : 
+HikariPool-1 - Starting...
+2026-04-04T06:46:57.481Z  WARN 1 --- 
+[user-service] [           main] 
+o.h.engine.jdbc.spi.SqlExceptionHelper   : 
+SQL Error: 0, SQLState: 08001
+2026-04-04T06:46:57.490Z ERROR 1 --- 
+[user-service] [           main] 
+o.h.engine.jdbc.spi.SqlExceptionHelper   : 
+The connection attempt failed.
+	at com.zaxxer.hikari.util.DriverDataSource.ge
+tConnection(DriverDataSource.java:137) 
+~[HikariCP-5.1.0.jar!/:na]
+	at com.zaxxer.hikari.HikariDataSource.getConn
+ection(HikariDataSource.java:111) 
+~[HikariCP-5.1.0.jar!/:na]
+	at org.hibernate.engine.jdbc.connections.inte
+rnal.DatasourceConnectionProviderImpl.getConne
+ction(DatasourceConnectionProviderImpl.java:12
+2) ~[hibernate-core-6.5.3.Final.jar!/:6.5.3.Fi
+nal]
+2026-04-04T06:46:57.512Z ERROR 1 --- 
+[user-service] [           main] 
+j.LocalContainerEntityManagerFactoryBean : 
+Failed to initialize JPA 
+EntityManagerFactory: Unable to create 
+requested service [org.hibernate.engine.jdbc.e
+nv.spi.JdbcEnvironment] due to: Unable to 
+determine Dialect without JDBC metadata 
+(please set 'jakarta.persistence.jdbc.url' 
+for common cases or 'hibernate.dialect' when 
+a custom Dialect implementation must be 
+provided)
+2026-04-04T06:46:57.512Z  WARN 1 --- 
+[user-service] [           main] 
+ConfigServletWebServerApplicationContext : 
+Exception encountered during context 
+initialization - cancelling refresh attempt: o
+rg.springframework.beans.factory.BeanCreationE
+xception: Error creating bean with name 
+'entityManagerFactory' defined in class path 
+resource [org/springframework/boot/autoconfigu
+re/orm/jpa/HibernateJpaConfiguration.class]: 
+Unable to create requested service [org.hibern
+ate.engine.jdbc.env.spi.JdbcEnvironment] due 
+to: Unable to determine Dialect without JDBC 
+metadata (please set 
+'jakarta.persistence.jdbc.url' for common 
+cases or 'hibernate.dialect' when a custom 
+Dialect implementation must be provided)
+Error starting ApplicationContext. To display 
+the condition evaluation report re-run your 
+application with 'debug' enabled.
+2026-04-04T06:46:57.663Z ERROR 1 --- 
+[user-service] [           main] 
+o.s.boot.SpringApplication               : 
+Application run failed
+org.springframework.beans.factory.BeanCreation
+Exception: Error creating bean with name 
+'entityManagerFactory' defined in class path 
+resource [org/springframework/boot/autoconfigu
+re/orm/jpa/HibernateJpaConfiguration.class]: 
+Unable to create requested service [org.hibern
+ate.engine.jdbc.env.spi.JdbcEnvironment] due 
+to: Unable to determine Dialect without JDBC 
+metadata (please set 
+'jakarta.persistence.jdbc.url' for common 
+cases or 'hibernate.dialect' when a custom 
+Dialect implementation must be provided)
+
+

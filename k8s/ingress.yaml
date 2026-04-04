@@ -19,7 +19,6 @@ metadata:
 spec:
   ingressClassName: alb
   rules:
-    # ── Default (no custom domain): ALB URL routes directly ──────
     - http:
         paths:
           - path: /api
@@ -50,41 +49,6 @@ spec:
                 name: api-gateway
                 port:
                   number: 7505
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: frontend
-                port:
-                  number: 80
-
-    # ── API traffic (all microservices via API Gateway) ──────────
-    - host: api.payment.example.com
-      http:
-        paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: api-gateway
-                port:
-                  number: 7505
-
-    # ── Frontend ─────────────────────────────────────────────────
-    - host: payment.example.com
-      http:
-        paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: frontend
-                port:
-                  number: 80
-
-    - host: www.payment.example.com
-      http:
-        paths:
           - path: /
             pathType: Prefix
             backend:

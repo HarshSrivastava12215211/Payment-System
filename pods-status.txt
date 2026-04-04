@@ -1,0 +1,14 @@
+﻿NAME                                    READY   STATUS             RESTARTS      AGE
+admin-service-67cc87fc84-kj4vq          0/1     Running            2 (44s ago)   3m28s
+api-gateway-7f886fff4d-7zqz5            1/1     Running            0             3h17m
+config-server-5bdb8bc975-f8gpv          1/1     Running            0             3h21m
+eureka-server-7796b59454-x8pmt          1/1     Running            0             3h21m
+frontend-686b7dbfb9-79fd2               1/1     Running            0             4h3m
+kyc-service-654696f48b-7qnp9            0/1     CrashLoopBackOff   1 (7s ago)    3m26s
+notification-service-669d465d79-8ltdr   0/1     Running            2 (40s ago)   3m28s
+payment-service-5f898bb48f-wjkhc        0/1     Running            2 (32s ago)   3m26s
+rabbitmq-67cfd4f989-kb8dv               1/1     Running            0             15h
+rewards-service-7ff8db97f-wp9rh         0/1     Error              3 (70s ago)   3m27s
+transaction-service-6c779cfcfb-8mtqb    0/1     Running            2 (48s ago)   3m27s
+user-service-5bccbf6d67-bdvjx           0/1     CrashLoopBackOff   3 (26s ago)   3m28s
+wallet-service-58cd646fb4-rpx9b         0/1     Error              2 (72s ago)   3m27s

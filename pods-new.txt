@@ -1,0 +1,14 @@
+﻿NAME                                    READY   STATUS    RESTARTS      AGE
+admin-service-5cd8cf7b6f-cgvg8          0/1     Running   0             67s
+api-gateway-7f886fff4d-7zqz5            1/1     Running   0             3h29m
+config-server-5bdb8bc975-f8gpv          1/1     Running   0             3h33m
+eureka-server-7796b59454-x8pmt          1/1     Running   0             3h33m
+frontend-686b7dbfb9-79fd2               1/1     Running   0             4h15m
+kyc-service-77dbc446d5-lssfg            0/1     Running   0             67s
+notification-service-66b7686fcb-8brxf   0/1     Running   0             56s
+payment-service-7d78cc65d6-gjsjh        0/1     Running   0             67s
+rabbitmq-67cfd4f989-kb8dv               1/1     Running   0             15h
+rewards-service-565fc7bf4d-s8rlg        0/1     Running   0             67s
+transaction-service-976b97fcc-pjsh6     0/1     Running   1 (10s ago)   67s
+user-service-7796fd899d-lmjtd           0/1     Running   0             54s
+wallet-service-65fc47c-bwwrq            0/1     Running   0             67s

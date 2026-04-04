@@ -1,0 +1,13 @@
+﻿Server:    10.100.0.10
+Address 1: 10.100.0.10 kube-dns.kube-system.svc.cluster.local
+
+nslookup: can't resolve 'payment-varah-db.cp2gq61ueyrb.ap-southeast-1.rds.amazonaws.com'
+pod "dns-test" deleted from payment-system namespace
+kubectl : pod payment-system/dns-test terminated (Error)
+At line:1 char:1
++ kubectl run dns-test --image=busybox:1.28 --restart=Never -n payment- ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (pod payment-sys...minated (Error):String) [], RemoteExceptio 
+   n
+    + FullyQualifiedErrorId : NativeCommandError
+ 

@@ -1,4 +1,4 @@
 export const environment = {
-  production: false,
-  apiBaseUrl: typeof window !== 'undefined' && window.location.hostname === 'localhost' ? 'http://localhost:7505' : ''
+  production: true,
+  apiBaseUrl: 'http://k8s-payments-paymenti-fda58bb720-1004809000.ap-southeast-1.elb.amazonaws.com'
 };

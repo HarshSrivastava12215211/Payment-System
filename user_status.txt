@@ -1,0 +1,20 @@
+﻿2026-04-04T09:35:46.669Z  INFO 1 --- [user-service] [nio-7500-exec-3] com.user.Security.JwtFilter              : Request to /actuator/health - No JWT found, allowing filter chain to proceed
+2026-04-04T09:35:46.669Z TRACE 1 --- [user-service] [nio-7500-exec-3] o.s.security.web.FilterChainProxy        : Invoking RequestCacheAwareFilter (7/11)
+2026-04-04T09:35:46.669Z TRACE 1 --- [user-service] [nio-7500-exec-3] o.s.s.w.s.HttpSessionRequestCache        : matchingRequestParameterName is required for getMatchingRequest to lookup a value, but not provided
+2026-04-04T09:35:46.669Z TRACE 1 --- [user-service] [nio-7500-exec-3] o.s.security.web.FilterChainProxy        : Invoking SecurityContextHolderAwareRequestFilter (8/11)
+2026-04-04T09:35:46.670Z TRACE 1 --- [user-service] [nio-7500-exec-3] o.s.security.web.FilterChainProxy        : Invoking AnonymousAuthenticationFilter (9/11)
+2026-04-04T09:35:46.670Z TRACE 1 --- [user-service] [nio-7500-exec-3] o.s.security.web.FilterChainProxy        : Invoking ExceptionTranslationFilter (10/11)
+2026-04-04T09:35:46.670Z TRACE 1 --- [user-service] [nio-7500-exec-3] o.s.security.web.FilterChainProxy        : Invoking AuthorizationFilter (11/11)
+2026-04-04T09:35:46.670Z TRACE 1 --- [user-service] [nio-7500-exec-3] estMatcherDelegatingAuthorizationManager : Authorizing GET /actuator/health
+2026-04-04T09:35:46.670Z TRACE 1 --- [user-service] [nio-7500-exec-3] estMatcherDelegatingAuthorizationManager : Checking authorization on GET /actuator/health using org.springframework.security.config.annotation.web.configurers.AuthorizeHttpRequestsConfigurer$$Lambda/0x00007f836db43000@2929a8ff
+2026-04-04T09:35:46.670Z DEBUG 1 --- [user-service] [nio-7500-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /actuator/health
+2026-04-04T09:35:46.670Z DEBUG 1 --- [user-service] [nio-7500-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/actuator/health", parameters={}
+2026-04-04T09:35:46.671Z DEBUG 1 --- [user-service] [nio-7500-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Read "application/octet-stream" to []
+2026-04-04T09:35:49.359Z DEBUG 1 --- [user-service] [nio-7500-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/vnd.spring-boot.actuator.v3+json', given [*/*] and supported [application/vnd.spring-boot.actuator.v3+json, application/vnd.spring-boot.actuator.v2+json, application/json]
+2026-04-04T09:35:49.360Z DEBUG 1 --- [user-service] [nio-7500-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [org.springframework.boot.actuate.health.SystemHealth@4195e5ed]
+2026-04-04T09:35:49.361Z TRACE 1 --- [user-service] [nio-7500-exec-3] o.s.s.w.header.writers.HstsHeaderWriter  : Not injecting HSTS header since it did not match request to [Is Secure]
+2026-04-04T09:35:49.361Z DEBUG 1 --- [user-service] [nio-7500-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-04-04T09:35:49.361Z TRACE 1 --- [user-service] [nio-7500-exec-3] w.c.HttpSessionSecurityContextRepository : No HttpSession currently exists
+2026-04-04T09:35:49.361Z TRACE 1 --- [user-service] [nio-7500-exec-3] .s.s.w.c.SupplierDeferredSecurityContext : Created SecurityContextImpl [Null authentication]
+2026-04-04T09:35:49.362Z TRACE 1 --- [user-service] [nio-7500-exec-3] .s.s.w.c.SupplierDeferredSecurityContext : Created SecurityContextImpl [Null authentication]
+2026-04-04T09:35:49.362Z TRACE 1 --- [user-service] [nio-7500-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to AnonymousAuthenticationToken [Principal=anonymousUser, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.45.109, SessionId=null], Granted Authorities=[ROLE_ANONYMOUS]]
