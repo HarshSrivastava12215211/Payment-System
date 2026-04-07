@@ -77,7 +77,7 @@ export class LoginComponent {
   private cdr = inject(ChangeDetectorRef);
 
   step = 1;
-  loginMethod: 'otp' | 'password' = 'otp';
+  loginMethod: 'otp' | 'password' = 'password';
   identifier = '';
   password = '';
   otp = '';
@@ -119,7 +119,13 @@ export class LoginComponent {
       },
       error: (err) => { 
         console.error('LoginComponent: Auth error', err);
-        this.errorMsg = err.error?.error || err.error?.message || 'Verification failed. Please check the code and try again.'; 
+        if (err?.status === 503) {
+          this.errorMsg = 'Services are still starting. Please retry in 20-30 seconds.';
+        } else if (err?.status === 0) {
+          this.errorMsg = 'Cannot reach server. Please ensure containers are running.';
+        } else {
+          this.errorMsg = err.error?.error || err.error?.message || 'Verification failed. Please check the code and try again.';
+        }
         this.loading = false; 
         this.cdr.detectChanges();
       }
@@ -143,7 +149,13 @@ export class LoginComponent {
       },
       error: (err) => { 
         console.error('LoginComponent: Auth error', err);
-        this.errorMsg = err.error?.error || err.error?.message || 'Invalid credentials. Please verify your identity.'; 
+        if (err?.status === 503) {
+          this.errorMsg = 'Services are still starting. Please retry in 20-30 seconds.';
+        } else if (err?.status === 0) {
+          this.errorMsg = 'Cannot reach server. Please ensure containers are running.';
+        } else {
+          this.errorMsg = err.error?.error || err.error?.message || 'Invalid credentials. Please verify your identity.';
+        }
         this.loading = false; 
         this.cdr.detectChanges();
       }

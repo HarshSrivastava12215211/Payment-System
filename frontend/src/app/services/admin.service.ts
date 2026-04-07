@@ -1,16 +1,18 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { environment } from '../../environments/environment';
+import { ConfigService } from './config.service';
 import { UserDto } from '../models/user.model';
 import { TransactionDTO } from '../models/transaction.model';
 import { AdminActionDTO } from '../models/admin.model';
 
 @Injectable({ providedIn: 'root' })
 export class AdminService {
-  private apiUrl = `${environment.apiBaseUrl}/admin`;
+  private apiUrl: string;
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private configService: ConfigService) {
+    this.apiUrl = `${this.configService.apiBaseUrl}/admin`;
+  }
 
   getUsers(): Observable<UserDto[]> {
     return this.http.get<UserDto[]>(`${this.apiUrl}/users`);

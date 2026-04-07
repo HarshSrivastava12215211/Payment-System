@@ -2,7 +2,7 @@ import { Injectable, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, BehaviorSubject, of } from 'rxjs';
 import { tap, switchMap, catchError } from 'rxjs/operators';
-import { environment } from '../../environments/environment';
+import { ConfigService } from './config.service';
 import { RegisterRequest, UserDto } from '../models/user.model';
 import { UserService } from './user.service';
 import { WalletService } from './wallet.service';
@@ -12,11 +12,16 @@ export class AuthService {
   private http = inject(HttpClient);
   private userService = inject(UserService);
   private walletService = inject(WalletService);
-  private apiUrl = environment.apiBaseUrl;
+  private configService = inject(ConfigService);
+  private apiUrl: string;
   private tokenKey = 'jwt_token';
   private userKey = 'current_user';
   private loggedIn = new BehaviorSubject<boolean>(this.hasToken());
   isLoggedIn$ = this.loggedIn.asObservable();
+
+  constructor() {
+    this.apiUrl = this.configService.apiBaseUrl;
+  }
 
   private hasToken(): boolean {
     return !!localStorage.getItem(this.tokenKey);
@@ -38,8 +43,15 @@ export class AuthService {
   }
 
   login(identifier: string, otp: string): Observable<UserDto> {
+    const normalizedIdentifier = identifier.trim();
+    const normalizedOtp = otp.trim();
+
+    // Prevent stale tokens from affecting a fresh authentication request.
+    localStorage.removeItem(this.tokenKey);
+    localStorage.removeItem(this.userKey);
+
     return this.http.post(
-      `${this.apiUrl}/auth/Log-In?identifier=${encodeURIComponent(identifier)}&otp=${encodeURIComponent(otp)}`,
+      `${this.apiUrl}/auth/Log-In?identifier=${encodeURIComponent(normalizedIdentifier)}&otp=${encodeURIComponent(normalizedOtp)}`,
       {},
       { responseType: 'text' }
     ).pipe(
@@ -75,9 +87,16 @@ export class AuthService {
   }
 
   loginWithPassword(identifier: string, password: string): Observable<UserDto> {
-    console.log(`AuthService: Initiating login for ${identifier}`);
+    const normalizedIdentifier = identifier.trim();
+    const normalizedPassword = password.trim();
+
+    // Prevent stale tokens from affecting a fresh authentication request.
+    localStorage.removeItem(this.tokenKey);
+    localStorage.removeItem(this.userKey);
+
+    console.log(`AuthService: Initiating login for ${normalizedIdentifier}`);
     return this.http.post(
-      `${this.apiUrl}/auth/login-password?identifier=${encodeURIComponent(identifier)}&password=${encodeURIComponent(password)}`,
+      `${this.apiUrl}/auth/login-password?identifier=${encodeURIComponent(normalizedIdentifier)}&password=${encodeURIComponent(normalizedPassword)}`,
       {},
       { responseType: 'text' }
     ).pipe(

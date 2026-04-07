@@ -1,4 +1,5 @@
 export const environment = {
-  production: true,
-  apiBaseUrl: 'http://k8s-payments-paymenti-fda58bb720-1004809000.ap-southeast-1.elb.amazonaws.com'
+  production: false,
+  // apiBaseUrl: 'http://k8s-payments-paymenti-fda58bb720-1004809000.ap-southeast-1.elb.amazonaws.com'
+  apiBaseUrl: 'http://localhost:7505'
 };

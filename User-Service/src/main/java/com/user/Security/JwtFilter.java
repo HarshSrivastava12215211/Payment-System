@@ -31,7 +31,16 @@ public class JwtFilter extends OncePerRequestFilter {
             throws ServletException, IOException {
 
         String path = request.getServletPath();
+        String requestUri = request.getRequestURI();
         String authHeader = request.getHeader("Authorization");
+
+        // Auth endpoints must remain accessible even if a stale/invalid token is sent.
+        boolean isAuthPath = (path != null && (path.equals("/auth") || path.startsWith("/auth/")))
+            || (requestUri != null && (requestUri.equals("/auth") || requestUri.startsWith("/auth/")));
+        if (isAuthPath) {
+            filterChain.doFilter(request, response);
+            return;
+        }
 
         if (authHeader == null || !authHeader.startsWith("Bearer ")) {
             log.info("Request to {} - No JWT found, allowing filter chain to proceed", path);
