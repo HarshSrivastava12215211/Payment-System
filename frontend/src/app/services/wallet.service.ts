@@ -3,16 +3,18 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { retry, tap } from 'rxjs/operators';
 import { timer, throwError } from 'rxjs';
-import { environment } from '../../environments/environment';
 import { WalletDTO, CreateWalletRequest, WalletOperationRequest, LedgerEntryDTO, WalletLimitDTO } from '../models/wallet.model';
+import { ConfigService } from './config.service';
 
 @Injectable({ providedIn: 'root' })
 export class WalletService {
-  private apiUrl = `${environment.apiBaseUrl}/api/wallets`;
+  private apiUrl: string;
   private walletState = new BehaviorSubject<WalletDTO | null>(null);
   wallet$ = this.walletState.asObservable();
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private configService: ConfigService) {
+    this.apiUrl = `${this.configService.apiBaseUrl}/api/wallets`;
+  }
 
   createWallet(request: CreateWalletRequest): Observable<WalletDTO> {
     return this.http.post<WalletDTO>(this.apiUrl, request).pipe(

@@ -1,14 +1,16 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { environment } from '../../environments/environment';
 import { RewardPointsDTO, PointsTransactionDTO, RedemptionDTO, CatalogItemDTO, RewardRuleDTO, CampaignDTO, EarnPointsRequest, RedeemRequest } from '../models/rewards.model';
+import { ConfigService } from './config.service';
 
 @Injectable({ providedIn: 'root' })
 export class RewardsService {
-  private apiUrl = `${environment.apiBaseUrl}/api/rewards`;
+  private apiUrl: string;
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private configService: ConfigService) {
+    this.apiUrl = `${this.configService.apiBaseUrl}/api/rewards`;
+  }
 
   earnPoints(request: EarnPointsRequest): Observable<RewardPointsDTO> {
     return this.http.post<RewardPointsDTO>(`${this.apiUrl}/earn`, request);

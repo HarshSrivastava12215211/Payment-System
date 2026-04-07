@@ -3,14 +3,16 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { retry } from 'rxjs/operators';
 import { timer } from 'rxjs';
-import { environment } from '../../environments/environment';
 import { PaymentRequest, PaymentResponse } from '../models/payment.model';
+import { ConfigService } from './config.service';
 
 @Injectable({ providedIn: 'root' })
 export class PaymentService {
-  private apiUrl = `${environment.apiBaseUrl}/api/payments`;
+  private apiUrl: string;
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private configService: ConfigService) {
+    this.apiUrl = `${this.configService.apiBaseUrl}/api/payments`;
+  }
 
   makePayment(request: PaymentRequest): Observable<PaymentResponse> {
     return this.http.post<PaymentResponse>(this.apiUrl, request).pipe(
