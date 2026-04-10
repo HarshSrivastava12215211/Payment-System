@@ -282,7 +282,7 @@ services:
     environment:
       EUREKA_SERVER: http://eureka-server:8761/eureka/
       PORT: 7509
-      GEMINI_API_KEY: "AIzaSyAcsl-A5kDK2QbRznQ0bxRaM3poS992eus"
+      GEMINI_API_KEY: ${GEMINI_API_KEY}
     depends_on:
       eureka-server:
         condition: service_started
