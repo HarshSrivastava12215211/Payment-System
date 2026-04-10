@@ -200,8 +200,8 @@ jobs:
         # Update all deployments to the new SHA tag immediately
         # Using specific SHA ensures we always pull the exact code from this build
         IMAGES=(admin-service api-gateway config-server eureka-server kyc-service \
-                notification-service payment-service rewards-service transaction-service \
-                user-service wallet-service frontend)
+          notification-service payment-service rewards-service transaction-service \
+          user-service wallet-service chatbot-service fraud-detection-service frontend)
         
         for img in "${IMAGES[@]}"; do
           echo "Updating $img to tag ${{ github.sha }}..."
@@ -214,7 +214,8 @@ jobs:
         echo "Waiting for all services to stabilize (600s timeout)..."
         # Wait for everything in parallel
         SERVICES=(api-gateway user-service admin-service kyc-service wallet-service \
-                  payment-service transaction-service notification-service rewards-service frontend)
+            payment-service transaction-service notification-service rewards-service \
+            chatbot-service fraud-detection-service frontend)
         
         for svc in "${SERVICES[@]}"; do
           kubectl rollout status deployment/$svc -n payment-system --timeout=600s &

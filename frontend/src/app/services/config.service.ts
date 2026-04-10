@@ -16,7 +16,7 @@ export class ConfigService {
     await firstValueFrom(
       this.http.get<{ apiBaseUrl?: string }>('assets/config.json').pipe(
         tap((cfg) => {
-          if (cfg?.apiBaseUrl) {
+          if (cfg && cfg.apiBaseUrl !== undefined) {
             this.config.apiBaseUrl = cfg.apiBaseUrl;
           }
         }),
