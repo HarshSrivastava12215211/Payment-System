@@ -271,9 +271,98 @@ services:
     networks:
       - payment-network
 
+  chatbot-service:
+    build: 
+      context: ./ChatBot-Service
+      dockerfile: Dockerfile
+    image: harsh12215211/chatbot-service:latest
+    container_name: chatbot-service
+    ports:
+      - "7509:7509"
+    environment:
+      EUREKA_SERVER: http://eureka-server:8761/eureka/
+      PORT: 7509
+      GEMINI_API_KEY: "AIzaSyAcsl-A5kDK2QbRznQ0bxRaM3poS992eus"
+    depends_on:
+      eureka-server:
+        condition: service_started
+    networks:
+      - payment-network
+
+  fraud-detection-service:
+    build: 
+      context: ./Fraud-Detection-Service
+      dockerfile: Dockerfile
+    image: harsh12215211/fraud-detection-service:latest
+    container_name: fraud-detection-service
+    ports:
+      - "7508:7508"
+    environment:
+      EUREKA_SERVER: http://eureka-server:8761/eureka/
+      PORT: 7508
+    depends_on:
+      eureka-server:
+        condition: service_started
+    networks:
+      - payment-network
+
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: prometheus
+    ports:
+      - "9090:9090"
+    command:
+      - "--config.file=/etc/prometheus/prometheus.yml"
+      - "--storage.tsdb.path=/prometheus"
+      - "--web.enable-lifecycle"
+    volumes:
+      - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - prometheus-data:/prometheus
+    depends_on:
+      - api-gateway
+      - user-service
+      - admin-service
+      - transaction-service
+      - rewards-service
+    networks:
+      - payment-network
+
+  grafana:
+    image: grafana/grafana:latest
+    container_name: grafana
+    ports:
+      - "3000:3000"
+    environment:
+      GF_SECURITY_ADMIN_USER: admin
+      GF_SECURITY_ADMIN_PASSWORD: admin
+      GF_USERS_ALLOW_SIGN_UP: "false"
+    volumes:
+      - grafana-data:/var/lib/grafana
+      - ./grafana/provisioning:/etc/grafana/provisioning:ro
+    depends_on:
+      - prometheus
+    networks:
+      - payment-network
+
+  cadvisor:
+    image: gcr.io/cadvisor/cadvisor:latest
+    container_name: cadvisor
+    ports:
+      - "8088:8080"
+    volumes:
+      - /:/rootfs:ro
+      - /var/run:/var/run:ro
+      - /sys:/sys:ro
+      - /var/lib/docker/:/var/lib/docker:ro
+    privileged: true
+    networks:
+      - payment-network
+
 networks:
   payment-network:
     driver: bridge
 
 volumes:
   pgdata:
+  prometheus-data:
+  grafana-data:

@@ -1,0 +1,120 @@
+/usr/local/lib/python3.9/site-packages/google/api_core/_python_version_support.py:234: FutureWarning: You are using a non-supported Python version (3.9.25). Google will not post any further updates to google.api_core supporting this Python version. Please upgrade to the latest Python version, or at least Python 3.10, and then update google.api_core.
+  warnings.warn(message, FutureWarning)
+/usr/local/lib/python3.9/site-packages/google/auth/__init__.py:54: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
+  warnings.warn(eol_message.format("3.9"), FutureWarning)
+/usr/local/lib/python3.9/site-packages/google/oauth2/__init__.py:40: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
+  warnings.warn(eol_message.format("3.9"), FutureWarning)
+INFO:     Started server process [1]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:7509 (Press CTRL+C to quit)
+[2026-04-09 18:08:29]-[MainThread]-[eureka_client:712] WARNING: Register error! Will try in next heartbeat. 
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/urllib/request.py", line 1346, in do_open
+    h.request(req.get_method(), req.selector, req.data, headers,
+  File "/usr/local/lib/python3.9/http/client.py", line 1285, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/local/lib/python3.9/http/client.py", line 1331, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.9/http/client.py", line 1280, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.9/http/client.py", line 1040, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.9/http/client.py", line 980, in send
+    self.connect()
+  File "/usr/local/lib/python3.9/http/client.py", line 946, in connect
+    self.sock = self._create_connection(
+  File "/usr/local/lib/python3.9/socket.py", line 856, in create_connection
+    raise err
+  File "/usr/local/lib/python3.9/socket.py", line 844, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/py_eureka_client/eureka_client.py", line 709, in register
+    await self.__connect_to_eureka_server(do_register)
+  File "/usr/local/lib/python3.9/site-packages/py_eureka_client/eureka_client.py", line 652, in __connect_to_eureka_server
+    await self.__try_all_eureka_servers(fun)
+  File "/usr/local/lib/python3.9/site-packages/py_eureka_client/eureka_client.py", line 615, in __try_all_eureka_servers
+    await self.__try_eureka_server_in_zone(fun)
+  File "/usr/local/lib/python3.9/site-packages/py_eureka_client/eureka_client.py", line 585, in __try_eureka_server_in_zone
+    await self.__try_eureka_servers_in_list(
+  File "/usr/local/lib/python3.9/site-packages/py_eureka_client/eureka_client.py", line 630, in __try_eureka_servers_in_list
+    await fun(url)
+  File "/usr/local/lib/python3.9/site-packages/py_eureka_client/eureka_client.py", line 708, in do_register
+    await _register(url, self.__instance)
+  File "/usr/local/lib/python3.9/site-packages/py_eureka_client/eureka_basic.py", line 304, in _register
+    await http_client.http_client.urlopen(req, json.dumps({"instance": instance_dic}).encode(
+  File "/usr/local/lib/python3.9/site-packages/py_eureka_client/http_client.py", line 142, in urlopen
+    res.raw_response = urllib.request.urlopen(req._to_urllib_request(), data=data, timeout=timeout)
+  File "/usr/local/lib/python3.9/urllib/request.py", line 214, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/local/lib/python3.9/urllib/request.py", line 517, in open
+    response = self._open(req, data)
+  File "/usr/local/lib/python3.9/urllib/request.py", line 534, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+  File "/usr/local/lib/python3.9/urllib/request.py", line 494, in _call_chain
+    result = func(*args)
+  File "/usr/local/lib/python3.9/urllib/request.py", line 1375, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+  File "/usr/local/lib/python3.9/urllib/request.py", line 1349, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [Errno 111] Connection refused>
+[2026-04-09 18:08:29]-[MainThread]-[eureka_client:801] WARNING: pull full registry from eureka server error!
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/urllib/request.py", line 1346, in do_open
+    h.request(req.get_method(), req.selector, req.data, headers,
+  File "/usr/local/lib/python3.9/http/client.py", line 1285, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/local/lib/python3.9/http/client.py", line 1331, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.9/http/client.py", line 1280, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.9/http/client.py", line 1040, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.9/http/client.py", line 980, in send
+    self.connect()
+  File "/usr/local/lib/python3.9/http/client.py", line 946, in connect
+    self.sock = self._create_connection(
+  File "/usr/local/lib/python3.9/socket.py", line 856, in create_connection
+    raise err
+  File "/usr/local/lib/python3.9/socket.py", line 844, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/py_eureka_client/eureka_client.py", line 799, in __pull_full_registry
+    await self.__connect_to_eureka_server(do_pull)
+  File "/usr/local/lib/python3.9/site-packages/py_eureka_client/eureka_client.py", line 652, in __connect_to_eureka_server
+    await self.__try_all_eureka_servers(fun)
+  File "/usr/local/lib/python3.9/site-packages/py_eureka_client/eureka_client.py", line 615, in __try_all_eureka_servers
+    await self.__try_eureka_server_in_zone(fun)
+  File "/usr/local/lib/python3.9/site-packages/py_eureka_client/eureka_client.py", line 585, in __try_eureka_server_in_zone
+    await self.__try_eureka_servers_in_list(
+  File "/usr/local/lib/python3.9/site-packages/py_eureka_client/eureka_client.py", line 630, in __try_eureka_servers_in_list
+    await fun(url)
+  File "/usr/local/lib/python3.9/site-packages/py_eureka_client/eureka_client.py", line 796, in do_pull
+    self.__applications = await get_applications(url, self.__remote_regions)
+  File "/usr/local/lib/python3.9/site-packages/py_eureka_client/eureka_basic.py", line 353, in get_applications
+    res = await _get_applications_(f"{_format_url(eureka_server)}apps/", regions)
+  File "/usr/local/lib/python3.9/site-packages/py_eureka_client/eureka_basic.py", line 370, in _get_applications_
+    res = await http_client.http_client.urlopen(
+  File "/usr/local/lib/python3.9/site-packages/py_eureka_client/http_client.py", line 142, in urlopen
+    res.raw_response = urllib.request.urlopen(req._to_urllib_request(), data=data, timeout=timeout)
+  File "/usr/local/lib/python3.9/urllib/request.py", line 214, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/local/lib/python3.9/urllib/request.py", line 517, in open
+    response = self._open(req, data)
+  File "/usr/local/lib/python3.9/urllib/request.py", line 534, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+  File "/usr/local/lib/python3.9/urllib/request.py", line 494, in _call_chain
+    result = func(*args)
+  File "/usr/local/lib/python3.9/urllib/request.py", line 1375, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+  File "/usr/local/lib/python3.9/urllib/request.py", line 1349, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [Errno 111] Connection refused>

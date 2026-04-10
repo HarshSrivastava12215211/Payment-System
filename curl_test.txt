@@ -1,0 +1,26 @@
+Note: Unnecessary use of -X or --request, POST is already inferred.
+* Host localhost:7505 was resolved.
+* IPv6: ::1
+* IPv4: 127.0.0.1
+*   Trying [::1]:7505...
+* Established connection to localhost (::1 port 7505) from ::1 port 64933 
+* using HTTP/1.x
+> POST /api/chatbot/message HTTP/1.1
+> Host: localhost:7505
+> User-Agent: curl/8.18.0
+> Accept: */*
+> Content-Type: application/json
+> Content-Length: 31
+> 
+} [31 bytes data]
+* upload completely sent off: 31 bytes
+< HTTP/1.1 404 Not Found
+< Vary: Origin
+< Vary: Access-Control-Request-Method
+< Vary: Access-Control-Request-Headers
+< Content-Type: application/json
+< Content-Length: 133
+< 
+{ [133 bytes data]
+* Connection #0 to host localhost:7505 left intact
+{"timestamp":"2026-04-09T18:39:40.182+00:00","path":"/api/chatbot/message","status":404,"error":"Not Found","requestId":"d74733c0-3"}

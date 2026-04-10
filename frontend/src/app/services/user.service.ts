@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { UserDto } from '../models/user.model';
+import { UserDto, UpdateProfileRequest } from '../models/user.model';
 import { ConfigService } from './config.service';
 
 @Injectable({ providedIn: 'root' })
@@ -30,5 +30,9 @@ export class UserService {
 
   getUserByEmail(email: string): Observable<UserDto> {
     return this.http.get<UserDto>(`${this.apiUrl}/email/${email}`);
+  }
+
+  updateProfile(id: number, request: UpdateProfileRequest): Observable<UserDto> {
+    return this.http.put<UserDto>(`${this.apiUrl}/${id}/profile`, request);
   }
 }

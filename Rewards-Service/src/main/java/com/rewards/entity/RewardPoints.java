@@ -30,7 +30,7 @@ public class RewardPoints {
     private long lifetimePoints;
 
     @Column(nullable = false, length = 20)
-    private String tier; // SILVER, GOLD, PLATINUM
+    private String tier; // BRONZE, SILVER, GOLD, PLATINUM
 
     private LocalDateTime updatedAt;
 
@@ -38,7 +38,7 @@ public class RewardPoints {
     public void prePersist() {
         this.updatedAt = LocalDateTime.now();
         if (this.tier == null) {
-            this.tier = "SILVER";
+            this.tier = "BRONZE";
         }
     }
 

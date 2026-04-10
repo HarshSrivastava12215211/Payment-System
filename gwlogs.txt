@@ -1,0 +1,30 @@
+2026-04-09T18:38:17.402Z DEBUG 1 --- [Api-Gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition ReactiveCompositeDiscoveryClient_API-GATEWAY applying filter {regexp=/api-gateway/?(?<remaining>.*), replacement=/${remaining}} to RewritePath
+2026-04-09T18:38:17.404Z DEBUG 1 --- [Api-Gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition matched: ReactiveCompositeDiscoveryClient_API-GATEWAY
+2026-04-09T18:38:17.404Z DEBUG 1 --- [Api-Gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition ReactiveCompositeDiscoveryClient_KYC-SERVICE applying {pattern=/kyc-service/**} to Path
+2026-04-09T18:38:17.406Z DEBUG 1 --- [Api-Gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition ReactiveCompositeDiscoveryClient_KYC-SERVICE applying filter {regexp=/kyc-service/?(?<remaining>.*), replacement=/${remaining}} to RewritePath
+2026-04-09T18:38:17.407Z DEBUG 1 --- [Api-Gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition matched: ReactiveCompositeDiscoveryClient_KYC-SERVICE
+2026-04-09T18:38:17.407Z DEBUG 1 --- [Api-Gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition ReactiveCompositeDiscoveryClient_NOTIFICATION-SERVICE applying {pattern=/notification-service/**} to Path
+2026-04-09T18:38:17.408Z DEBUG 1 --- [Api-Gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition ReactiveCompositeDiscoveryClient_NOTIFICATION-SERVICE applying filter {regexp=/notification-service/?(?<remaining>.*), replacement=/${remaining}} to RewritePath
+2026-04-09T18:38:17.409Z DEBUG 1 --- [Api-Gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition matched: ReactiveCompositeDiscoveryClient_NOTIFICATION-SERVICE
+2026-04-09T18:38:17.410Z DEBUG 1 --- [Api-Gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition ReactiveCompositeDiscoveryClient_USER-SERVICE applying {pattern=/user-service/**} to Path
+2026-04-09T18:38:17.411Z DEBUG 1 --- [Api-Gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition ReactiveCompositeDiscoveryClient_USER-SERVICE applying filter {regexp=/user-service/?(?<remaining>.*), replacement=/${remaining}} to RewritePath
+2026-04-09T18:38:17.411Z DEBUG 1 --- [Api-Gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition matched: ReactiveCompositeDiscoveryClient_USER-SERVICE
+2026-04-09T18:38:17.412Z DEBUG 1 --- [Api-Gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition AUTH-SERVICE applying {_genkey_0=/auth/**} to Path
+2026-04-09T18:38:17.413Z DEBUG 1 --- [Api-Gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition matched: AUTH-SERVICE
+2026-04-09T18:38:17.413Z DEBUG 1 --- [Api-Gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition ADMIN-SERVICE applying {_genkey_0=/admin/**} to Path
+2026-04-09T18:38:17.414Z DEBUG 1 --- [Api-Gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition matched: ADMIN-SERVICE
+2026-04-09T18:38:17.414Z DEBUG 1 --- [Api-Gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition KYC-SERVICE applying {_genkey_0=/api/kyc/**} to Path
+2026-04-09T18:38:17.415Z DEBUG 1 --- [Api-Gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition matched: KYC-SERVICE
+2026-04-09T18:38:17.416Z DEBUG 1 --- [Api-Gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition PAYMENT-SERVICES applying {_genkey_0=/api/payments/**} to Path
+2026-04-09T18:38:17.417Z DEBUG 1 --- [Api-Gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition matched: PAYMENT-SERVICES
+2026-04-09T18:38:17.417Z DEBUG 1 --- [Api-Gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition WALLET-SERVICE applying {_genkey_0=/api/wallets/**} to Path
+2026-04-09T18:38:17.418Z DEBUG 1 --- [Api-Gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition matched: WALLET-SERVICE
+2026-04-09T18:38:17.418Z DEBUG 1 --- [Api-Gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition TRANSACTION-SERVICE applying {_genkey_0=/api/transaction/**} to Path
+2026-04-09T18:38:17.419Z DEBUG 1 --- [Api-Gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition matched: TRANSACTION-SERVICE
+2026-04-09T18:38:17.419Z DEBUG 1 --- [Api-Gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition REWARDS-SERVICE applying {_genkey_0=/api/rewards/**} to Path
+2026-04-09T18:38:17.420Z DEBUG 1 --- [Api-Gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition matched: REWARDS-SERVICE
+2026-04-09T18:38:17.420Z DEBUG 1 --- [Api-Gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition NOTIFICATION-SERVICE applying {_genkey_0=/api/notifications/**} to Path
+2026-04-09T18:38:17.421Z DEBUG 1 --- [Api-Gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition matched: NOTIFICATION-SERVICE
+2026-04-09T18:38:17.421Z DEBUG 1 --- [Api-Gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition USER-SERVICE applying {_genkey_0=/users/**} to Path
+2026-04-09T18:38:17.422Z DEBUG 1 --- [Api-Gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition matched: USER-SERVICE
+2026-04-09T18:38:17.424Z DEBUG 1 --- [Api-Gateway] [reshExecutor-%d] o.s.c.g.filter.GatewayMetricsFilter      : New routes count: 14

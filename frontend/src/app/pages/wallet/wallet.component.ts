@@ -1,4 +1,4 @@
-import { Component, OnInit, inject } from '@angular/core';
+import { Component, OnInit, inject, ChangeDetectorRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { WalletService } from '../../services/wallet.service';
@@ -114,6 +114,7 @@ import { WalletDTO, LedgerEntryDTO, WalletLimitDTO } from '../../models/wallet.m
 export class WalletComponent implements OnInit {
   private walletService = inject(WalletService);
   private auth = inject(AuthService);
+  private cdr = inject(ChangeDetectorRef);
 
   wallet: WalletDTO | null = null;
   ledger: LedgerEntryDTO[] = [];
@@ -154,6 +155,7 @@ export class WalletComponent implements OnInit {
   credit() {
     if (this.creditAmount <= 0) { this.showToast('Enter a valid amount', 'error'); return; }
     this.creditLoading = true;
+    this.cdr.detectChanges();
     this.walletService.credit({ userId: this.userId, amount: this.creditAmount, currency: 'INR' }).subscribe({
       next: (w) => {
         this.wallet = w;
@@ -161,10 +163,12 @@ export class WalletComponent implements OnInit {
         this.loadWallet();
         this.creditLoading = false;
         this.creditAmount = 0;
+        this.cdr.detectChanges();
       },
       error: (e) => {
         this.showToast(e.error || 'Failed', 'error');
         this.creditLoading = false;
+        this.cdr.detectChanges();
       }
     });
   }
@@ -172,6 +176,7 @@ export class WalletComponent implements OnInit {
   debit() {
     if (this.debitAmount <= 0) { this.showToast('Enter a valid amount', 'error'); return; }
     this.debitLoading = true;
+    this.cdr.detectChanges();
     this.walletService.debit({ userId: this.userId, amount: this.debitAmount, currency: 'INR' }).subscribe({
       next: (w) => {
         this.wallet = w;
@@ -179,10 +184,12 @@ export class WalletComponent implements OnInit {
         this.loadWallet();
         this.debitLoading = false;
         this.debitAmount = 0;
+        this.cdr.detectChanges();
       },
       error: (e) => {
         this.showToast(e.error || 'Failed', 'error');
         this.debitLoading = false;
+        this.cdr.detectChanges();
       }
     });
   }
@@ -218,6 +225,10 @@ export class WalletComponent implements OnInit {
   showToast(msg: string, type: string) {
     this.toastMsg = msg;
     this.toastType = type;
-    setTimeout(() => this.toastMsg = '', 3000);
+    this.cdr.detectChanges();
+    setTimeout(() => { 
+      this.toastMsg = ''; 
+      this.cdr.detectChanges();
+    }, 3000);
   }
 }

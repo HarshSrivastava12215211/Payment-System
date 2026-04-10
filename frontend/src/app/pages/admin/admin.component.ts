@@ -3,8 +3,9 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { AdminService } from '../../services/admin.service';
 import { UserDto } from '../../models/user.model';
-import { TransactionDTO } from '../../models/transaction.model';
+import { TransactionDTO, DisputeDTO } from '../../models/transaction.model';
 import { AdminActionDTO } from '../../models/admin.model';
+import { TransactionService } from '../../services/transaction.service';
 
 @Component({
   selector: 'app-admin',
@@ -90,6 +91,51 @@ import { AdminActionDTO } from '../../models/admin.model';
         </div>
       </div>
 
+      <!-- Complaints -->
+      <div *ngIf="activeTab === 'complaints'" class="glass-card p-4 fade-in">
+        <div class="flex-between align-center mb-3">
+          <h3 class="font-black text-primary">📝 User Complaints</h3>
+          <button class="btn btn-secondary btn-sm" (click)="loadComplaints()">🔄 REFRESH</button>
+        </div>
+
+        <div *ngIf="disputes.length === 0" class="empty-state py-5 text-center">
+          <div class="empty-icon">📭</div>
+          <p class="text-muted">No complaints have been filed yet.</p>
+        </div>
+
+        <div class="table-container" *ngIf="disputes.length > 0">
+          <table>
+            <thead>
+              <tr><th>DISPUTE ID</th><th>TX-HASH</th><th>USER</th><th>REASON</th><th>STATUS</th><th>RESOLUTION</th><th>ACTIONS</th></tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let d of disputes">
+                <td style="font-family: monospace; font-size: 0.75rem;">{{ d.id | slice:0:12 }}...</td>
+                <td style="font-family: monospace; font-size: 0.75rem; color: var(--primary);">{{ d.transactionId | slice:0:12 }}...</td>
+                <td>#{{ d.userId }}</td>
+                <td style="font-size: 0.8rem; max-width: 260px;">{{ d.reason }}</td>
+                <td>
+                  <span class="badge"
+                        [class.badge-warning]="d.status === 'OPEN' || d.status === 'UNDER_REVIEW'"
+                        [class.badge-success]="d.status === 'RESOLVED'"
+                        [class.badge-danger]="d.status === 'REJECTED'">{{ d.status }}</span>
+                </td>
+                <td style="font-size: 0.78rem;">
+                  <input class="form-control" [(ngModel)]="disputeResolution[d.id]" placeholder="Add resolution note" style="min-width: 190px;" />
+                </td>
+                <td>
+                  <div class="flex gap-2">
+                    <button class="btn btn-sm btn-secondary px-2" (click)="updateComplaintStatus(d, 'UNDER_REVIEW')">REVIEW</button>
+                    <button class="btn btn-sm btn-success px-2" (click)="updateComplaintStatus(d, 'RESOLVED')">RESOLVE</button>
+                    <button class="btn btn-sm btn-danger px-2" (click)="updateComplaintStatus(d, 'REJECTED')">REJECT</button>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
       <!-- KYC -->
       <div *ngIf="activeTab === 'kyc'" class="glass-card p-4 fade-in">
         <h3 class="font-black text-primary mb-3">🆔 Document Verification Queue</h3>
@@ -158,22 +204,47 @@ import { AdminActionDTO } from '../../models/admin.model';
 })
 export class AdminComponent implements OnInit {
   private adminService = inject(AdminService);
+  private txService = inject(TransactionService);
   private cdr = inject(ChangeDetectorRef);
-  tabs=[{id:'users',label:'Users',icon:'👥'},{id:'transactions',label:'Transactions',icon:'📊'},{id:'kyc',label:'KYC',icon:'🆔'},{id:'audit',label:'Audit Log',icon:'📋'}];
+  tabs=[{id:'users',label:'Users',icon:'👥'},{id:'transactions',label:'Transactions',icon:'📊'},{id:'complaints',label:'Complaints',icon:'📝'},{id:'kyc',label:'KYC',icon:'🆔'},{id:'audit',label:'Audit Log',icon:'📋'}];
   activeTab='users';
-  users:UserDto[]=[];transactions:TransactionDTO[]=[];kycs:any[]=[];auditLog:AdminActionDTO[]=[];
+  users:UserDto[]=[];transactions:TransactionDTO[]=[];disputes:DisputeDTO[]=[];kycs:any[]=[];auditLog:AdminActionDTO[]=[];
+  disputeResolution: Record<string, string> = {};
   toastMsg='';toastType='';
 
   ngOnInit(){this.loadTab();}
   loadTab(){
     if(this.activeTab==='users')this.loadUsers();
     if(this.activeTab==='transactions')this.loadTransactions();
+    if(this.activeTab==='complaints')this.loadComplaints();
     if(this.activeTab==='kyc')this.adminService.getAllKycs().subscribe({next:k=>{this.kycs=k;this.cdr.detectChanges();},error:()=>{}});
     if(this.activeTab==='audit')this.adminService.getAuditLog().subscribe({next:a=>{this.auditLog=a;this.cdr.detectChanges();},error:()=>{}});
   }
   loadUsers(){this.adminService.getUsers().subscribe({next:u=>{this.users=u;this.cdr.detectChanges();},error:()=>{}});}
   loadTransactions(){this.adminService.getTransactions().subscribe({next:t=>{this.transactions=t;this.cdr.detectChanges();},error:()=>{}});}
   loadSuspicious(){this.adminService.getSuspiciousTransactions().subscribe({next:t=>{this.transactions=t;this.cdr.detectChanges();},error:()=>{}});}
+  loadComplaints(){
+    this.txService.getAllDisputes().subscribe({
+      next:d=>{
+        this.disputes=(d||[]).sort((a,b)=>new Date(b.createdAt||'').getTime()-new Date(a.createdAt||'').getTime());
+        this.cdr.detectChanges();
+      },
+      error:()=>this.toast('Failed to load complaints','error')
+    });
+  }
+  updateComplaintStatus(d: DisputeDTO, status: 'UNDER_REVIEW' | 'RESOLVED' | 'REJECTED') {
+    const resolution = (this.disputeResolution[d.id] || '').trim();
+    const resolvedText = status === 'RESOLVED'
+      ? (resolution || 'Resolved by admin team')
+      : status === 'REJECTED'
+        ? (resolution || 'Rejected after investigation')
+        : (resolution || 'Marked for review');
+
+    this.txService.updateDispute(d.id, { status, resolution: resolvedText }).subscribe({
+      next:()=>{this.toast('Complaint updated','success');this.loadComplaints();this.cdr.detectChanges();},
+      error:()=>this.toast('Failed to update complaint','error')
+    });
+  }
   blockUser(id:number){this.adminService.blockUser(id).subscribe({next:()=>{this.toast('Blocked','success');this.loadUsers();this.cdr.detectChanges();},error:()=>this.toast('Failed','error')});}
   unblockUser(id:number){this.adminService.unblockUser(id).subscribe({next:()=>{this.toast('Unblocked','success');this.loadUsers();this.cdr.detectChanges();},error:()=>this.toast('Failed','error')});}
   approveKyc(id:number|string){this.adminService.approveKyc(Number(id)).subscribe({next:()=>{this.toast('KYC Approved','success');this.loadUsers();if(this.activeTab==='kyc')this.loadTab();this.cdr.detectChanges();},error:()=>this.toast('Failed','error')});}

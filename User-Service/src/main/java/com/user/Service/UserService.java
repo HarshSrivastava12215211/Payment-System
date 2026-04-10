@@ -5,6 +5,7 @@ import java.util.stream.Collectors;
 
 import org.springframework.stereotype.Service;
 
+import com.user.dto.UpdateProfileRequest;
 import com.user.dto.UserDto;
 import com.user.entity.User;
 import com.user.repository.UserRepository;
@@ -41,6 +42,33 @@ public class UserService {
         User user = userRepository.findById(id).orElseThrow(() -> new RuntimeException("User not found"));
         user.setBlocked(false);
         userRepository.save(user);
+    }
+
+    public UserDto updateProfile(Long id, UpdateProfileRequest request) {
+        User user = userRepository.findById(id).orElseThrow(() -> new RuntimeException("User not found"));
+
+        String nextName = request.getName() == null ? "" : request.getName().trim();
+        String nextPhone = request.getPhone() == null ? "" : request.getPhone().trim();
+
+        if (nextName.isEmpty()) {
+            throw new RuntimeException("Name is required");
+        }
+
+        if (nextPhone.isEmpty()) {
+            throw new RuntimeException("Phone is required");
+        }
+
+        userRepository.findByPhone(nextPhone)
+                .filter(existing -> !existing.getId().equals(id))
+                .ifPresent(existing -> {
+                    throw new RuntimeException("Phone number already in use");
+                });
+
+        user.setName(nextName);
+        user.setPhone(nextPhone);
+
+        User saved = userRepository.save(user);
+        return mapToDto(saved);
     }
 
     private UserDto mapToDto(User user) {

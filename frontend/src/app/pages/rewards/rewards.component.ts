@@ -2,7 +2,7 @@ import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RewardsService } from '../../services/rewards.service';
 import { AuthService } from '../../services/auth.service';
-import { RewardPointsDTO, PointsTransactionDTO, CatalogItemDTO } from '../../models/rewards.model';
+import { RewardPointsDTO, PointsTransactionDTO, CatalogItemDTO, CampaignDTO } from '../../models/rewards.model';
 
 @Component({
   selector: 'app-rewards',
@@ -20,14 +20,39 @@ import { RewardPointsDTO, PointsTransactionDTO, CatalogItemDTO } from '../../mod
           <div class="stat-icon-circle amber">⭐</div>
           <div>
             <p class="text-muted" style="font-size: 0.72rem; text-transform: uppercase; font-weight: 800;">Available Credits</p>
-            <h2 class="font-black text-primary">{{ userPoints?.totalPoints || 0 }}</h2>
+            <h2 class="font-black text-primary">{{ userPoints?.availablePoints || 0 }}</h2>
           </div>
         </div>
         <div class="glass-card stat-card-mini flex align-center gap-3">
           <div class="stat-icon-circle cyan">🏆</div>
           <div>
             <p class="text-muted" style="font-size: 0.72rem; text-transform: uppercase; font-weight: 800;">Ecosystem Tier</p>
-            <h2 class="font-black" style="color: var(--primary);">{{ userPoints?.tier || 'BRONZE' }}</h2>
+            <h2 class="font-black" style="color: var(--primary);">{{ userPoints?.tier || '--' }}</h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="glass-card p-4 mb-3 fade-in-up" style="animation-delay: 0.08s;">
+        <div class="flex-between align-center mb-3">
+          <h3 class="font-black text-primary">🎯 Active Campaigns For You</h3>
+          <span class="badge badge-success">{{ curatedCampaigns.length }} LIVE</span>
+        </div>
+
+        <div *ngIf="curatedCampaigns.length === 0" class="empty-state py-4">
+          <p class="text-muted">No campaigns are active for your tier at the moment.</p>
+        </div>
+
+        <div class="dashboard-grid" style="grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 14px;" *ngIf="curatedCampaigns.length > 0">
+          <div *ngFor="let c of curatedCampaigns" class="glass-card p-3" style="background: rgba(255,255,255,0.45); border-left: 4px solid #10b981;">
+            <div class="flex-between align-center mb-2">
+              <h4 class="font-bold text-primary m-0">{{ c.name }}</h4>
+              <span class="badge badge-info">+{{ c.bonusPoints }} pts</span>
+            </div>
+            <p class="text-secondary mb-2" style="font-size: 0.8rem;">{{ c.description }}</p>
+            <div class="flex-between text-muted" style="font-size: 0.72rem; border-top: 1px solid var(--border); padding-top: 8px;">
+              <span>{{ c.triggerType || 'GENERAL' }}</span>
+              <span>{{ c.currentRedemptions }}/{{ c.maxRedemptions === 0 ? '∞' : c.maxRedemptions }}</span>
+            </div>
           </div>
         </div>
       </div>
@@ -53,7 +78,7 @@ import { RewardPointsDTO, PointsTransactionDTO, CatalogItemDTO } from '../../mod
               <p class="text-secondary mb-3 flex-1" style="font-size: 0.8rem;">{{ item.description }}</p>
               <div class="flex-between align-center mt-auto pt-2" style="border-top: 1px solid var(--border);">
                 <span class="font-black text-amber" style="font-size: 0.9rem;">{{ item.pointsCost }} <span style="font-size: 0.7rem;">PTS</span></span>
-                <button class="btn btn-primary btn-sm px-3" (click)="redeem(item)" [disabled]="(userPoints?.totalPoints || 0) < item.pointsCost">
+                <button class="btn btn-primary btn-sm px-3" (click)="redeem(item)" [disabled]="(userPoints?.availablePoints || 0) < item.pointsCost">
                   REDEEM
                 </button>
               </div>
@@ -109,18 +134,69 @@ export class RewardsComponent implements OnInit {
   private rewardsService = inject(RewardsService);
   private auth = inject(AuthService);
   userPoints: RewardPointsDTO|null = null;
+  userId: number | null = null;
+  campaigns: CampaignDTO[] = [];
+  curatedCampaigns: CampaignDTO[] = [];
   catalog: CatalogItemDTO[] = [];
   history: PointsTransactionDTO[] = [];
   toastMsg=''; toastType='';
 
   ngOnInit() {
-    const uid = this.auth.getCurrentUserId()||1;
-    this.rewardsService.getUserPoints(uid).subscribe({next:p=>this.userPoints=p,error:()=>{}});
-    this.rewardsService.getActiveCatalog().subscribe({next:c=>this.catalog=c,error:()=>{}});
-    this.rewardsService.getPointsHistory(uid).subscribe({next:h=>this.history=h,error:()=>{}});
+    this.userId = this.auth.getCurrentUserId();
+    if (!this.userId) {
+      this.showToast('Unable to identify current user. Please login again.', 'error');
+      return;
+    }
+
+    const uid = this.userId;
+    this.rewardsService.getUserPoints(uid).subscribe({
+      next: p => {
+        this.userPoints = p;
+        this.applyCampaignCuration();
+      },
+      error: () => this.showToast('Could not load reward points.', 'error')
+    });
+
+    this.rewardsService.getActiveCampaigns().subscribe({
+      next: c => {
+        this.campaigns = c || [];
+        this.applyCampaignCuration();
+      },
+      error: () => {
+        this.campaigns = [];
+        this.curatedCampaigns = [];
+      }
+    });
+
+    this.rewardsService.getActiveCatalog().subscribe({next:c=>this.catalog=c,error:()=>this.showToast('Could not load reward catalog.', 'error')});
+    this.rewardsService.getPointsHistory(uid).subscribe({next:h=>this.history=h,error:()=>this.showToast('Could not load points history.', 'error')});
   }
+
+  private applyCampaignCuration() {
+    const userTier = (this.userPoints?.tier || '').toUpperCase();
+    const now = Date.now();
+    this.curatedCampaigns = (this.campaigns || [])
+      .filter(c => c.isActive)
+      .filter(c => {
+        const tier = (c.eligibleTier || '').toUpperCase();
+        return !tier || tier === userTier;
+      })
+      .filter(c => {
+        const start = Date.parse(c.startDate);
+        const end = Date.parse(c.endDate);
+        const validStart = Number.isNaN(start) ? true : now >= start;
+        const validEnd = Number.isNaN(end) ? true : now <= end;
+        return validStart && validEnd;
+      })
+      .sort((a, b) => b.bonusPoints - a.bonusPoints);
+  }
+
   redeem(item: CatalogItemDTO) {
-    const uid = this.auth.getCurrentUserId()||1;
+    const uid = this.auth.getCurrentUserId();
+    if (!uid) {
+      this.showToast('Please login again before redeeming rewards.', 'error');
+      return;
+    }
     this.rewardsService.redeem({userId:uid,catalogItemId:item.id}).subscribe({
       next:()=>{this.showToast('Redeemed!','success');this.ngOnInit();},error:()=>this.showToast('Failed','error')
     });

@@ -15,3 +15,8 @@ export interface RegisterRequest {
   password: string;
   otp: string;
 }
+
+export interface UpdateProfileRequest {
+  name: string;
+  phone: string;
+}

@@ -5,10 +5,14 @@ import java.util.List;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.user.Service.UserService;
+import com.user.dto.UpdateProfileRequest;
+import com.user.dto.UpdateProfileRequest;
 import com.user.dto.UserDto;
 
 import lombok.RequiredArgsConstructor;
@@ -41,6 +45,11 @@ public class UserController {
     @PutMapping("/{id}/block")
     public void blockUser(@PathVariable Long id) {
         userService.blockUser(id);
+    }
+
+    @PutMapping("/{id}/profile")
+    public UserDto updateProfile(@PathVariable Long id, @RequestBody UpdateProfileRequest request) {
+        return userService.updateProfile(id, request);
     }
 
     @PutMapping("/{id}/unblock")

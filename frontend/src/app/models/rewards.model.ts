@@ -2,6 +2,8 @@ export interface RewardPointsDTO {
   id: string;
   userId: number;
   totalPoints: number;
+  availablePoints: number;
+  lifetimePoints: number;
   tier: string;
 }
 
@@ -31,6 +33,7 @@ export interface CatalogItemDTO {
   category: string;
   active: boolean;
   imageUrl: string;
+  minTier?: string;
 }
 
 export interface RewardRuleDTO {
@@ -46,10 +49,14 @@ export interface CampaignDTO {
   id: string;
   name: string;
   description: string;
-  multiplier: number;
+  bonusPoints: number;
+  triggerType: string;
   startDate: string;
   endDate: string;
-  active: boolean;
+  maxRedemptions: number;
+  currentRedemptions: number;
+  eligibleTier: string;
+  isActive: boolean;
 }
 
 export interface EarnPointsRequest {

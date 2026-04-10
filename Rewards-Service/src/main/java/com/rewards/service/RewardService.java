@@ -36,6 +36,9 @@ public class RewardService {
     private final CampaignRepository campaignRepository;
     private final WalletClient walletClient;
 
+    @Value("${rewards.tier.bronze-max:499}")
+    private long bronzeMax;
+
     @Value("${rewards.tier.silver-max:999}")
     private long silverMax;
 
@@ -442,7 +445,7 @@ public class RewardService {
                             .totalPoints(0)
                             .availablePoints(0)
                             .lifetimePoints(0)
-                            .tier("SILVER")
+                            .tier("BRONZE")
                             .build();
                     return pointsRepository.save(rp);
                 });
@@ -451,7 +454,8 @@ public class RewardService {
     private String calculateTier(long lifetimePoints) {
         if (lifetimePoints >= goldMax + 1) return "PLATINUM";
         if (lifetimePoints >= silverMax + 1) return "GOLD";
-        return "SILVER";
+        if (lifetimePoints >= bronzeMax + 1) return "SILVER";
+        return "BRONZE";
     }
 
     private boolean isTierEligible(String userTier, String requiredTier) {
@@ -475,9 +479,10 @@ public class RewardService {
 
     private int tierLevel(String tier) {
         return switch (tier) {
-            case "PLATINUM" -> 3;
-            case "GOLD" -> 2;
-            case "SILVER" -> 1;
+            case "PLATINUM" -> 4;
+            case "GOLD" -> 3;
+            case "SILVER" -> 2;
+            case "BRONZE" -> 1;
             default -> 0;
         };
     }

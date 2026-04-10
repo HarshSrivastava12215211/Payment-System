@@ -1,0 +1,28 @@
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+
+scrape_configs:
+  - job_name: "prometheus"
+    static_configs:
+      - targets: ["prometheus:9090"]
+
+  - job_name: "cadvisor"
+    static_configs:
+      - targets: ["cadvisor:8080"]
+
+  - job_name: "spring-services"
+    metrics_path: "/actuator/prometheus"
+    static_configs:
+      - targets:
+          - "api-gateway:7505"
+          - "eureka-server:8761"
+          - "config-server:7512"
+          - "user-service:7500"
+          - "admin-service:7501"
+          - "kyc-service:7502"
+          - "wallet-service:7503"
+          - "payment-service:7504"
+          - "transaction-service:7506"
+          - "notification-service:7507"
+          - "rewards-service:7511"
